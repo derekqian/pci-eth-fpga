@@ -1,0 +1,90 @@
+--------------------------------------------------------------------------------
+Release 13.3 Trace  (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+/software/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n 3
+-fastpaths -xml ten24.twx ten24.ncd -o ten24.twr ten24.pcf -ucf ten24.ucf
+
+Design file:              ten24.ncd
+Physical constraint file: ten24.pcf
+Device,package,speed:     xc6slx45,csg324,C,-3 (PRODUCTION 1.20 2011-10-03)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+indata<0>      |outdata<0>     |   11.641|
+indata<0>      |outdata<1>     |   11.646|
+indata<0>      |outdata<2>     |   11.434|
+indata<0>      |outdata<3>     |   10.954|
+indata<1>      |outdata<0>     |   11.454|
+indata<1>      |outdata<1>     |   11.459|
+indata<1>      |outdata<2>     |   11.247|
+indata<1>      |outdata<3>     |   10.767|
+indata<2>      |outdata<0>     |   11.189|
+indata<2>      |outdata<1>     |   11.194|
+indata<2>      |outdata<2>     |   10.982|
+indata<2>      |outdata<3>     |   10.502|
+indata<3>      |outdata<0>     |   11.867|
+indata<3>      |outdata<1>     |   11.872|
+indata<3>      |outdata<2>     |   11.660|
+indata<3>      |outdata<3>     |   11.180|
+indata<4>      |outdata<0>     |   11.332|
+indata<4>      |outdata<1>     |   11.337|
+indata<4>      |outdata<2>     |   11.125|
+indata<4>      |outdata<3>     |   10.645|
+indata<5>      |outdata<0>     |   11.570|
+indata<5>      |outdata<1>     |   11.575|
+indata<5>      |outdata<2>     |   11.363|
+indata<5>      |outdata<3>     |   10.883|
+indata<6>      |outdata<0>     |   11.350|
+indata<6>      |outdata<1>     |   11.355|
+indata<6>      |outdata<2>     |   11.143|
+indata<6>      |outdata<3>     |   10.663|
+indata<7>      |outdata<0>     |   12.113|
+indata<7>      |outdata<1>     |   12.118|
+indata<7>      |outdata<2>     |   11.906|
+indata<7>      |outdata<3>     |   11.426|
+indata<8>      |outdata<0>     |   12.182|
+indata<8>      |outdata<1>     |   12.187|
+indata<8>      |outdata<2>     |   11.975|
+indata<8>      |outdata<3>     |   11.495|
+indata<9>      |outdata<0>     |   12.485|
+indata<9>      |outdata<1>     |   12.490|
+indata<9>      |outdata<2>     |   12.278|
+indata<9>      |outdata<3>     |   11.798|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Jul 18 16:57:56 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 433 MB
+
+
+

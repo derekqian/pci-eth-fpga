@@ -1,0 +1,14 @@
+NET "INDATA<0>"  LOC = "V16"  ;
+NET "INDATA<1>"  LOC = "V15"  ;
+NET "INDATA<2>"  LOC = "V13"  ;
+NET "INDATA<3>"  LOC = "N11"  ;
+NET "INDATA<4>"  LOC = "T11"  ;
+NET "INDATA<5>"  LOC = "V12"  ;
+NET "INDATA<6>"  LOC = "P11"  ;
+NET "INDATA<7>"  LOC = "N9"  ;
+NET "INDATA<8>"  LOC = "V11"  ;
+NET "INDATA<9>"  LOC = "T10"  ;
+NET "OUTDATA<0>"  LOC = "U18"  ;
+NET "OUTDATA<1>"  LOC = "M14"  ;
+NET "OUTDATA<2>"  LOC = "N14"  ;
+NET "OUTDATA<3>"  LOC = "L14"  ;

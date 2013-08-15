@@ -1,0 +1,18 @@
+//! **************************************************************************
+// Written by: Map K.39 on Thu Jul 18 17:14:25 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "P15" LEVEL 1;
+COMP "dout<0>" LOCATE = SITE "P86" LEVEL 1;
+COMP "dout<1>" LOCATE = SITE "P85" LEVEL 1;
+COMP "dout<2>" LOCATE = SITE "P83" LEVEL 1;
+COMP "dout<3>" LOCATE = SITE "P84" LEVEL 1;
+COMP "dout<4>" LOCATE = SITE "P80" LEVEL 1;
+COMP "dout<5>" LOCATE = SITE "P78" LEVEL 1;
+COMP "dout<6>" LOCATE = SITE "P79" LEVEL 1;
+COMP "dout<7>" LOCATE = SITE "P77" LEVEL 1;
+COMP "dout<8>" LOCATE = SITE "P75" LEVEL 1;
+COMP "dout<9>" LOCATE = SITE "P76" LEVEL 1;
+SCHEMATIC END;
+

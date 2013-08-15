@@ -1,0 +1,11 @@
+NET "CLK"  LOC = "p15"  ;
+NET "DOUT<0>"  LOC = "P86"  ;
+NET "DOUT<1>"  LOC = "P85"  ;
+NET "DOUT<2>"  LOC = "P83"  ;
+NET "DOUT<3>"  LOC = "P84"  ;
+NET "DOUT<4>"  LOC = "P80"  ;
+NET "DOUT<5>"  LOC = "P78"  ;
+NET "DOUT<6>"  LOC = "P79"  ;
+NET "DOUT<7>"  LOC = "P77"  ;
+NET "DOUT<8>"  LOC = "P75"  ;
+NET "DOUT<9>"  LOC = "P76"  ;

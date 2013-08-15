@@ -1,0 +1,21 @@
+//! **************************************************************************
+// Written by: Map O.76xd on Thu Jul 18 16:57:40 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "outdata<2>" LOCATE = SITE "N14" LEVEL 1;
+COMP "outdata<0>" LOCATE = SITE "U18" LEVEL 1;
+COMP "outdata<1>" LOCATE = SITE "M14" LEVEL 1;
+COMP "outdata<3>" LOCATE = SITE "L14" LEVEL 1;
+COMP "indata<0>" LOCATE = SITE "V16" LEVEL 1;
+COMP "indata<1>" LOCATE = SITE "V15" LEVEL 1;
+COMP "indata<2>" LOCATE = SITE "V13" LEVEL 1;
+COMP "indata<3>" LOCATE = SITE "N11" LEVEL 1;
+COMP "indata<4>" LOCATE = SITE "T11" LEVEL 1;
+COMP "indata<5>" LOCATE = SITE "V12" LEVEL 1;
+COMP "indata<6>" LOCATE = SITE "P11" LEVEL 1;
+COMP "indata<7>" LOCATE = SITE "N9" LEVEL 1;
+COMP "indata<8>" LOCATE = SITE "V11" LEVEL 1;
+COMP "indata<9>" LOCATE = SITE "T10" LEVEL 1;
+SCHEMATIC END;
+
