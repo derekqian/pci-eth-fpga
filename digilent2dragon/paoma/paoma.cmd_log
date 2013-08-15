@@ -1,0 +1,53 @@
+xst -intstyle ise -ifn "/home/derek/iseproject/paoma/paoma.xst" -ofn "/home/derek/iseproject/paoma/paoma.syr" 
+xst -intstyle ise -ifn "/home/derek/iseproject/paoma/paoma.xst" -ofn "/home/derek/iseproject/paoma/paoma.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-csg324-3 paoma.ngc paoma.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc paoma.ucf -p xc6slx45-csg324-3 paoma.ngc paoma.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc paoma.ucf -p xc6slx45-csg324-3 paoma.ngc paoma.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc paoma.ucf -p xc6slx45-csg324-3 paoma.ngc paoma.ngd  
+xst -intstyle ise -ifn "/home/derek/iseproject/paoma/paoma.xst" -ofn "/home/derek/iseproject/paoma/paoma.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc paoma.ucf -p xc6slx45-csg324-3 paoma.ngc paoma.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o paoma_map.ncd paoma.ngd paoma.pcf 
+par -w -intstyle ise -ol high -mt off paoma_map.ncd paoma.ncd paoma.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml paoma.twx paoma.ncd -o paoma.twr paoma.pcf -ucf paoma.ucf 
+bitgen -intstyle ise -f paoma.ut paoma.ncd 
+xst -intstyle ise -ifn "/home/derek/iseproject/paoma/paoma.xst" -ofn "/home/derek/iseproject/paoma/paoma.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc paoma.ucf -p xc6slx45-csg324-3 paoma.ngc paoma.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o paoma_map.ncd paoma.ngd paoma.pcf 
+par -w -intstyle ise -ol high -mt off paoma_map.ncd paoma.ncd paoma.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml paoma.twx paoma.ncd -o paoma.twr paoma.pcf -ucf paoma.ucf 
+bitgen -intstyle ise -f paoma.ut paoma.ncd 
+xst -intstyle ise -ifn "/home/derek/iseproject/paoma/paoma.xst" -ofn "/home/derek/iseproject/paoma/paoma.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc paoma.ucf -p xc6slx45-csg324-3 paoma.ngc paoma.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o paoma_map.ncd paoma.ngd paoma.pcf 
+par -w -intstyle ise -ol high -mt off paoma_map.ncd paoma.ncd paoma.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml paoma.twx paoma.ncd -o paoma.twr paoma.pcf -ucf paoma.ucf 
+bitgen -intstyle ise -f paoma.ut paoma.ncd 
+xst -intstyle ise -ifn "/home/derek/iseproject/paoma/paoma.xst" -ofn "/home/derek/iseproject/paoma/paoma.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc paoma.ucf -p xc6slx45-csg324-3 paoma.ngc paoma.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o paoma_map.ncd paoma.ngd paoma.pcf 
+par -w -intstyle ise -ol high -mt off paoma_map.ncd paoma.ncd paoma.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml paoma.twx paoma.ncd -o paoma.twr paoma.pcf -ucf paoma.ucf 
+bitgen -intstyle ise -f paoma.ut paoma.ncd 
+xst -intstyle ise -ifn "/home/derek/iseproject/paoma/paoma.xst" -ofn "/home/derek/iseproject/paoma/paoma.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc paoma.ucf -p xc6slx45-csg324-3 paoma.ngc paoma.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o paoma_map.ncd paoma.ngd paoma.pcf 
+par -w -intstyle ise -ol high -mt off paoma_map.ncd paoma.ncd paoma.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml paoma.twx paoma.ncd -o paoma.twr paoma.pcf -ucf paoma.ucf 
+bitgen -intstyle ise -f paoma.ut paoma.ncd 
+xst -intstyle ise -ifn "/home/derek/iseproject/paoma/paoma.xst" -ofn "/home/derek/iseproject/paoma/paoma.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc paoma.ucf -p xc6slx45-csg324-3 paoma.ngc paoma.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o paoma_map.ncd paoma.ngd paoma.pcf 
+par -w -intstyle ise -ol high -mt off paoma_map.ncd paoma.ncd paoma.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml paoma.twx paoma.ncd -o paoma.twr paoma.pcf -ucf paoma.ucf 
+bitgen -intstyle ise -f paoma.ut paoma.ncd 
+xst -intstyle ise -ifn "/home/derek/iseproject/paoma/paoma.xst" -ofn "/home/derek/iseproject/paoma/paoma.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc paoma.ucf -p xc6slx45-csg324-3 paoma.ngc paoma.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o paoma_map.ncd paoma.ngd paoma.pcf 
+par -w -intstyle ise -ol high -mt off paoma_map.ncd paoma.ncd paoma.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml paoma.twx paoma.ncd -o paoma.twr paoma.pcf -ucf paoma.ucf 
+xst -intstyle ise -ifn "/home/derek/iseproject/paoma/paoma.xst" -ofn "/home/derek/iseproject/paoma/paoma.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc paoma.ucf -p xc6slx45-csg324-3 paoma.ngc paoma.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o paoma_map.ncd paoma.ngd paoma.pcf 
+par -w -intstyle ise -ol high -mt off paoma_map.ncd paoma.ncd paoma.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml paoma.twx paoma.ncd -o paoma.twr paoma.pcf -ucf paoma.ucf 
+bitgen -intstyle ise -f paoma.ut paoma.ncd 

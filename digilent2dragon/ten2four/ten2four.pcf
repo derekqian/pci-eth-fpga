@@ -1,0 +1,25 @@
+//! **************************************************************************
+// Written by: Map K.39 on Wed Jul 31 14:58:03 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "outdata<0>" LOCATE = SITE "P67" LEVEL 1;
+COMP "outdata<1>" LOCATE = SITE "P62" LEVEL 1;
+COMP "outdata<2>" LOCATE = SITE "P60" LEVEL 1;
+COMP "outdata<3>" LOCATE = SITE "P57" LEVEL 1;
+COMP "outdata<4>" LOCATE = SITE "P39" LEVEL 1;
+COMP "outdata<5>" LOCATE = SITE "P44" LEVEL 1;
+COMP "outdata<6>" LOCATE = SITE "P46" LEVEL 1;
+COMP "outdata<7>" LOCATE = SITE "P49" LEVEL 1;
+COMP "indata<0>" LOCATE = SITE "P86" LEVEL 1;
+COMP "indata<1>" LOCATE = SITE "P85" LEVEL 1;
+COMP "indata<2>" LOCATE = SITE "P83" LEVEL 1;
+COMP "indata<3>" LOCATE = SITE "P84" LEVEL 1;
+COMP "indata<4>" LOCATE = SITE "P80" LEVEL 1;
+COMP "indata<5>" LOCATE = SITE "P78" LEVEL 1;
+COMP "indata<6>" LOCATE = SITE "P79" LEVEL 1;
+COMP "indata<7>" LOCATE = SITE "P77" LEVEL 1;
+COMP "indata<8>" LOCATE = SITE "P75" LEVEL 1;
+COMP "indata<9>" LOCATE = SITE "P76" LEVEL 1;
+SCHEMATIC END;
+

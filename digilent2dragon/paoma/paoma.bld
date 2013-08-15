@@ -1,0 +1,35 @@
+Release 13.3 ngdbuild O.76xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: /software/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle ise
+-dd _ngo -nt timestamp -uc paoma.ucf -p xc6slx45-csg324-3 paoma.ngc paoma.ngd
+
+Reading NGO file "/home/derek/iseproject/paoma/paoma.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "paoma.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 392168 kilobytes
+
+Writing NGD file "paoma.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "paoma.bld"...

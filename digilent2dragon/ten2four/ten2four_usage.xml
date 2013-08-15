@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<DeviceUsageSummary rev="2">
+<DesignStatistics TimeStamp="Wed Jul 31 14:58:14 2013"><group name="NetStatistics">
+<item name="NumNets_Active" rev="2">
+<attrib name="value" value="46"/></item>
+<item name="NumNodesOfType_Active_BIHEX" rev="2">
+<attrib name="value" value="23"/></item>
+<item name="NumNodesOfType_Active_DUMMY" rev="2">
+<attrib name="value" value="73"/></item>
+<item name="NumNodesOfType_Active_INPUT" rev="2">
+<attrib name="value" value="92"/></item>
+<item name="NumNodesOfType_Active_IOBOUTPUT" rev="2">
+<attrib name="value" value="10"/></item>
+<item name="NumNodesOfType_Active_OMUX" rev="2">
+<attrib name="value" value="14"/></item>
+<item name="NumNodesOfType_Active_OUTPUT" rev="2">
+<attrib name="value" value="18"/></item>
+<item name="NumNodesOfType_Active_SINGLE" rev="2">
+<attrib name="value" value="114"/></item>
+<item name="NumNodesOfType_Active_UNIHEX" rev="2">
+<attrib name="value" value="9"/></item>
+</group>
+<group name="MiscellaneousStatistics">
+<item name="AVG_LUT_FAN_IN" rev="1">
+<attrib name="value" value="3.772700"/></item>
+<item name="AVG_SIG_FANOUT" rev="1">
+<attrib name="value" value="1.180000"/></item>
+<item name="LUT" rev="1">
+<attrib name="value" value="22"/></item>
+<item name="MAX_SIG_FANOUT" rev="1">
+<attrib name="value" value="3"/></item>
+<item name="PK_NUM_4_INPUT_LUTS" rev="1">
+<attrib name="value" value="22"/></item>
+<item name="PK_NUM_BONDED_IOBS" rev="1">
+<attrib name="value" value="18"/></item>
+<item name="PK_NUM_MUXF5" rev="1">
+<attrib name="value" value="5"/></item>
+<item name="PK_NUM_MUXFs" rev="1">
+<attrib name="value" value="5"/></item>
+<item name="PK_NUM_SLICES" rev="1">
+<attrib name="value" value="12"/></item>
+<item name="SINGLE_LOAD_SIG" rev="1">
+<attrib name="value" value="19"/></item>
+<item name="THREE_LOAD_SIG" rev="1">
+<attrib name="value" value="1"/></item>
+<item name="TWO_LOAD_SIG" rev="1">
+<attrib name="value" value="2"/></item>
+</group>
+</DesignStatistics>
+<DeviceUsage TimeStamp="Wed Jul 31 14:58:14 2013"><group name="SiteSummary">
+<item name="IOB" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="18"/></item>
+<item name="IOB_INBUF" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="10"/></item>
+<item name="IOB_OUTBUF" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
+<item name="IOB_O_GROUND" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="4"/></item>
+<item name="IOB_PAD" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="18"/></item>
+<item name="SLICE" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="12"/></item>
+<item name="SLICE_F" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="11"/></item>
+<item name="SLICE_F5MUX" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="5"/></item>
+<item name="SLICE_G" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="12"/></item>
+</group>
+</DeviceUsage>
+<ReportConfigData TimeStamp="Wed Jul 31 14:58:14 2013"><group name="SLICE_F">
+<item name="LUT_OR_MEM" rev="2">
+<attrib name="LUT" value="11"/></item>
+</group>
+<group name="SLICE_G">
+<item name="LUT_OR_MEM" rev="2">
+<attrib name="LUT" value="12"/></item>
+</group>
+<group name="IOB_PAD">
+<item name="DRIVEATTRBOX" rev="2">
+<attrib name="12" value="8"/></item>
+<item name="IOATTRBOX" rev="2">
+<attrib name="LVTTL" value="18"/></item>
+<item name="SLEW" rev="2">
+<attrib name="SLOW" value="8"/></item>
+</group>
+</ReportConfigData>
+<ReportPinData TimeStamp="Wed Jul 31 14:58:14 2013"><group name="IOB_OUTBUF">
+<item name="IN" rev="2">
+<attrib name="value" value="8"/></item>
+<item name="OUT" rev="2">
+<attrib name="value" value="8"/></item>
+</group>
+<group name="SLICE_F5MUX">
+<item name="F" rev="2">
+<attrib name="value" value="5"/></item>
+<item name="G" rev="2">
+<attrib name="value" value="5"/></item>
+<item name="OUT" rev="2">
+<attrib name="value" value="5"/></item>
+<item name="S0" rev="2">
+<attrib name="value" value="5"/></item>
+</group>
+<group name="IOB_INBUF">
+<item name="IN" rev="2">
+<attrib name="value" value="10"/></item>
+<item name="OUT" rev="2">
+<attrib name="value" value="10"/></item>
+</group>
+<group name="SLICE">
+<item name="BX" rev="2">
+<attrib name="value" value="5"/></item>
+<item name="F1" rev="2">
+<attrib name="value" value="10"/></item>
+<item name="F2" rev="2">
+<attrib name="value" value="10"/></item>
+<item name="F3" rev="2">
+<attrib name="value" value="9"/></item>
+<item name="F4" rev="2">
+<attrib name="value" value="6"/></item>
+<item name="G1" rev="2">
+<attrib name="value" value="12"/></item>
+<item name="G2" rev="2">
+<attrib name="value" value="12"/></item>
+<item name="G3" rev="2">
+<attrib name="value" value="12"/></item>
+<item name="G4" rev="2">
+<attrib name="value" value="12"/></item>
+<item name="X" rev="2">
+<attrib name="value" value="11"/></item>
+<item name="Y" rev="2">
+<attrib name="value" value="7"/></item>
+</group>
+<group name="SLICE_F">
+<item name="A1" rev="2">
+<attrib name="value" value="10"/></item>
+<item name="A2" rev="2">
+<attrib name="value" value="10"/></item>
+<item name="A3" rev="2">
+<attrib name="value" value="9"/></item>
+<item name="A4" rev="2">
+<attrib name="value" value="6"/></item>
+<item name="D" rev="2">
+<attrib name="value" value="11"/></item>
+</group>
+<group name="SLICE_G">
+<item name="A1" rev="2">
+<attrib name="value" value="12"/></item>
+<item name="A2" rev="2">
+<attrib name="value" value="12"/></item>
+<item name="A3" rev="2">
+<attrib name="value" value="12"/></item>
+<item name="A4" rev="2">
+<attrib name="value" value="12"/></item>
+<item name="D" rev="2">
+<attrib name="value" value="12"/></item>
+</group>
+<group name="IOB_PAD">
+<item name="PAD" rev="2">
+<attrib name="value" value="18"/></item>
+</group>
+<group name="IOB_O_GROUND">
+<item name="0" rev="2">
+<attrib name="value" value="4"/></item>
+</group>
+<group name="IOB">
+<item name="I" rev="2">
+<attrib name="value" value="10"/></item>
+<item name="O" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="PAD" rev="2">
+<attrib name="value" value="18"/></item>
+</group>
+</ReportPinData>
+<CmdHistory>
+</CmdHistory>
+</DeviceUsageSummary>

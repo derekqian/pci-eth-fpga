@@ -1,0 +1,8 @@
+xst -ise "/home/derek/iseproject/ten2four/ten2four.ise" -intstyle ise -ifn "/home/derek/iseproject/ten2four/ten2four.xst" -ofn "/home/derek/iseproject/ten2four/ten2four.syr"
+ngdbuild -ise "/home/derek/iseproject/ten2four/ten2four.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "ten2four.ngc" ten2four.ngd
+xst -ise "/home/derek/iseproject/ten2four/ten2four.ise" -intstyle ise -ifn "/home/derek/iseproject/ten2four/ten2four.xst" -ofn "/home/derek/iseproject/ten2four/ten2four.syr"
+ngdbuild -ise "/home/derek/iseproject/ten2four/ten2four.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "ten2four.ngc" ten2four.ngd
+map -ise "/home/derek/iseproject/ten2four/ten2four.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o ten2four_map.ncd ten2four.ngd ten2four.pcf
+par -ise "/home/derek/iseproject/ten2four/ten2four.ise" -w -intstyle ise -ol std -t 1 ten2four_map.ncd ten2four.ncd ten2four.pcf
+trce -ise "/home/derek/iseproject/ten2four/ten2four.ise" -intstyle ise -v 3 -s 5 -xml ten2four ten2four.ncd -o ten2four.twr ten2four.pcf -ucf ten2four.ucf
+bitgen -ise "/home/derek/iseproject/ten2four/ten2four.ise" -intstyle ise -f ten2four.ut ten2four.ncd

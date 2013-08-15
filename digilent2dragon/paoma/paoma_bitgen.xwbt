@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/derek/iseproject/paoma/paoma.ncd
+OUTFILE=/home/derek/iseproject/paoma/paoma.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=/home/derek/iseproject/paoma
+LICENSE=ISE
+USER_INFO=203015750_205625509_205892658_267

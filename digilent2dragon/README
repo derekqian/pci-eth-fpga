@@ -1,0 +1,5 @@
+Test the connector between two boards. This set of code is for test the direction from digilent to dragon only.
+
+paoma - diligent: only one output is high at the same time, the high bit shift right each second.
+ten2four - dragon: show which bit is high by USB.
+

@@ -1,0 +1,8 @@
+Release 13.3 Drc O.76xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Thu Aug  1 17:03:17 2013
+
+drc -z paoma.ncd paoma.pcf
+
+DRC detected 0 errors and 0 warnings.

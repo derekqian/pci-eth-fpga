@@ -1,0 +1,6 @@
+CommandLine
+/software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/bitgen -ise /home/derek/iseproject/ten2four/ten2four.ise -intstyle ise -f ten2four.ut ten2four.ncd
+s
+FormatString
+bitgen [-d] [-j] [-b] [-w] [-l] [-m] [-t] [-n] [-u] [-a] [--p] [-r <bitFile>] [-intstyle ise|xflow|silent] [-ise <projectrepositoryfile>] {-bd <BRAM_data_file> [tag <tagname>]} {-g <setting_value>} <infile[.ncd]> [<outfile>] [<pcffile[.pcf]>]
+s

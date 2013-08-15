@@ -1,0 +1,19 @@
+NET "INDATA<0>"  LOC = "P86"  ;
+NET "INDATA<1>"  LOC = "P85"  ;
+NET "INDATA<2>"  LOC = "P83"  ;
+NET "INDATA<3>"  LOC = "P84"  ;
+NET "INDATA<4>"  LOC = "P80"  ;
+NET "INDATA<5>"  LOC = "P78"  ;
+NET "INDATA<6>"  LOC = "P79"  ;
+NET "INDATA<7>"  LOC = "P77"  ;
+NET "INDATA<8>"  LOC = "P75"  ;
+NET "INDATA<9>"  LOC = "P76"  ;
+NET "OUTDATA<0>"  LOC = "P67"  ;
+NET "OUTDATA<1>"  LOC = "P62"  ;
+NET "OUTDATA<2>"  LOC = "P60"  ;
+NET "OUTDATA<3>"  LOC = "P57"  ;
+NET "OUTDATA<4>"  LOC = "P39"  ;
+NET "OUTDATA<5>"  LOC = "P44"  ;
+NET "OUTDATA<6>"  LOC = "P46"  ;
+NET "OUTDATA<7>"  LOC = "P49"  ;
+
