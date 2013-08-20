@@ -1,0 +1,40 @@
+Number of Timing Constraints that were not applied: 1
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+* COMP "TRDYn" OFFSET = OUT 11 ns AFTER COM | MAXDELAY|    -1.097ns|    12.097ns|       1|        1097
+  P "CLK"                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* COMP "DEVSELn" OFFSET = OUT 11 ns AFTER C | MAXDELAY|    -1.053ns|    12.053ns|       1|        1053
+  OMP "CLK"                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* TIMEGRP "AD_GRP" OFFSET = IN 7 ns BEFORE  | SETUP   |    -0.008ns|     7.008ns|       1|           8
+  COMP "CLK"                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "CBE_GRP" OFFSET = IN 7 ns BEFORE | SETUP   |     1.738ns|     5.262ns|       0|           0
+   COMP "CLK"                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "FRAMEn" OFFSET = IN 7 ns BEFORE COM | SETUP   |     2.154ns|     4.846ns|       0|           0
+  P "CLK"                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  COMP "IRDYn" OFFSET = IN 7 ns BEFORE COMP | SETUP   |     4.164ns|     2.836ns|       0|           0
+   "CLK"                                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_CLK = PERIOD TIMEGRP "CLK" 30 ns HIGH  | SETUP   |    24.347ns|     5.653ns|       0|           0
+  50%                                       | HOLD    |     2.902ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "AD_GRP" OFFSET = OUT 41 ns AFTER | N/A     |         N/A|         N/A|     N/A|         N/A
+   COMP "CLK"                               |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+
+
+3 constraints not met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+

@@ -1,0 +1,1 @@
+use "cat /proc/ioports" to check free IO ports, and change the verilog code correspondently.

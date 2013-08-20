@@ -1,0 +1,182 @@
+Release 10.1.03 Map K.39 (lin)
+Xilinx Mapping Report File for Design 'PCI'
+
+Design Information
+------------------
+Command Line   : map -ise /home/derek/pci-eth-fpga/pciled/pciled/pciled.ise
+-intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o
+PCI_map.ncd PCI.ngd PCI.pcf 
+Target Device  : xc2s100
+Target Package : tq144
+Target Speed   : -5
+Mapper Version : spartan2 -- $Revision: 1.46.12.2 $
+Mapped Date    : Tue Aug 20 15:15:18 2013
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:         4 out of  2,400    1%
+  Number of 4 input LUTs:            16 out of  2,400    1%
+Logic Distribution:
+    Number of occupied Slices:                           9 out of  1,200    1%
+    Number of Slices containing only related logic:      9 out of      9  100%
+    Number of Slices containing unrelated logic:         0 out of      9    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+Total Number of 4 input LUTs:        16 out of  2,400    1%
+   Number of bonded IOBs:            42 out of     92   45%
+   Number of GCLKs:                   1 out of      4   25%
+   Number of GCLKIOBs:                1 out of      4   25%
+
+Peak Memory Usage:  130 MB
+Total REAL time to MAP completion:  0 secs 
+Total CPU time to MAP completion:   0 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+Section 14 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type    | Direction | IO Standard | Drive    | Slew | Reg (s)  | Resistor | IOB   |
+|                                    |         |           |             | Strength | Rate |          |          | Delay |
++------------------------------------------------------------------------------------------------------------------------+
+| CLK                                | GCLKIOB | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<0>                              | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<1>                              | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<2>                              | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<3>                              | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<4>                              | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<5>                              | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<6>                              | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<7>                              | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<8>                              | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<9>                              | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<10>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<11>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<12>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<13>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<14>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<15>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<16>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<17>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<18>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<19>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<20>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<21>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<22>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<23>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<24>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<25>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<26>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<27>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<28>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<29>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<30>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| AD<31>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| CBE<0>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| CBE<1>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| CBE<2>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| CBE<3>                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| DEVSELn                            | IOB     | OUTPUT    | PCI33_5     |          |      |          |          |       |
+| FRAMEn                             | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| IRDYn                              | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| LED                                | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| RSTn                               | IOB     | INPUT     | PCI33_5     |          |      |          |          |       |
+| TRDYn                              | IOB     | BIDIR     | PCI33_5     |          |      |          |          |       |
++------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+No timing report for this architecture.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+No control set information for this architecture.

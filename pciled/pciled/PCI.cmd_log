@@ -1,0 +1,22 @@
+xst -ise "/home/derek/iseproject/pciled/pciled.ise" -intstyle ise -ifn "/home/derek/iseproject/pciled/PCI.xst" -ofn "/home/derek/iseproject/pciled/PCI.syr"
+ngdbuild -ise "/home/derek/iseproject/pciled/pciled.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "PCI.ngc" PCI.ngd
+ngdbuild -ise "/home/derek/iseproject/pciled/pciled.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "PCI.ngc" PCI.ngd
+xst -ise "/home/derek/iseproject/pciled/pciled.ise" -intstyle ise -ifn "/home/derek/iseproject/pciled/PCI.xst" -ofn "/home/derek/iseproject/pciled/PCI.syr"
+ngdbuild -ise "/home/derek/iseproject/pciled/pciled.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "PCI.ngc" PCI.ngd
+map -ise "/home/derek/iseproject/pciled/pciled.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o PCI_map.ncd PCI.ngd PCI.pcf
+par -ise "/home/derek/iseproject/pciled/pciled.ise" -w -intstyle ise -ol std -t 1 PCI_map.ncd PCI.ncd PCI.pcf
+trce -ise "/home/derek/iseproject/pciled/pciled.ise" -intstyle ise -v 3 -s 5 -xml PCI PCI.ncd -o PCI.twr PCI.pcf -ucf PCI.ucf
+bitgen -ise "/home/derek/iseproject/pciled/pciled.ise" -intstyle ise -f PCI.ut PCI.ncd
+ngdbuild -ise "/home/derek/pci-eth-fpga/pciled/pciled/pciled.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "PCI.ngc" PCI.ngd
+ngdbuild -ise "/home/derek/pci-eth-fpga/pciled/pciled/pciled.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "PCI.ngc" PCI.ngd
+xst -ise "/home/derek/pci-eth-fpga/pciled/pciled/pciled.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pciled/pciled/PCI.xst" -ofn "/home/derek/pci-eth-fpga/pciled/pciled/PCI.syr"
+xst -ise "/home/derek/pci-eth-fpga/pciled/pciled/pciled.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pciled/pciled/PCI.xst" -ofn "/home/derek/pci-eth-fpga/pciled/pciled/PCI.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pciled/pciled/pciled.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "PCI.ngc" PCI.ngd
+xst -ise "/home/derek/pci-eth-fpga/pciled/pciled/pciled.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pciled/pciled/PCI.xst" -ofn "/home/derek/pci-eth-fpga/pciled/pciled/PCI.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pciled/pciled/pciled.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "PCI.ngc" PCI.ngd
+xst -ise "/home/derek/pci-eth-fpga/pciled/pciled/pciled.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pciled/pciled/PCI.xst" -ofn "/home/derek/pci-eth-fpga/pciled/pciled/PCI.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pciled/pciled/pciled.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "PCI.ngc" PCI.ngd
+map -ise "/home/derek/pci-eth-fpga/pciled/pciled/pciled.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o PCI_map.ncd PCI.ngd PCI.pcf
+par -ise "/home/derek/pci-eth-fpga/pciled/pciled/pciled.ise" -w -intstyle ise -ol std -t 1 PCI_map.ncd PCI.ncd PCI.pcf
+trce -ise "/home/derek/pci-eth-fpga/pciled/pciled/pciled.ise" -intstyle ise -v 3 -s 5 -xml PCI PCI.ncd -o PCI.twr PCI.pcf -ucf PCI.ucf
+bitgen -ise "/home/derek/pci-eth-fpga/pciled/pciled/pciled.ise" -intstyle ise -f PCI.ut PCI.ncd

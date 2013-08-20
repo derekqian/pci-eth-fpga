@@ -1,0 +1,383 @@
+Release 10.1.03 - xst K.39 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/derek/pci-eth-fpga/pciled/pciled/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/derek/pci-eth-fpga/pciled/pciled/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: PCI.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "PCI.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "PCI"
+Output Format                      : NGC
+Target Device                      : xc2s100-5-tq144
+
+---- Source Options
+Top Module Name                    : PCI
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Convert Tristates To Logic         : Yes
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : PCI.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "pciled.v" in library work
+Module <PCI> compiled
+No errors in compilation
+Analysis of file <"PCI.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <PCI> in library <work> with parameters.
+	CBECD_IOWrite = "0011"
+	IO_address = "00000000000000000000001000000000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <PCI>.
+	CBECD_IOWrite = 4'b0011
+	IO_address = 32'b00000000000000000000001000000000
+Module <PCI> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <PCI>.
+    Related source file is "pciled.v".
+    Found 1-bit tristate buffer for signal <DEVSELn>.
+    Found 1-bit register for signal <LED>.
+    Found 1-bit tristate buffer for signal <TRDYn>.
+    Found 1-bit register for signal <DevSel>.
+    Found 1-bit register for signal <DevSelOE>.
+    Found 1-bit register for signal <Transaction>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   2 Tristate(s).
+Unit <PCI> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ 1-bit register                                        : 4
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file 'v100.nph' in environment /software/ISE_WEBPACK_10.1/ISE.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <PCI> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block PCI, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : PCI.ngr
+Top Level Output File Name         : PCI
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 43
+
+Cell Usage :
+# BELS                             : 31
+#      GND                         : 1
+#      INV                         : 4
+#      LUT2                        : 1
+#      LUT3                        : 3
+#      LUT4                        : 11
+#      MUXCY                       : 10
+#      VCC                         : 1
+# FlipFlops/Latches                : 4
+#      FDC                         : 3
+#      FDE                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 42
+#      IBUF                        : 39
+#      IOBUF                       : 1
+#      OBUF                        : 1
+#      OBUFT                       : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2s100tq144-5 
+
+ Number of Slices:                        8  out of   1200     0%  
+ Number of Slice Flip Flops:              4  out of   2400     0%  
+ Number of 4 input LUTs:                 19  out of   2400     0%  
+ Number of IOs:                          43
+ Number of bonded IOBs:                  43  out of     92    46%  
+ Number of GCLKs:                         1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 4     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+RSTn_inv(RSTn_inv1_INV_0:O)        | NONE(Transaction)      | 3     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.461ns (Maximum Frequency: 183.117MHz)
+   Minimum input arrival time before clock: 6.757ns
+   Maximum output required time after clock: 10.348ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 5.461ns (frequency: 183.117MHz)
+  Total number of paths / destination ports: 6 / 4
+-------------------------------------------------------------------------
+Delay:               5.461ns (Levels of Logic = 1)
+  Source:            DevSel (FF)
+  Destination:       LED (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: DevSel to LED
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   1.292   1.480  DevSel (DevSel)
+     LUT3:I2->O            1   0.653   1.150  DataTransfer1 (DataTransfer)
+     FDE:CE                    0.886          LED
+    ----------------------------------------
+    Total                      5.461ns (2.831ns logic, 2.630ns route)
+                                       (51.8% logic, 48.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 84 / 5
+-------------------------------------------------------------------------
+Offset:              6.757ns (Levels of Logic = 5)
+  Source:            FRAMEn (PAD)
+  Destination:       DevSel (FF)
+  Destination Clock: CLK rising
+
+  Data Path: FRAMEn to DevSel
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.924   1.600  FRAMEn_IBUF (FRAMEn_IBUF)
+     LUT4:I2->O            1   0.653   0.000  DevSelOE_mux00002_wg_lut<8> (DevSelOE_mux00002_wg_lut<8>)
+     MUXCY:S->O            1   0.784   0.000  DevSelOE_mux00002_wg_cy<8> (DevSelOE_mux00002_wg_cy<8>)
+     MUXCY:CI->O           2   0.050   1.340  DevSelOE_mux00002_wg_cy<9> (DevSelOE_mux00002_wg_cy<9>)
+     LUT4:I3->O            1   0.653   0.000  DevSelOE_mux00001 (DevSelOE_mux0000)
+     FDC:D                     0.753          DevSelOE
+    ----------------------------------------
+    Total                      6.757ns (3.817ns logic, 2.940ns route)
+                                       (56.5% logic, 43.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 5 / 3
+-------------------------------------------------------------------------
+Offset:              10.348ns (Levels of Logic = 2)
+  Source:            DevSelOE (FF)
+  Destination:       TRDYn (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: DevSelOE to TRDYn
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   1.292   1.340  DevSelOE (DevSelOE)
+     INV:I->O              2   0.653   1.340  DevSelOE_inv1_INV_0 (DevSelOE_inv)
+     OBUFT:T->O                5.723          DEVSELn_OBUFT (DEVSELn)
+    ----------------------------------------
+    Total                     10.348ns (7.668ns logic, 2.680ns route)
+                                       (74.1% logic, 25.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.32 secs
+ 
+--> 
+
+
+Total memory usage is 126888 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

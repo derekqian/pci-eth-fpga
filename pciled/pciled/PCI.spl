@@ -1,0 +1,15 @@
+[Inputs]
+CLK
+RSTn
+FRAMEn
+IRDYn
+=AD[31:0]=
+=CBE[3:0]=
+[Outputs]
+LED
+[BiDir]
+TRDYn
+DEVSELn
+[ATTRIBUTES]
+VeriModel PCI
+

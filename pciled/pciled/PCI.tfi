@@ -1,0 +1,17 @@
+
+
+
+// Instantiate the module
+PCI instance_name (
+    .CLK(CLK), 
+    .RSTn(RSTn), 
+    .FRAMEn(FRAMEn), 
+    .AD(AD), 
+    .CBE(CBE), 
+    .IRDYn(IRDYn), 
+    .TRDYn(TRDYn), 
+    .DEVSELn(DEVSELn), 
+    .LED(LED)
+    );
+
+

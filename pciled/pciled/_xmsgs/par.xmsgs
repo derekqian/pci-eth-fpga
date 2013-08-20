@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Timing" num="3224" delta="unknown" >The clock <arg fmt="%s" index="1">CLK</arg> associated with <arg fmt="%s" index="2">TIMEGRP &quot;AD_GRP&quot; OFFSET = OUT 41 ns AFTER COMP &quot;CLK&quot;;</arg> does not clock any registered <arg fmt="%s" index="3">output</arg> components.</msg>
+
+<msg type="warning" file="Timing" num="3225" delta="unknown" >Timing constraint <arg fmt="%s" index="1">TIMEGRP &quot;AD_GRP&quot; OFFSET = OUT 41 ns AFTER COMP &quot;CLK&quot;;</arg> ignored during timing analysis</msg>
+
+<msg type="info" file="Timing" num="2761" delta="unknown" >N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no requested value.</msg>
+
+<msg type="info" file="Timing" num="2761" delta="unknown" >N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no requested value.</msg>
+
+<msg type="warning" file="Par" num="62" delta="unknown" >Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
+
+   Review the timing report using Timing Analyzer (In ISE select &quot;Post-Place &amp;
+   Route Static Timing Report&quot;).  Go to the failing constraint(s) and select
+   the &quot;Timing Improvement Wizard&quot; link for suggestions to correct each problem.
+
+Try the Design Goal and Strategies for Timing Performance (In ISE select Project -&gt; Design Goals &amp; Strategies) to ensure the best options are set in the tools for timing closure.
+
+</msg>
+
+<msg type="info" file="Timing" num="2761" delta="unknown" >N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no requested value.</msg>
+
+</messages>
+
