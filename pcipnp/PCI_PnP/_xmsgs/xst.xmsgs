@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">PCI_data&lt;31:2&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">PCI_TransferRead</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">PCI_CSTransferRead</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="0" delta="unknown" >The RAM &lt;<arg fmt="%s" index="1">Mram_RAM</arg>&gt; will be implemented as BLOCK RAM
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="unknown" >Node &lt;<arg fmt="%s" index="1">PCI_data_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">PCI_PnP</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2041" delta="unknown" >Unit <arg fmt="%s" index="1">PCI_PnP</arg>: <arg fmt="%d" index="2">1</arg> internal tristate is replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+
+</messages>
+

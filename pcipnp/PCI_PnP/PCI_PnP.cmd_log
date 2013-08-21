@@ -1,0 +1,13 @@
+xst -ise "/home/derek/iseproject/PCI_PnP/PCI_PnP.ise" -intstyle ise -ifn "/home/derek/iseproject/PCI_PnP/PCI_PnP.xst" -ofn "/home/derek/iseproject/PCI_PnP/PCI_PnP.syr"
+xst -ise "/home/derek/iseproject/PCI_PnP/PCI_PnP.ise" -intstyle ise -ifn "/home/derek/iseproject/PCI_PnP/PCI_PnP.xst" -ofn "/home/derek/iseproject/PCI_PnP/PCI_PnP.syr"
+ngdbuild -ise "/home/derek/iseproject/PCI_PnP/PCI_PnP.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "PCI_PnP.ngc" PCI_PnP.ngd
+map -ise "/home/derek/iseproject/PCI_PnP/PCI_PnP.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o PCI_PnP_map.ncd PCI_PnP.ngd PCI_PnP.pcf
+par -ise "/home/derek/iseproject/PCI_PnP/PCI_PnP.ise" -w -intstyle ise -ol std -t 1 PCI_PnP_map.ncd PCI_PnP.ncd PCI_PnP.pcf
+trce -ise "/home/derek/iseproject/PCI_PnP/PCI_PnP.ise" -intstyle ise -v 3 -s 5 -xml PCI_PnP PCI_PnP.ncd -o PCI_PnP.twr PCI_PnP.pcf -ucf PCI_PnP.ucf
+bitgen -ise "/home/derek/iseproject/PCI_PnP/PCI_PnP.ise" -intstyle ise -f PCI_PnP.ut PCI_PnP.ncd
+xst -ise "/home/derek/pci-eth-fpga/pcipnp/PCI_PnP/PCI_PnP.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcipnp/PCI_PnP/PCI_PnP.xst" -ofn "/home/derek/pci-eth-fpga/pcipnp/PCI_PnP/PCI_PnP.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcipnp/PCI_PnP/PCI_PnP.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "PCI_PnP.ngc" PCI_PnP.ngd
+map -ise "/home/derek/pci-eth-fpga/pcipnp/PCI_PnP/PCI_PnP.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o PCI_PnP_map.ncd PCI_PnP.ngd PCI_PnP.pcf
+par -ise "/home/derek/pci-eth-fpga/pcipnp/PCI_PnP/PCI_PnP.ise" -w -intstyle ise -ol std -t 1 PCI_PnP_map.ncd PCI_PnP.ncd PCI_PnP.pcf
+trce -ise "/home/derek/pci-eth-fpga/pcipnp/PCI_PnP/PCI_PnP.ise" -intstyle ise -v 3 -s 5 -xml PCI_PnP PCI_PnP.ncd -o PCI_PnP.twr PCI_PnP.pcf -ucf PCI_PnP.ucf
+bitgen -ise "/home/derek/pci-eth-fpga/pcipnp/PCI_PnP/PCI_PnP.ise" -intstyle ise -f PCI_PnP.ut PCI_PnP.ncd
