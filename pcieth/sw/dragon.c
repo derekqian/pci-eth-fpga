@@ -210,9 +210,10 @@ static long iDragon_ioctl(struct file *file, unsigned int cmd, unsigned long arg
                 }
                 outl(value, port + 0x4);
             } else {
-                if (copy_from_user(data->membase + 1, (unsigned int *)arg, sizeof(unsigned int))) {
+                if (copy_from_user(&value, (unsigned int *)arg, sizeof(unsigned int))) {
                     return -EACCES;
                 }
+                data->membase[1] = value;
             }
             break;
         case IOCTL_GET_STATUS:
@@ -236,9 +237,10 @@ static long iDragon_ioctl(struct file *file, unsigned int cmd, unsigned long arg
                 }
                 outl(value, port + 0x8);
             } else {
-                if (copy_from_user(data->membase + 2, (unsigned int *)arg, sizeof(unsigned int))) {
+                if (copy_from_user(&value, (unsigned int *)arg, sizeof(unsigned int))) {
                     return -EACCES;
                 }
+                data->membase[2] = value;
             }
             break;
         case IOCTL_GET_SWITCH:
