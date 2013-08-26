@@ -1,0 +1,6 @@
+CommandLine
+/software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/xst -ise /home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise -intstyle ise -ifn /home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst -ofn /home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s

@@ -1,0 +1,76 @@
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "pcieth.ngc" pcieth.ngd
+map -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o pcieth_map.ncd pcieth.ngd pcieth.pcf
+par -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -w -intstyle ise -ol std -t 1 pcieth_map.ncd pcieth.ncd pcieth.pcf
+trce -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -v 3 -s 5 -xml pcieth pcieth.ncd -o pcieth.twr pcieth.pcf -ucf pcieth.ucf
+bitgen -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -f pcieth.ut pcieth.ncd
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "pcieth.ngc" pcieth.ngd
+map -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o pcieth_map.ncd pcieth.ngd pcieth.pcf
+par -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -w -intstyle ise -ol std -t 1 pcieth_map.ncd pcieth.ncd pcieth.pcf
+trce -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -v 3 -s 5 -xml pcieth pcieth.ncd -o pcieth.twr pcieth.pcf -ucf pcieth.ucf
+bitgen -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -f pcieth.ut pcieth.ncd
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "pcieth.ngc" pcieth.ngd
+map -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o pcieth_map.ncd pcieth.ngd pcieth.pcf
+par -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -w -intstyle ise -ol std -t 1 pcieth_map.ncd pcieth.ncd pcieth.pcf
+trce -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -v 3 -s 5 -xml pcieth pcieth.ncd -o pcieth.twr pcieth.pcf -ucf pcieth.ucf
+bitgen -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -f pcieth.ut pcieth.ncd
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "pcieth.ngc" pcieth.ngd
+map -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o pcieth_map.ncd pcieth.ngd pcieth.pcf
+par -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -w -intstyle ise -ol std -t 1 pcieth_map.ncd pcieth.ncd pcieth.pcf
+trce -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -v 3 -s 5 -xml pcieth pcieth.ncd -o pcieth.twr pcieth.pcf -ucf pcieth.ucf
+bitgen -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -f pcieth.ut pcieth.ncd
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "pcieth.ngc" pcieth.ngd
+map -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o pcieth_map.ncd pcieth.ngd pcieth.pcf
+par -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -w -intstyle ise -ol std -t 1 pcieth_map.ncd pcieth.ncd pcieth.pcf
+trce -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -v 3 -s 5 -xml pcieth pcieth.ncd -o pcieth.twr pcieth.pcf -ucf pcieth.ucf
+bitgen -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -f pcieth.ut pcieth.ncd
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "pcieth.ngc" pcieth.ngd
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "pcieth.ngc" pcieth.ngd
+map -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o pcieth_map.ncd pcieth.ngd pcieth.pcf
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "pcieth.ngc" pcieth.ngd
+map -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o pcieth_map.ncd pcieth.ngd pcieth.pcf
+par -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -w -intstyle ise -ol std -t 1 pcieth_map.ncd pcieth.ncd pcieth.pcf
+trce -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -v 3 -s 5 -xml pcieth pcieth.ncd -o pcieth.twr pcieth.pcf -ucf pcieth.ucf
+bitgen -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -f pcieth.ut pcieth.ncd
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "pcieth.ngc" pcieth.ngd
+map -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o pcieth_map.ncd pcieth.ngd pcieth.pcf
+par -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -w -intstyle ise -ol std -t 1 pcieth_map.ncd pcieth.ncd pcieth.pcf
+trce -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -v 3 -s 5 -xml pcieth pcieth.ncd -o pcieth.twr pcieth.pcf -ucf pcieth.ucf
+bitgen -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -f pcieth.ut pcieth.ncd
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "pcieth.ngc" pcieth.ngd
+map -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o pcieth_map.ncd pcieth.ngd pcieth.pcf
+par -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -w -intstyle ise -ol std -t 1 pcieth_map.ncd pcieth.ncd pcieth.pcf
+trce -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -v 3 -s 5 -xml pcieth pcieth.ncd -o pcieth.twr pcieth.pcf -ucf pcieth.ucf
+bitgen -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -f pcieth.ut pcieth.ncd
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "pcieth.ngc" pcieth.ngd
+map -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o pcieth_map.ncd pcieth.ngd pcieth.pcf
+par -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -w -intstyle ise -ol std -t 1 pcieth_map.ncd pcieth.ncd pcieth.pcf
+trce -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -v 3 -s 5 -xml pcieth pcieth.ncd -o pcieth.twr pcieth.pcf -ucf pcieth.ucf
+bitgen -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -f pcieth.ut pcieth.ncd
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "pcieth.ngc" pcieth.ngd
+map -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o pcieth_map.ncd pcieth.ngd pcieth.pcf
+par -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -w -intstyle ise -ol std -t 1 pcieth_map.ncd pcieth.ncd pcieth.pcf
+trce -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -v 3 -s 5 -xml pcieth pcieth.ncd -o pcieth.twr pcieth.pcf -ucf pcieth.ucf
+bitgen -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -f pcieth.ut pcieth.ncd
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+xst -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.syr"
+ngdbuild -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc2s100-tq144-5 "pcieth.ngc" pcieth.ngd
+map -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o pcieth_map.ncd pcieth.ngd pcieth.pcf
+par -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -w -intstyle ise -ol std -t 1 pcieth_map.ncd pcieth.ncd pcieth.pcf
+trce -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -v 3 -s 5 -xml pcieth pcieth.ncd -o pcieth.twr pcieth.pcf -ucf pcieth.ucf
+bitgen -ise "/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise" -intstyle ise -f pcieth.ut pcieth.ncd

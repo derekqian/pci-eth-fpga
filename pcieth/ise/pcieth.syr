@@ -1,0 +1,770 @@
+Release 10.1.03 - xst K.39 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/derek/pci-eth-fpga/pcieth/ise/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/derek/pci-eth-fpga/pcieth/ise/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: pcieth.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pcieth.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pcieth"
+Output Format                      : NGC
+Target Device                      : xc2s100-5-tq144
+
+---- Source Options
+Top Module Name                    : pcieth
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Convert Tristates To Logic         : Yes
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : pcieth.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "pcieth.v" in library work
+Module <pcieth> compiled
+Module <SR16_8> compiled
+Module <SR16> compiled
+No errors in compilation
+Analysis of file <"pcieth.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <pcieth> in library <work> with parameters.
+	DEVICE_ID = "0000000000000001"
+	PCI_CBECD_CSRead = "1010"
+	PCI_CBECD_CSWrite = "1011"
+	PCI_CBECD_IORead = "0010"
+	PCI_CBECD_IOWrite = "0011"
+	PCI_CBECD_MEMRead = "0110"
+	PCI_CBECD_MEMReadLine = "1110"
+	PCI_CBECD_MEMReadMultiple = "1100"
+	PCI_CBECD_MEMWrite = "0111"
+	PCI_CBECD_MEMWriteAndInvalidate = "1111"
+	VENDOR_ID = "0000000100000000"
+
+Analyzing hierarchy for module <SR16_8> in library <work>.
+
+Analyzing hierarchy for module <SR16> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <pcieth>.
+	DEVICE_ID = 16'b0000000000000001
+	PCI_CBECD_CSRead = 4'b1010
+	PCI_CBECD_CSWrite = 4'b1011
+	PCI_CBECD_IORead = 4'b0010
+	PCI_CBECD_IOWrite = 4'b0011
+	PCI_CBECD_MEMRead = 4'b0110
+	PCI_CBECD_MEMReadLine = 4'b1110
+	PCI_CBECD_MEMReadMultiple = 4'b1100
+	PCI_CBECD_MEMWrite = 4'b0111
+	PCI_CBECD_MEMWriteAndInvalidate = 4'b1111
+	VENDOR_ID = 16'b0000000100000000
+WARNING:Xst:905 - "pcieth.v" line 204: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <InterruptLine>
+Module <pcieth> is correct for synthesis.
+ 
+Analyzing module <SR16_8> in library <work>.
+Module <SR16_8> is correct for synthesis.
+ 
+Analyzing module <SR16> in library <work>.
+Module <SR16> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <SR16>.
+    Related source file is "pcieth.v".
+WARNING:Xst:646 - Signal <data<15>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 16-bit register for signal <data>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <SR16> synthesized.
+
+
+Synthesizing Unit <SR16_8>.
+    Related source file is "pcieth.v".
+Unit <SR16_8> synthesized.
+
+
+Synthesizing Unit <pcieth>.
+    Related source file is "pcieth.v".
+WARNING:Xst:653 - Signal <REG_switch> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:646 - Signal <REG_led<31:3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <PCI_TransferWrite> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <PCI_TransferRead> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <PCI_MEMTransferRead> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <PCI_IOTransferRead> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 256x48-bit dual-port RAM <Mram_RAM_LA> for signal <RAM_LA>.
+WARNING:Xst:737 - Found 32-bit latch for signal <PCI_DATAread>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 32-bit tristate buffer for signal <PCI_AD>.
+    Found 1-bit tristate buffer for signal <PCI_DEVSELn>.
+    Found 1-bit tristate buffer for signal <PCI_INTAn>.
+    Found 1-bit tristate buffer for signal <PCI_REQn>.
+    Found 1-bit tristate buffer for signal <PCI_STOPn>.
+    Found 1-bit tristate buffer for signal <PCI_TRDYn>.
+    Found 8-bit tristate buffer for signal <USB_D>.
+    Found 1-bit register for signal <acquisition>.
+    Found 8-bit register for signal <addr_regb>.
+    Found 8-bit up counter for signal <addra>.
+    Found 11-bit up counter for signal <addrb>.
+    Found 24-bit up counter for signal <counter>.
+    Found 8-bit register for signal <InterruptLine>.
+    Found 1-bit register for signal <PCI_AD_OE>.
+    Found 1-bit register for signal <PCI_ConfSpace>.
+    Found 10-bit register for signal <PCI_CSBAR0>.
+    Found 1-bit register for signal <PCI_CSCMD_IOenabled>.
+    Found 1-bit register for signal <PCI_CSCMD_MEMenabled>.
+    Found 32-bit 8-to-1 multiplexer for signal <PCI_DATAread$mux0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <PCI_DATAread$mux0001>.
+    Found 32-bit 4-to-1 multiplexer for signal <PCI_DATAread$mux0002>.
+    Found 1-bit register for signal <PCI_DevSel>.
+    Found 1-bit register for signal <PCI_DevSelOE>.
+    Found 1-bit register for signal <PCI_INTA>.
+    Found 1-bit register for signal <PCI_IOSpace>.
+    Found 16-bit register for signal <PCI_MEMBAR1>.
+    Found 1-bit register for signal <PCI_MEMSpace>.
+    Found 10-bit comparator equal for signal <PCI_Targeted$cmp_eq0000> created at line 99.
+    Found 16-bit comparator equal for signal <PCI_Targeted$cmp_eq0002> created at line 99.
+    Found 1-bit register for signal <PCI_TargetReady>.
+    Found 1-bit register for signal <PCI_Transaction>.
+    Found 1-bit register for signal <PCI_Transaction_Read_nWrite>.
+    Found 4-bit up counter for signal <PCI_TransactionAddr>.
+    Found 1-bit register for signal <PCI_WasLastDataTransfer>.
+    Found 32-bit register for signal <REG_led>.
+    Found 32-bit register for signal <REG_status>.
+    Found 8-bit register for signal <USB_Data>.
+    Found 8-bit 8-to-1 multiplexer for signal <USB_Data$mux0000> created at line 349.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Counter(s).
+	inferred 128 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred 104 Multiplexer(s).
+	inferred  45 Tristate(s).
+Unit <pcieth> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 256x48-bit dual-port RAM                              : 1
+# Counters                                             : 4
+ 11-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 69
+ 1-bit register                                        : 14
+ 10-bit register                                       : 1
+ 16-bit register                                       : 49
+ 32-bit register                                       : 2
+ 8-bit register                                        : 3
+# Latches                                              : 1
+ 32-bit latch                                          : 1
+# Comparators                                          : 2
+ 10-bit comparator equal                               : 1
+ 16-bit comparator equal                               : 1
+# Multiplexers                                         : 4
+ 32-bit 4-to-1 multiplexer                             : 2
+ 32-bit 8-to-1 multiplexer                             : 1
+ 8-bit 8-to-1 multiplexer                              : 1
+# Tristates                                            : 7
+ 1-bit tristate buffer                                 : 5
+ 32-bit tristate buffer                                : 1
+ 8-bit tristate buffer                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file 'v100.nph' in environment /software/ISE_WEBPACK_10.1/ISE.
+
+Synthesizing (advanced) Unit <pcieth>.
+INFO:Xst - The RAM <Mram_RAM_LA> will be implemented as a BLOCK RAM, absorbing the following register(s): <addr_regb>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 48-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <PCI_CLK>       | rise     |
+    |     weA            | connected to signal <acquisition>   | high     |
+    |     addrA          | connected to signal <addra>         |          |
+    |     diA            | connected to signal <dosr>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 256-word x 48-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLK24>         | rise     |
+    |     addrB          | connected to signal <addrb>         |          |
+    |     doB            | connected to signal <dob>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <pcieth> synthesized (advanced).
+WARNING:Xst:2677 - Node <data_4> of sequential type is unconnected in block <SR16>.
+WARNING:Xst:2677 - Node <data_5> of sequential type is unconnected in block <SR16>.
+WARNING:Xst:2677 - Node <data_6> of sequential type is unconnected in block <SR16>.
+WARNING:Xst:2677 - Node <data_7> of sequential type is unconnected in block <SR16>.
+WARNING:Xst:2677 - Node <data_8> of sequential type is unconnected in block <SR16>.
+WARNING:Xst:2677 - Node <data_9> of sequential type is unconnected in block <SR16>.
+WARNING:Xst:2677 - Node <data_10> of sequential type is unconnected in block <SR16>.
+WARNING:Xst:2677 - Node <data_11> of sequential type is unconnected in block <SR16>.
+WARNING:Xst:2677 - Node <data_12> of sequential type is unconnected in block <SR16>.
+WARNING:Xst:2677 - Node <data_13> of sequential type is unconnected in block <SR16>.
+WARNING:Xst:2677 - Node <data_14> of sequential type is unconnected in block <SR16>.
+WARNING:Xst:2677 - Node <data_15> of sequential type is unconnected in block <SR16>.
+WARNING:Xst:2677 - Node <REG_led_3> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_4> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_5> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_6> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_7> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_8> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_9> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_10> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_11> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_12> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_13> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_14> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_15> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_16> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_17> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_18> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_19> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_20> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_21> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_22> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_23> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_24> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_25> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_26> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_27> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_28> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_29> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_30> of sequential type is unconnected in block <pcieth>.
+WARNING:Xst:2677 - Node <REG_led_31> of sequential type is unconnected in block <pcieth>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 256x48-bit dual-port block RAM                        : 1
+# Counters                                             : 4
+ 11-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 283
+ Flip-Flops                                            : 283
+# Latches                                              : 1
+ 32-bit latch                                          : 1
+# Comparators                                          : 2
+ 10-bit comparator equal                               : 1
+ 16-bit comparator equal                               : 1
+# Multiplexers                                         : 4
+ 32-bit 4-to-1 multiplexer                             : 2
+ 32-bit 8-to-1 multiplexer                             : 1
+ 8-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <pcieth> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pcieth, actual ratio is 19.
+FlipFlop PCI_IOSpace has been replicated 1 time(s)
+FlipFlop PCI_TransactionAddr_0 has been replicated 3 time(s)
+FlipFlop PCI_TransactionAddr_1 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <pcieth> :
+	Found 4-bit shift register for signal <SR5/SR_0/data_3>.
+	Found 4-bit shift register for signal <SR5/SR_1/data_3>.
+	Found 4-bit shift register for signal <SR5/SR_2/data_3>.
+	Found 4-bit shift register for signal <SR5/SR_3/data_3>.
+	Found 4-bit shift register for signal <SR5/SR_4/data_3>.
+	Found 4-bit shift register for signal <SR5/SR_5/data_3>.
+	Found 4-bit shift register for signal <SR5/SR_6/data_3>.
+	Found 4-bit shift register for signal <SR5/SR_7/data_3>.
+	Found 4-bit shift register for signal <SR4/SR_0/data_3>.
+	Found 4-bit shift register for signal <SR4/SR_1/data_3>.
+	Found 4-bit shift register for signal <SR4/SR_2/data_3>.
+	Found 4-bit shift register for signal <SR4/SR_3/data_3>.
+	Found 4-bit shift register for signal <SR4/SR_4/data_3>.
+	Found 4-bit shift register for signal <SR4/SR_5/data_3>.
+	Found 4-bit shift register for signal <SR4/SR_6/data_3>.
+	Found 4-bit shift register for signal <SR4/SR_7/data_3>.
+	Found 4-bit shift register for signal <SR3/SR_0/data_3>.
+	Found 4-bit shift register for signal <SR3/SR_1/data_3>.
+	Found 4-bit shift register for signal <SR3/SR_2/data_3>.
+	Found 4-bit shift register for signal <SR3/SR_3/data_3>.
+	Found 4-bit shift register for signal <SR3/SR_4/data_3>.
+	Found 4-bit shift register for signal <SR3/SR_5/data_3>.
+	Found 4-bit shift register for signal <SR3/SR_6/data_3>.
+	Found 4-bit shift register for signal <SR3/SR_7/data_3>.
+	Found 4-bit shift register for signal <SR2/SR_0/data_3>.
+	Found 4-bit shift register for signal <SR2/SR_1/data_3>.
+	Found 4-bit shift register for signal <SR2/SR_2/data_3>.
+	Found 4-bit shift register for signal <SR2/SR_3/data_3>.
+	Found 4-bit shift register for signal <SR2/SR_4/data_3>.
+	Found 4-bit shift register for signal <SR2/SR_5/data_3>.
+	Found 4-bit shift register for signal <SR2/SR_6/data_3>.
+	Found 4-bit shift register for signal <SR2/SR_7/data_3>.
+	Found 4-bit shift register for signal <SR1/SR_0/data_3>.
+	Found 4-bit shift register for signal <SR1/SR_1/data_3>.
+	Found 4-bit shift register for signal <SR1/SR_2/data_3>.
+	Found 4-bit shift register for signal <SR1/SR_3/data_3>.
+	Found 4-bit shift register for signal <SR1/SR_4/data_3>.
+	Found 4-bit shift register for signal <SR1/SR_5/data_3>.
+	Found 4-bit shift register for signal <SR1/SR_6/data_3>.
+	Found 4-bit shift register for signal <SR1/SR_7/data_3>.
+	Found 4-bit shift register for signal <SR0/SR_0/data_3>.
+	Found 3-bit shift register for signal <SR0/SR_1/data_3>.
+	Found 4-bit shift register for signal <SR0/SR_2/data_3>.
+	Found 3-bit shift register for signal <SR0/SR_3/data_3>.
+	Found 3-bit shift register for signal <SR0/SR_4/data_3>.
+	Found 3-bit shift register for signal <SR0/SR_5/data_3>.
+	Found 3-bit shift register for signal <SR0/SR_6/data_3>.
+	Found 4-bit shift register for signal <SR0/SR_7/data_3>.
+Unit <pcieth> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 149
+ Flip-Flops                                            : 149
+# Shift Registers                                      : 48
+ 3-bit shift register                                  : 5
+ 4-bit shift register                                  : 43
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : pcieth.ngr
+Top Level Output File Name         : pcieth
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 73
+
+Cell Usage :
+# BELS                             : 356
+#      GND                         : 1
+#      INV                         : 11
+#      LUT1                        : 40
+#      LUT2                        : 7
+#      LUT2_L                      : 1
+#      LUT3                        : 41
+#      LUT3_D                      : 1
+#      LUT3_L                      : 7
+#      LUT4                        : 117
+#      LUT4_D                      : 5
+#      LUT4_L                      : 3
+#      MUXCY                       : 59
+#      MUXF5                       : 19
+#      VCC                         : 1
+#      XORCY                       : 43
+# FlipFlops/Latches                : 229
+#      FD                          : 86
+#      FDC                         : 4
+#      FDCE                        : 42
+#      FDE                         : 63
+#      FDR                         : 1
+#      FDRE                        : 1
+#      LD                          : 32
+# RAMS                             : 3
+#      RAMB4_S16_S16               : 3
+# Shift Registers                  : 48
+#      SRL16                       : 48
+# Clock Buffers                    : 3
+#      BUFG                        : 1
+#      BUFGP                       : 2
+# IO Buffers                       : 71
+#      IBUF                        : 14
+#      IOBUF                       : 36
+#      OBUF                        : 12
+#      OBUFT                       : 9
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2s100tq144-5 
+
+ Number of Slices:                      161  out of   1200    13%  
+ Number of Slice Flip Flops:            229  out of   2400     9%  
+ Number of 4 input LUTs:                281  out of   2400    11%  
+    Number used as logic:               233
+    Number used as Shift registers:      48
+ Number of IOs:                          73
+ Number of bonded IOBs:                  73  out of     92    79%  
+ Number of BRAMs:                         3  out of     10    30%  
+ Number of GCLKs:                         3  out of      4    75%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------+------------------------+-------+
+Clock Signal                                  | Clock buffer(FF name)  | Load  |
+----------------------------------------------+------------------------+-------+
+PCI_CLK                                       | BUFGP                  | 229   |
+CLK24                                         | BUFGP                  | 22    |
+PCI_DATAread_not00011(PCI_DATAread_not00011:O)| BUFG(*)(PCI_DATAread_0)| 32    |
+----------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+PCI_RSTn_inv(PCI_RSTn_inv1_INV_0:O)| NONE(PCI_CSBAR0_8)     | 46    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 10.881ns (Maximum Frequency: 91.903MHz)
+   Minimum input arrival time before clock: 10.393ns
+   Maximum output required time after clock: 17.088ns
+   Maximum combinational path delay: 13.000ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PCI_CLK'
+  Clock period: 10.881ns (frequency: 91.903MHz)
+  Total number of paths / destination ports: 1233 / 274
+-------------------------------------------------------------------------
+Delay:               10.881ns (Levels of Logic = 1)
+  Source:            PCI_TransactionAddr_1 (FF)
+  Destination:       REG_status_0 (FF)
+  Source Clock:      PCI_CLK rising
+  Destination Clock: PCI_CLK rising
+
+  Data Path: PCI_TransactionAddr_1 to REG_status_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             41   1.292   4.250  PCI_TransactionAddr_1 (PCI_TransactionAddr_1)
+     LUT4:I1->O           32   0.653   3.800  REG_status_not0001 (REG_status_not0001)
+     FDE:CE                    0.886          REG_status_0
+    ----------------------------------------
+    Total                     10.881ns (2.831ns logic, 8.050ns route)
+                                       (26.0% logic, 74.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK24'
+  Clock period: 8.508ns (frequency: 117.536MHz)
+  Total number of paths / destination ports: 186 / 43
+-------------------------------------------------------------------------
+Delay:               8.508ns (Levels of Logic = 3)
+  Source:            Mram_RAM_LA1 (RAM)
+  Destination:       USB_Data_0 (FF)
+  Source Clock:      CLK24 rising
+  Destination Clock: CLK24 rising
+
+  Data Path: Mram_RAM_LA1 to USB_Data_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB4_S16_S16:CLKB->DOB0    1   3.774   1.150  Mram_RAM_LA1 (dob<0>)
+     LUT3:I1->O            1   0.653   0.000  Mmux_USB_Data_mux0000_7 (Mmux_USB_Data_mux0000_7)
+     MUXF5:I0->O           1   0.375   1.150  Mmux_USB_Data_mux0000_5_f5 (Mmux_USB_Data_mux0000_5_f5)
+     LUT3:I1->O            1   0.653   0.000  addrb<2> (USB_Data_mux0000<0>)
+     FD:D                      0.753          USB_Data_0
+    ----------------------------------------
+    Total                      8.508ns (6.208ns logic, 2.300ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PCI_CLK'
+  Total number of paths / destination ports: 503 / 227
+-------------------------------------------------------------------------
+Offset:              10.393ns (Levels of Logic = 9)
+  Source:            PCI_AD<6> (PAD)
+  Destination:       acquisition (FF)
+  Destination Clock: PCI_CLK rising
+
+  Data Path: PCI_AD<6> to acquisition
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           5   0.924   1.740  PCI_AD_6_IOBUF (N108)
+     LUT4:I0->O            1   0.653   0.000  Mcompar_PCI_Targeted_cmp_eq0000_lut<0> (Mcompar_PCI_Targeted_cmp_eq0000_lut<0>)
+     MUXCY:S->O            1   0.784   0.000  Mcompar_PCI_Targeted_cmp_eq0000_cy<0> (Mcompar_PCI_Targeted_cmp_eq0000_cy<0>)
+     MUXCY:CI->O           1   0.050   0.000  Mcompar_PCI_Targeted_cmp_eq0000_cy<1> (Mcompar_PCI_Targeted_cmp_eq0000_cy<1>)
+     MUXCY:CI->O           1   0.050   0.000  Mcompar_PCI_Targeted_cmp_eq0000_cy<2> (Mcompar_PCI_Targeted_cmp_eq0000_cy<2>)
+     MUXCY:CI->O           1   0.050   0.000  Mcompar_PCI_Targeted_cmp_eq0000_cy<3> (Mcompar_PCI_Targeted_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           1   0.050   1.150  Mcompar_PCI_Targeted_cmp_eq0000_cy<4> (Mcompar_PCI_Targeted_cmp_eq0000_cy<4>)
+     LUT4:I0->O            4   0.653   1.600  PCI_Targeted32 (PCI_Targeted32)
+     LUT3:I2->O            1   0.653   1.150  PCI_Targeted58 (PCI_Targeted)
+     FDRE:CE                   0.886          acquisition
+    ----------------------------------------
+    Total                     10.393ns (4.753ns logic, 5.640ns route)
+                                       (45.7% logic, 54.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK24'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              6.883ns (Levels of Logic = 2)
+  Source:            USB_FRDn (PAD)
+  Destination:       addrb_0 (FF)
+  Destination Clock: CLK24 rising
+
+  Data Path: USB_FRDn to addrb_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   0.924   2.120  USB_FRDn_IBUF (USB_D_USB_Data_not0000_inv)
+     INV:I->O             11   0.653   2.300  USB_D_USB_Data_not0000_inv_inv1_INV_0 (USB_D_USB_Data_not0000_inv_inv)
+     FDE:CE                    0.886          addrb_0
+    ----------------------------------------
+    Total                      6.883ns (2.463ns logic, 4.420ns route)
+                                       (35.8% logic, 64.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PCI_CLK'
+  Total number of paths / destination ports: 308 / 38
+-------------------------------------------------------------------------
+Offset:              17.088ns (Levels of Logic = 4)
+  Source:            PCI_TransactionAddr_0 (FF)
+  Destination:       PCI_AD<16> (PAD)
+  Source Clock:      PCI_CLK rising
+
+  Data Path: PCI_TransactionAddr_0 to PCI_AD<16>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             46   1.292   4.500  PCI_TransactionAddr_0 (PCI_TransactionAddr_0)
+     LUT2:I0->O            3   0.653   1.480  Mmux_PCI_DATAread_mux00002331 (N8)
+     LUT4:I2->O            1   0.653   1.150  PCI_read<8>18_SW0 (N174)
+     LUT4:I2->O            1   0.653   1.150  PCI_read<8>18 (PCI_read<8>)
+     IOBUF:I->IO               5.557          PCI_AD_8_IOBUF (PCI_AD<8>)
+    ----------------------------------------
+    Total                     17.088ns (8.808ns logic, 8.280ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK24'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              7.999ns (Levels of Logic = 1)
+  Source:            USB_Data_7 (FF)
+  Destination:       USB_D<7> (PAD)
+  Source Clock:      CLK24 rising
+
+  Data Path: USB_Data_7 to USB_D<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   1.292   1.150  USB_Data_7 (USB_Data_7)
+     OBUFT:I->O                5.557          USB_D_7_OBUFT (USB_D<7>)
+    ----------------------------------------
+    Total                      7.999ns (6.849ns logic, 1.150ns route)
+                                       (85.6% logic, 14.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PCI_DATAread_not00011'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              9.931ns (Levels of Logic = 2)
+  Source:            PCI_DATAread_31 (LATCH)
+  Destination:       PCI_AD<31> (PAD)
+  Source Clock:      PCI_DATAread_not00011 falling
+
+  Data Path: PCI_DATAread_31 to PCI_AD<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   1.421   1.150  PCI_DATAread_31 (PCI_DATAread_31)
+     LUT4:I1->O            1   0.653   1.150  PCI_read<31>1 (PCI_read<31>)
+     IOBUF:I->IO               5.557          PCI_AD_31_IOBUF (PCI_AD<31>)
+    ----------------------------------------
+    Total                      9.931ns (7.631ns logic, 2.300ns route)
+                                       (76.8% logic, 23.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Delay:               13.000ns (Levels of Logic = 3)
+  Source:            PCI_RSTn (PAD)
+  Destination:       PCI_REQn (PAD)
+
+  Data Path: PCI_RSTn to PCI_REQn
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.924   1.150  PCI_RSTn_IBUF (PCI_RSTn_IBUF)
+     INV:I->O             47   0.653   4.550  PCI_RSTn_inv1_INV_0 (PCI_RSTn_inv)
+     IOBUF:T->IO               5.723          PCI_REQn_IOBUF (PCI_REQn)
+    ----------------------------------------
+    Total                     13.000ns (7.300ns logic, 5.700ns route)
+                                       (56.2% logic, 43.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.97 secs
+ 
+--> 
+
+
+Total memory usage is 135092 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   50 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

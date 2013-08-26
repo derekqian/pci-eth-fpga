@@ -1,0 +1,194 @@
+//! **************************************************************************
+// Written by: Map K.39 on Thu Aug 22 17:01:52 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "PCI_STOPn" LOCATE = SITE "P133" LEVEL 1;
+COMP "CLK24" LOCATE = SITE "P18" LEVEL 1;
+COMP "PCI_GNTn" LOCATE = SITE "P93" LEVEL 1;
+COMP "PCI_AD<0>" LOCATE = SITE "P23" LEVEL 1;
+COMP "PCI_AD<1>" LOCATE = SITE "P22" LEVEL 1;
+COMP "PCI_AD<2>" LOCATE = SITE "P21" LEVEL 1;
+COMP "PCI_AD<3>" LOCATE = SITE "P20" LEVEL 1;
+COMP "PCI_AD<4>" LOCATE = SITE "P19" LEVEL 1;
+COMP "PCI_REQn" LOCATE = SITE "P94" LEVEL 1;
+COMP "PCI_AD<5>" LOCATE = SITE "P13" LEVEL 1;
+COMP "PCI_AD<6>" LOCATE = SITE "P11" LEVEL 1;
+COMP "PCI_AD<7>" LOCATE = SITE "P12" LEVEL 1;
+COMP "PCI_AD<8>" LOCATE = SITE "P10" LEVEL 1;
+COMP "PCI_AD<9>" LOCATE = SITE "P6" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "P51" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "P27" LEVEL 1;
+COMP "PCI_FRAMEn" LOCATE = SITE "P126" LEVEL 1;
+COMP "PCI_RSTn" LOCATE = SITE "P87" LEVEL 1;
+COMP "LOW_r" LOCATE = SITE "P76" LEVEL 1;
+COMP "LOW_w" LOCATE = SITE "P75" LEVEL 1;
+COMP "USB_D<0>" LOCATE = SITE "P67" LEVEL 1;
+COMP "USB_D<1>" LOCATE = SITE "P62" LEVEL 1;
+COMP "USB_D<2>" LOCATE = SITE "P60" LEVEL 1;
+COMP "USB_D<3>" LOCATE = SITE "P57" LEVEL 1;
+COMP "USB_D<4>" LOCATE = SITE "P39" LEVEL 1;
+COMP "USB_D<5>" LOCATE = SITE "P44" LEVEL 1;
+COMP "USB_D<6>" LOCATE = SITE "P46" LEVEL 1;
+COMP "USB_D<7>" LOCATE = SITE "P49" LEVEL 1;
+COMP "PCI_CLK" LOCATE = SITE "P91" LEVEL 1;
+COMP "PCI_PAR" LOCATE = SITE "P137" LEVEL 1;
+COMP "PCI_IDSEL" LOCATE = SITE "P114" LEVEL 1;
+COMP "LOW_data<0>" LOCATE = SITE "P86" LEVEL 1;
+COMP "LOW_data<1>" LOCATE = SITE "P85" LEVEL 1;
+COMP "LOW_data<2>" LOCATE = SITE "P83" LEVEL 1;
+COMP "LOW_data<3>" LOCATE = SITE "P84" LEVEL 1;
+COMP "USB_FRDn" LOCATE = SITE "P26" LEVEL 1;
+COMP "LOW_data<4>" LOCATE = SITE "P80" LEVEL 1;
+COMP "LOW_data<5>" LOCATE = SITE "P78" LEVEL 1;
+COMP "LOW_data<6>" LOCATE = SITE "P79" LEVEL 1;
+COMP "LOW_data<7>" LOCATE = SITE "P77" LEVEL 1;
+COMP "PCI_LOCKn" LOCATE = SITE "P132" LEVEL 1;
+COMP "PCI_IRDYn" LOCATE = SITE "P129" LEVEL 1;
+COMP "PCI_DEVSELn" LOCATE = SITE "P131" LEVEL 1;
+COMP "PCI_AD<10>" LOCATE = SITE "P5" LEVEL 1;
+COMP "PCI_AD<11>" LOCATE = SITE "P4" LEVEL 1;
+COMP "PCI_AD<20>" LOCATE = SITE "P117" LEVEL 1;
+COMP "PCI_AD<12>" LOCATE = SITE "P3" LEVEL 1;
+COMP "PCI_PERRn" LOCATE = SITE "P134" LEVEL 1;
+COMP "PCI_AD<21>" LOCATE = SITE "P118" LEVEL 1;
+COMP "PCI_AD<13>" LOCATE = SITE "P141" LEVEL 1;
+COMP "PCI_AD<30>" LOCATE = SITE "P96" LEVEL 1;
+COMP "PCI_AD<22>" LOCATE = SITE "P116" LEVEL 1;
+COMP "PCI_AD<14>" LOCATE = SITE "P140" LEVEL 1;
+COMP "PCI_AD<31>" LOCATE = SITE "P95" LEVEL 1;
+COMP "PCI_AD<23>" LOCATE = SITE "P115" LEVEL 1;
+COMP "PCI_AD<15>" LOCATE = SITE "P139" LEVEL 1;
+COMP "PCI_AD<24>" LOCATE = SITE "P112" LEVEL 1;
+COMP "PCI_AD<16>" LOCATE = SITE "P123" LEVEL 1;
+COMP "PCI_AD<25>" LOCATE = SITE "P103" LEVEL 1;
+COMP "PCI_AD<17>" LOCATE = SITE "P122" LEVEL 1;
+COMP "PCI_AD<26>" LOCATE = SITE "P102" LEVEL 1;
+COMP "PCI_AD<18>" LOCATE = SITE "P121" LEVEL 1;
+COMP "PCI_AD<27>" LOCATE = SITE "P101" LEVEL 1;
+COMP "PCI_AD<19>" LOCATE = SITE "P120" LEVEL 1;
+COMP "PCI_AD<28>" LOCATE = SITE "P100" LEVEL 1;
+COMP "PCI_AD<29>" LOCATE = SITE "P99" LEVEL 1;
+COMP "PCI_SERRn" LOCATE = SITE "P136" LEVEL 1;
+COMP "PCI_TRDYn" LOCATE = SITE "P130" LEVEL 1;
+COMP "PCI_CBE<0>" LOCATE = SITE "P7" LEVEL 1;
+COMP "PCI_CBE<1>" LOCATE = SITE "P138" LEVEL 1;
+COMP "PCI_CBE<2>" LOCATE = SITE "P124" LEVEL 1;
+COMP "PCI_CBE<3>" LOCATE = SITE "P113" LEVEL 1;
+PIN Mram_RAM_LA1.A_pins<25> = BEL "Mram_RAM_LA1.A" PINNAME "31";
+PIN Mram_RAM_LA2.A_pins<25> = BEL "Mram_RAM_LA2.A" PINNAME "31";
+PIN Mram_RAM_LA3.A_pins<25> = BEL "Mram_RAM_LA3.A" PINNAME "31";
+TIMEGRP PCI_CLK = BEL "PCI_ConfSpace" BEL "PCI_Transaction" BEL
+        "PCI_Transaction_Read_nWrite" BEL "PCI_MEMSpace" BEL "PCI_IOSpace" BEL
+        "PCI_TargetReady" BEL "PCI_DevSelOE" BEL "PCI_DevSel" BEL "PCI_AD_OE"
+        BEL "REG_led_0" BEL "REG_led_1" BEL "REG_led_2" BEL "acquisition" BEL
+        "PCI_INTA" BEL "PCI_WasLastDataTransfer" BEL "PCI_CSBAR0_0" BEL
+        "PCI_CSBAR0_1" BEL "PCI_CSBAR0_2" BEL "PCI_CSBAR0_3" BEL
+        "PCI_CSBAR0_4" BEL "PCI_CSBAR0_5" BEL "PCI_CSBAR0_6" BEL
+        "PCI_CSBAR0_7" BEL "PCI_CSBAR0_8" BEL "PCI_CSBAR0_9" BEL
+        "PCI_CSCMD_IOenabled" BEL "InterruptLine_0" BEL "InterruptLine_1" BEL
+        "InterruptLine_2" BEL "InterruptLine_3" BEL "InterruptLine_4" BEL
+        "InterruptLine_5" BEL "InterruptLine_6" BEL "InterruptLine_7" BEL
+        "PCI_CSCMD_MEMenabled" BEL "PCI_MEMBAR1_0" BEL "PCI_MEMBAR1_1" BEL
+        "PCI_MEMBAR1_2" BEL "PCI_MEMBAR1_3" BEL "PCI_MEMBAR1_4" BEL
+        "PCI_MEMBAR1_5" BEL "PCI_MEMBAR1_6" BEL "PCI_MEMBAR1_7" BEL
+        "PCI_MEMBAR1_8" BEL "PCI_MEMBAR1_9" BEL "PCI_MEMBAR1_10" BEL
+        "PCI_MEMBAR1_11" BEL "PCI_MEMBAR1_12" BEL "PCI_MEMBAR1_13" BEL
+        "PCI_MEMBAR1_14" BEL "PCI_MEMBAR1_15" BEL "REG_status_0" BEL
+        "REG_status_1" BEL "REG_status_2" BEL "REG_status_3" BEL
+        "REG_status_4" BEL "REG_status_5" BEL "REG_status_6" BEL
+        "REG_status_7" BEL "REG_status_8" BEL "REG_status_9" BEL
+        "REG_status_10" BEL "REG_status_11" BEL "REG_status_12" BEL
+        "REG_status_13" BEL "REG_status_14" BEL "REG_status_15" BEL
+        "REG_status_16" BEL "REG_status_17" BEL "REG_status_18" BEL
+        "REG_status_19" BEL "REG_status_20" BEL "REG_status_21" BEL
+        "REG_status_22" BEL "REG_status_23" BEL "REG_status_24" BEL
+        "REG_status_25" BEL "REG_status_26" BEL "REG_status_27" BEL
+        "REG_status_28" BEL "REG_status_29" BEL "REG_status_30" BEL
+        "REG_status_31" BEL "SR0/SR_1/data_0" BEL "SR0/SR_3/data_0" BEL
+        "SR0/SR_4/data_0" BEL "SR0/SR_5/data_0" BEL "SR0/SR_6/data_0" BEL
+        "addra_0" BEL "addra_1" BEL "addra_2" BEL "addra_3" BEL "addra_4" BEL
+        "addra_5" BEL "addra_6" BEL "addra_7" BEL "PCI_TransactionAddr_0" BEL
+        "PCI_TransactionAddr_1" BEL "PCI_TransactionAddr_2" BEL
+        "PCI_TransactionAddr_3" BEL "counter_0" BEL "counter_1" BEL
+        "counter_2" BEL "counter_3" BEL "counter_4" BEL "counter_5" BEL
+        "counter_6" BEL "counter_7" BEL "counter_8" BEL "counter_9" BEL
+        "counter_10" BEL "counter_11" BEL "counter_12" BEL "counter_13" BEL
+        "counter_14" BEL "counter_15" BEL "counter_16" BEL "counter_17" BEL
+        "counter_18" BEL "counter_19" BEL "counter_20" BEL "counter_21" BEL
+        "counter_22" BEL "counter_23" BEL "PCI_TransactionAddr_0_1" BEL
+        "PCI_TransactionAddr_1_1" BEL "PCI_TransactionAddr_0_2" BEL
+        "PCI_TransactionAddr_1_2" BEL "PCI_IOSpace_1" BEL
+        "PCI_TransactionAddr_0_3" PIN "Mram_RAM_LA1.A_pins<25>" PIN
+        "Mram_RAM_LA2.A_pins<25>" PIN "Mram_RAM_LA3.A_pins<25>" BEL
+        "SR5/SR_2/Mshreg_data_3/SRL16E" BEL "SR5/SR_2/data_3" BEL
+        "SR5/SR_0/Mshreg_data_3/SRL16E" BEL "SR5/SR_0/data_3" BEL
+        "SR5/SR_1/Mshreg_data_3/SRL16E" BEL "SR5/SR_1/data_3" BEL
+        "SR5/SR_5/Mshreg_data_3/SRL16E" BEL "SR5/SR_5/data_3" BEL
+        "SR5/SR_3/Mshreg_data_3/SRL16E" BEL "SR5/SR_3/data_3" BEL
+        "SR5/SR_4/Mshreg_data_3/SRL16E" BEL "SR5/SR_4/data_3" BEL
+        "SR4/SR_0/Mshreg_data_3/SRL16E" BEL "SR4/SR_0/data_3" BEL
+        "SR5/SR_6/Mshreg_data_3/SRL16E" BEL "SR5/SR_6/data_3" BEL
+        "SR5/SR_7/Mshreg_data_3/SRL16E" BEL "SR5/SR_7/data_3" BEL
+        "SR4/SR_3/Mshreg_data_3/SRL16E" BEL "SR4/SR_3/data_3" BEL
+        "SR4/SR_1/Mshreg_data_3/SRL16E" BEL "SR4/SR_1/data_3" BEL
+        "SR4/SR_2/Mshreg_data_3/SRL16E" BEL "SR4/SR_2/data_3" BEL
+        "SR4/SR_6/Mshreg_data_3/SRL16E" BEL "SR4/SR_6/data_3" BEL
+        "SR4/SR_4/Mshreg_data_3/SRL16E" BEL "SR4/SR_4/data_3" BEL
+        "SR4/SR_5/Mshreg_data_3/SRL16E" BEL "SR4/SR_5/data_3" BEL
+        "SR3/SR_1/Mshreg_data_3/SRL16E" BEL "SR3/SR_1/data_3" BEL
+        "SR4/SR_7/Mshreg_data_3/SRL16E" BEL "SR4/SR_7/data_3" BEL
+        "SR3/SR_0/Mshreg_data_3/SRL16E" BEL "SR3/SR_0/data_3" BEL
+        "SR3/SR_4/Mshreg_data_3/SRL16E" BEL "SR3/SR_4/data_3" BEL
+        "SR3/SR_2/Mshreg_data_3/SRL16E" BEL "SR3/SR_2/data_3" BEL
+        "SR3/SR_3/Mshreg_data_3/SRL16E" BEL "SR3/SR_3/data_3" BEL
+        "SR3/SR_7/Mshreg_data_3/SRL16E" BEL "SR3/SR_7/data_3" BEL
+        "SR3/SR_5/Mshreg_data_3/SRL16E" BEL "SR3/SR_5/data_3" BEL
+        "SR3/SR_6/Mshreg_data_3/SRL16E" BEL "SR3/SR_6/data_3" BEL
+        "SR2/SR_2/Mshreg_data_3/SRL16E" BEL "SR2/SR_2/data_3" BEL
+        "SR2/SR_0/Mshreg_data_3/SRL16E" BEL "SR2/SR_0/data_3" BEL
+        "SR2/SR_1/Mshreg_data_3/SRL16E" BEL "SR2/SR_1/data_3" BEL
+        "SR2/SR_5/Mshreg_data_3/SRL16E" BEL "SR2/SR_5/data_3" BEL
+        "SR2/SR_3/Mshreg_data_3/SRL16E" BEL "SR2/SR_3/data_3" BEL
+        "SR2/SR_4/Mshreg_data_3/SRL16E" BEL "SR2/SR_4/data_3" BEL
+        "SR1/SR_0/Mshreg_data_3/SRL16E" BEL "SR1/SR_0/data_3" BEL
+        "SR2/SR_6/Mshreg_data_3/SRL16E" BEL "SR2/SR_6/data_3" BEL
+        "SR2/SR_7/Mshreg_data_3/SRL16E" BEL "SR2/SR_7/data_3" BEL
+        "SR1/SR_3/Mshreg_data_3/SRL16E" BEL "SR1/SR_3/data_3" BEL
+        "SR1/SR_1/Mshreg_data_3/SRL16E" BEL "SR1/SR_1/data_3" BEL
+        "SR1/SR_2/Mshreg_data_3/SRL16E" BEL "SR1/SR_2/data_3" BEL
+        "SR1/SR_6/Mshreg_data_3/SRL16E" BEL "SR1/SR_6/data_3" BEL
+        "SR1/SR_4/Mshreg_data_3/SRL16E" BEL "SR1/SR_4/data_3" BEL
+        "SR1/SR_5/Mshreg_data_3/SRL16E" BEL "SR1/SR_5/data_3" BEL
+        "SR0/SR_1/Mshreg_data_3/SRL16E" BEL "SR0/SR_1/data_3" BEL
+        "SR1/SR_7/Mshreg_data_3/SRL16E" BEL "SR1/SR_7/data_3" BEL
+        "SR0/SR_0/Mshreg_data_3/SRL16E" BEL "SR0/SR_0/data_3" BEL
+        "SR0/SR_4/Mshreg_data_3/SRL16E" BEL "SR0/SR_4/data_3" BEL
+        "SR0/SR_2/Mshreg_data_3/SRL16E" BEL "SR0/SR_2/data_3" BEL
+        "SR0/SR_3/Mshreg_data_3/SRL16E" BEL "SR0/SR_3/data_3" BEL
+        "SR0/SR_7/Mshreg_data_3/SRL16E" BEL "SR0/SR_7/data_3" BEL
+        "SR0/SR_5/Mshreg_data_3/SRL16E" BEL "SR0/SR_5/data_3" BEL
+        "SR0/SR_6/Mshreg_data_3/SRL16E" BEL "SR0/SR_6/data_3";
+TIMEGRP PCI_AD_GRP = BEL "PCI_AD<0>" BEL "PCI_AD<10>" BEL "PCI_AD<11>" BEL
+        "PCI_AD<12>" BEL "PCI_AD<13>" BEL "PCI_AD<14>" BEL "PCI_AD<15>" BEL
+        "PCI_AD<16>" BEL "PCI_AD<17>" BEL "PCI_AD<18>" BEL "PCI_AD<19>" BEL
+        "PCI_AD<1>" BEL "PCI_AD<20>" BEL "PCI_AD<21>" BEL "PCI_AD<22>" BEL
+        "PCI_AD<23>" BEL "PCI_AD<24>" BEL "PCI_AD<25>" BEL "PCI_AD<26>" BEL
+        "PCI_AD<27>" BEL "PCI_AD<28>" BEL "PCI_AD<29>" BEL "PCI_AD<2>" BEL
+        "PCI_AD<30>" BEL "PCI_AD<31>" BEL "PCI_AD<3>" BEL "PCI_AD<4>" BEL
+        "PCI_AD<5>" BEL "PCI_AD<6>" BEL "PCI_AD<7>" BEL "PCI_AD<8>" BEL
+        "PCI_AD<9>";
+TIMEGRP PCI_CBE_GRP = BEL "PCI_CBE<0>" BEL "PCI_CBE<1>" BEL "PCI_CBE<2>" BEL
+        "PCI_CBE<3>";
+TS_PCI_CLK = PERIOD TIMEGRP "PCI_CLK" 30 ns HIGH 50%;
+COMP "PCI_DEVSELn" OFFSET = OUT 11 ns AFTER COMP "PCI_CLK";
+COMP "PCI_FRAMEn" OFFSET = IN 7 ns BEFORE COMP "PCI_CLK";
+COMP "PCI_IDSEL" OFFSET = IN 7 ns BEFORE COMP "PCI_CLK";
+COMP "PCI_IRDYn" OFFSET = IN 7 ns BEFORE COMP "PCI_CLK";
+COMP "PCI_STOPn" OFFSET = OUT 11 ns AFTER COMP "PCI_CLK";
+COMP "PCI_TRDYn" OFFSET = OUT 11 ns AFTER COMP "PCI_CLK";
+TIMEGRP "PCI_CBE_GRP" OFFSET = IN 7 ns BEFORE COMP "PCI_CLK";
+TIMEGRP "PCI_AD_GRP" OFFSET = IN 7 ns BEFORE COMP "PCI_CLK";
+TIMEGRP "PCI_AD_GRP" OFFSET = OUT 41 ns AFTER COMP "PCI_CLK";
+SCHEMATIC END;
+
