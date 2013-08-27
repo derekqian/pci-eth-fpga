@@ -1,0 +1,35 @@
+Release 13.3 ngdbuild O.76xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: /software/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle ise
+-dd _ngo -nt timestamp -uc ledsw.ucf -p xc6slx45-csg324-3 ledsw.ngc ledsw.ngd
+
+Reading NGO file "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "ledsw.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 392136 kilobytes
+
+Writing NGD file "ledsw.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "ledsw.bld"...

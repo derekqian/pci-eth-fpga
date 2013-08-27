@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/pcieth_low.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/pcieth_low.syr" 

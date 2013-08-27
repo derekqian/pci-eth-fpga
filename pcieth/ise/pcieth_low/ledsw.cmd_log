@@ -1,0 +1,41 @@
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.syr" 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.syr" 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-csg324-3 ledsw.ngc ledsw.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ledsw_map.ncd ledsw.ngd ledsw.pcf 
+par -w -intstyle ise -ol high -mt off ledsw_map.ncd ledsw.ncd ledsw.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ledsw.twx ledsw.ncd -o ledsw.twr ledsw.pcf 
+bitgen -intstyle ise -f ledsw.ut ledsw.ncd 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ledsw.ucf -p xc6slx45-csg324-3 ledsw.ngc ledsw.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ledsw_map.ncd ledsw.ngd ledsw.pcf 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ledsw.ucf -p xc6slx45-csg324-3 ledsw.ngc ledsw.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ledsw_map.ncd ledsw.ngd ledsw.pcf 
+par -w -intstyle ise -ol high -mt off ledsw_map.ncd ledsw.ncd ledsw.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ledsw.twx ledsw.ncd -o ledsw.twr ledsw.pcf -ucf ledsw.ucf 
+bitgen -intstyle ise -f ledsw.ut ledsw.ncd 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ledsw.ucf -p xc6slx45-csg324-3 ledsw.ngc ledsw.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ledsw_map.ncd ledsw.ngd ledsw.pcf 
+par -w -intstyle ise -ol high -mt off ledsw_map.ncd ledsw.ncd ledsw.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ledsw.twx ledsw.ncd -o ledsw.twr ledsw.pcf -ucf ledsw.ucf 
+bitgen -intstyle ise -f ledsw.ut ledsw.ncd 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ledsw.ucf -p xc6slx45-csg324-3 ledsw.ngc ledsw.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ledsw_map.ncd ledsw.ngd ledsw.pcf 
+par -w -intstyle ise -ol high -mt off ledsw_map.ncd ledsw.ncd ledsw.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ledsw.twx ledsw.ncd -o ledsw.twr ledsw.pcf -ucf ledsw.ucf 
+bitgen -intstyle ise -f ledsw.ut ledsw.ncd 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ledsw.ucf -p xc6slx45-csg324-3 ledsw.ngc ledsw.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ledsw_map.ncd ledsw.ngd ledsw.pcf 
+par -w -intstyle ise -ol high -mt off ledsw_map.ncd ledsw.ncd ledsw.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ledsw.twx ledsw.ncd -o ledsw.twr ledsw.pcf -ucf ledsw.ucf 
+bitgen -intstyle ise -f ledsw.ut ledsw.ncd 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.xst" -ofn "/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ledsw.ucf -p xc6slx45-csg324-3 ledsw.ngc ledsw.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ledsw_map.ncd ledsw.ngd ledsw.pcf 
+par -w -intstyle ise -ol high -mt off ledsw_map.ncd ledsw.ncd ledsw.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ledsw.twx ledsw.ncd -o ledsw.twr ledsw.pcf -ucf ledsw.ucf 
+bitgen -intstyle ise -f ledsw.ut ledsw.ncd 

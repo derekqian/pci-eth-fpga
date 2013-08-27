@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.ncd
+OUTFILE=/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low/ledsw.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=/home/derek/pci-eth-fpga/pcieth/ise/pcieth_low
+LICENSE=ISE
+USER_INFO=203015750_205625509_205892658_267

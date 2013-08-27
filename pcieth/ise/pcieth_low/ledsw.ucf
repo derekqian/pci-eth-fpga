@@ -1,0 +1,30 @@
+NET "DATA<0>"  LOC = "V16"  ;
+NET "DATA<1>"  LOC = "V15"  ;
+NET "DATA<2>"  LOC = "V13"  ;
+NET "DATA<3>"  LOC = "N11"  ;
+NET "DATA<4>"  LOC = "T11"  ;
+NET "DATA<5>"  LOC = "V12"  ;
+NET "DATA<6>"  LOC = "P11"  ;
+NET "DATA<7>"  LOC = "N9"  ;
+NET "W"  LOC = "V11"  ;
+NET "R"  LOC = "T10"  ;
+
+NET "LED<0>"  LOC = "U18"  ;
+NET "LED<1>"  LOC = "M14"  ;
+NET "LED<2>"  LOC = "N14"  ;
+NET "LED<3>"  LOC = "L14"  ;
+NET "LED<4>"  LOC = "M13"  ;
+NET "LED<5>"  LOC = "D4"  ;
+NET "LED<6>"  LOC = "P16"  ;
+NET "LED<7>"  LOC = "N12"  ;
+
+NET "SW<0>"  LOC = "A10"  ;
+NET "SW<1>"  LOC = "D14"  ;
+NET "SW<2>"  LOC = "C14"  ;
+NET "SW<3>"  LOC = "P15"  ;
+NET "SW<4>"  LOC = "P12"  ;
+NET "SW<5>"  LOC = "R5"  ;
+NET "SW<6>"  LOC = "T5"  ;
+NET "SW<7>"  LOC = "E4"  ;
+
+NET "W" CLOCK_DEDICATED_ROUTE = FALSE;
