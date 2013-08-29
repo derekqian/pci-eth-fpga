@@ -1,7 +1,7 @@
 Release 10.1.03 par K.39 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-svl6::  Thu Jul 18 17:14:26 2013
+svl6::  Wed Aug 28 12:31:17 2013
 
 par -w -intstyle ise -ol std -t 1 testhw_map.ncd testhw.ncd testhw.pcf 
 
@@ -24,12 +24,14 @@ Device speed data version:  "PRODUCTION 1.27 2008-01-09".
 
 Device Utilization Summary:
 
+   Number of GCLKs                           1 out of 4      25%
    Number of External GCLKIOBs               1 out of 4      25%
       Number of LOCed GCLKIOBs               1 out of 1     100%
 
    Number of External IOBs                  10 out of 92     10%
       Number of LOCed IOBs                  10 out of 10    100%
 
+   Number of SLICEs                         24 out of 1200    2%
 
 
 Overall effort level (-ol):   Standard 
@@ -37,39 +39,40 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    Standard 
 
-WARNING:Par:288 - The signal clk_IBUF has no load.  PAR will not attempt to route this signal.
 
 Starting Placer
 
 Phase 1.1
-Phase 1.1 (Checksum:5902) REAL time: 0 secs 
+Phase 1.1 (Checksum:603b) REAL time: 0 secs 
 
 Phase 2.7
-Phase 2.7 (Checksum:5902) REAL time: 0 secs 
+Phase 2.7 (Checksum:603b) REAL time: 0 secs 
 
 Phase 3.31
-Phase 3.31 (Checksum:5902) REAL time: 0 secs 
+Phase 3.31 (Checksum:603b) REAL time: 0 secs 
 
 Phase 4.23
-Phase 4.23 (Checksum:5902) REAL time: 0 secs 
+Phase 4.23 (Checksum:65ed) REAL time: 0 secs 
 
 Phase 5.3
-Phase 5.3 (Checksum:5902) REAL time: 0 secs 
+Phase 5.3 (Checksum:65ed) REAL time: 0 secs 
 
 Phase 6.5
-Phase 6.5 (Checksum:5902) REAL time: 0 secs 
+Phase 6.5 (Checksum:65ed) REAL time: 0 secs 
 
 Phase 7.8
-Phase 7.8 (Checksum:5902) REAL time: 0 secs 
+.
+.
+Phase 7.8 (Checksum:11028) REAL time: 0 secs 
 
 Phase 8.5
-Phase 8.5 (Checksum:5902) REAL time: 0 secs 
+Phase 8.5 (Checksum:11028) REAL time: 0 secs 
 
 Phase 9.18
-Phase 9.18 (Checksum:5902) REAL time: 0 secs 
+Phase 9.18 (Checksum:10e9c) REAL time: 0 secs 
 
 Phase 10.5
-Phase 10.5 (Checksum:5902) REAL time: 0 secs 
+Phase 10.5 (Checksum:10e9c) REAL time: 0 secs 
 
 REAL time consumed by placer: 0 secs 
 CPU  time consumed by placer: 0 secs 
@@ -81,19 +84,23 @@ Total CPU time to Placer completion: 0 secs
 
 Starting Router
 
-Phase 1: 0 unrouted;       REAL time: 0 secs 
+Phase 1: 122 unrouted;       REAL time: 0 secs 
 
-Phase 2: 0 unrouted;       REAL time: 0 secs 
+Phase 2: 108 unrouted;       REAL time: 0 secs 
 
-Phase 3: 0 unrouted;       REAL time: 0 secs 
+Phase 3: 10 unrouted;       REAL time: 0 secs 
 
-Phase 4: 0 unrouted; (0)      REAL time: 0 secs 
+Phase 4: 10 unrouted; (700)      REAL time: 0 secs 
 
-Phase 5: 0 unrouted; (0)      REAL time: 0 secs 
+Phase 5: 10 unrouted; (0)      REAL time: 0 secs 
 
 Phase 6: 0 unrouted; (0)      REAL time: 0 secs 
 
 Phase 7: 0 unrouted; (0)      REAL time: 0 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 0 secs 
+
+Phase 9: 0 unrouted; (0)      REAL time: 0 secs 
 
 Total REAL time to Router completion: 0 secs 
 Total CPU time to Router completion: 0 secs 
@@ -107,27 +114,62 @@ Partition Implementation Status
 
 Generating "PAR" statistics.
 
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP |      GCLKBUF2| No   |   14 |  0.096     |  0.704      |
++---------------------+--------------+------+------+------------+-------------+
+|             clk_1Hz |         Local|      |    6 |  0.621     |  3.561      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
 Timing Score: 0
 
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no
+   requested value.
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP   |         N/A|     6.834ns|     N/A|           0
+  _BUFGP                                    | HOLD    |     2.485ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP   |         N/A|     4.842ns|     N/A|           0
+  _1Hz                                      | HOLD    |     1.944ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
 
 
 Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
-
 Total REAL time to PAR completion: 0 secs 
 Total CPU time to PAR completion: 0 secs 
 
-Peak Memory Usage:  90 MB
+Peak Memory Usage:  91 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 3
-Number of info messages: 1
+Number of warning messages: 0
+Number of info messages: 2
 
 Writing design to file testhw.ncd
 

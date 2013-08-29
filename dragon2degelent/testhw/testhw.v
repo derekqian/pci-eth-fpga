@@ -42,6 +42,7 @@ if(data == 10'h000)
 else
     data <= data<<1;
 
-assign dout = 10'h3ff;
+//assign dout = 10'h3ff;
+assign dout = data;
 
 endmodule

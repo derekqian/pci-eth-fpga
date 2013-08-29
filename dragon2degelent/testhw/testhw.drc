@@ -1,4 +1,2 @@
-WARNING:PhysDesignRules:367 - The signal <clk_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+DRC detected 0 errors and 0 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

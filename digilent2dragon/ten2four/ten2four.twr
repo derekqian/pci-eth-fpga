@@ -3,8 +3,9 @@ Release 10.1.03 Trace  (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
 /software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/trce -ise
-/home/derek/iseproject/ten2four/ten2four.ise -intstyle ise -v 3 -s 5 -xml
-ten2four ten2four.ncd -o ten2four.twr ten2four.pcf -ucf ten2four.ucf
+/home/derek/pci-eth-fpga/digilent2dragon/ten2four/ten2four.ise -intstyle ise -v
+3 -s 5 -xml ten2four ten2four.ncd -o ten2four.twr ten2four.pcf -ucf
+ten2four.ucf
 
 Design file:              ten2four.ncd
 Physical constraint file: ten2four.pcf
@@ -35,50 +36,50 @@ Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-indata<0>      |outdata<0>     |   12.411|
-indata<0>      |outdata<1>     |   12.479|
-indata<0>      |outdata<2>     |   14.540|
-indata<0>      |outdata<3>     |   14.958|
-indata<1>      |outdata<0>     |   12.026|
-indata<1>      |outdata<1>     |   12.496|
-indata<1>      |outdata<2>     |   14.087|
-indata<1>      |outdata<3>     |   13.524|
-indata<2>      |outdata<0>     |   12.231|
-indata<2>      |outdata<1>     |   12.313|
-indata<2>      |outdata<2>     |   14.369|
-indata<2>      |outdata<3>     |   13.716|
-indata<3>      |outdata<0>     |   12.284|
-indata<3>      |outdata<1>     |   12.127|
-indata<3>      |outdata<2>     |   14.422|
-indata<3>      |outdata<3>     |   14.840|
-indata<4>      |outdata<0>     |   11.994|
-indata<4>      |outdata<1>     |   12.773|
-indata<4>      |outdata<2>     |   14.570|
-indata<4>      |outdata<3>     |   14.988|
-indata<5>      |outdata<0>     |    9.806|
-indata<5>      |outdata<1>     |   12.190|
-indata<5>      |outdata<2>     |   13.054|
-indata<5>      |outdata<3>     |   12.968|
-indata<6>      |outdata<0>     |   11.446|
-indata<6>      |outdata<1>     |   12.201|
-indata<6>      |outdata<2>     |   14.179|
-indata<6>      |outdata<3>     |   14.597|
-indata<7>      |outdata<0>     |    9.438|
-indata<7>      |outdata<1>     |   11.922|
-indata<7>      |outdata<2>     |   11.008|
-indata<7>      |outdata<3>     |   10.809|
-indata<8>      |outdata<0>     |   11.498|
-indata<8>      |outdata<1>     |   12.047|
-indata<8>      |outdata<2>     |   11.599|
-indata<8>      |outdata<3>     |   11.174|
-indata<9>      |outdata<0>     |    9.877|
-indata<9>      |outdata<1>     |   11.510|
-indata<9>      |outdata<2>     |   11.244|
-indata<9>      |outdata<3>     |   10.650|
+indata<0>      |outdata<0>     |   12.982|
+indata<0>      |outdata<1>     |   12.880|
+indata<0>      |outdata<2>     |   14.577|
+indata<0>      |outdata<3>     |   16.063|
+indata<1>      |outdata<0>     |   12.525|
+indata<1>      |outdata<1>     |   12.326|
+indata<1>      |outdata<2>     |   14.173|
+indata<1>      |outdata<3>     |   13.842|
+indata<2>      |outdata<0>     |   12.068|
+indata<2>      |outdata<1>     |   12.134|
+indata<2>      |outdata<2>     |   13.861|
+indata<2>      |outdata<3>     |   13.741|
+indata<3>      |outdata<0>     |   12.409|
+indata<3>      |outdata<1>     |   12.369|
+indata<3>      |outdata<2>     |   13.833|
+indata<3>      |outdata<3>     |   15.497|
+indata<4>      |outdata<0>     |   11.222|
+indata<4>      |outdata<1>     |   12.329|
+indata<4>      |outdata<2>     |   13.405|
+indata<4>      |outdata<3>     |   15.505|
+indata<5>      |outdata<0>     |    9.771|
+indata<5>      |outdata<1>     |   12.127|
+indata<5>      |outdata<2>     |   12.650|
+indata<5>      |outdata<3>     |   13.222|
+indata<6>      |outdata<0>     |   11.248|
+indata<6>      |outdata<1>     |   12.628|
+indata<6>      |outdata<2>     |   13.887|
+indata<6>      |outdata<3>     |   15.987|
+indata<7>      |outdata<0>     |    9.932|
+indata<7>      |outdata<1>     |   12.462|
+indata<7>      |outdata<2>     |   11.086|
+indata<7>      |outdata<3>     |   11.353|
+indata<8>      |outdata<0>     |   11.415|
+indata<8>      |outdata<1>     |   12.043|
+indata<8>      |outdata<2>     |   11.824|
+indata<8>      |outdata<3>     |   11.292|
+indata<9>      |outdata<0>     |    9.556|
+indata<9>      |outdata<1>     |   11.492|
+indata<9>      |outdata<2>     |   11.279|
+indata<9>      |outdata<3>     |   11.036|
 ---------------+---------------+---------+
 
 
-Analysis completed Wed Jul 31 14:58:06 2013 
+Analysis completed Wed Aug 28 13:18:43 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:

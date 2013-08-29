@@ -21,9 +21,9 @@
 module ten24 (indata, outdata);
 
    input  [9:0] indata;
-   output [3:0] outdata;
+   output [7:0] outdata;
 
-reg [3:0] outdata;
+reg [7:0] outdata;
 
 always @(indata)
   case (indata)

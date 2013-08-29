@@ -1,7 +1,7 @@
 Release 10.1.03 - par K.39 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-Thu Jul 18 17:14:27 2013
+Wed Aug 28 12:31:18 2013
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -19,7 +19,7 @@ Pinout by Pin Number:
 
 -----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
 Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|Drive (mA)|Slew Rate|Termination|IOB Delay|Voltage|Constraint|DCI Value|IO Register|Signal Integrity|
-P1|||VCCO|||0|||||any******|||||
+P1|||VCCO|||0|||||3.30|||||
 P2|||TCK|||||||||||||
 P3||IOB|IO|UNUSED||0||||||||||
 P4||IOB|IO|UNUSED||0||||||||||
@@ -33,10 +33,10 @@ P11||IOB|IO|UNUSED||0||||||||||
 P12||IOB|IO_VREF_0|UNUSED||0||||||||||
 P13||IOB|IO|UNUSED||0||||||||||
 P14|||VCCINT||||||||2.5|||||
-P15|clk|GCLKIOB|GCK3|INPUT|LVTTL*|0||||NONE||LOCATED||NO|NONE|
-P16|||VCCO|||0|||||any******|||||
+P15||GCLKIOB|GCK3|UNUSED||0||||||||||
+P16|||VCCO|||0|||||3.30|||||
 P17|||GND|||||||||||||
-P18||GCLKIOB|GCK2|UNUSED||1||||||||||
+P18|clk|GCLKIOB|GCK2|INPUT|LVTTL*|1||||NONE||LOCATED||NO|NONE|
 P19||IOB|IO|UNUSED||1||||||||||
 P20||IOB|IO|UNUSED||1||||||||||
 P21||IOB|IO_VREF_1|UNUSED||1||||||||||
@@ -53,8 +53,8 @@ P31||IOB|IO_CS|UNUSED||1||||||||||
 P32|||TDI|||||||||||||
 P33|||GND|||||||||||||
 P34|||TDO|||||||||||||
-P35|||VCCO|||0|||||any******|||||
-P36|||VCCO|||1|||||any******|||||
+P35|||VCCO|||0|||||3.30|||||
+P36|||VCCO|||1|||||3.30|||||
 P37|||CCLK|||||||||||||
 P38||IOB|IO_DOUT_BUSY|UNUSED||2||||||||||
 P39||IOB|IO_DIN_D0|UNUSED||2||||||||||
@@ -71,7 +71,7 @@ P49||IOB|IO_D3|UNUSED||2||||||||||
 P50||IOB|IO|UNUSED||2||||||||||
 P51||PCIIOB|IO_IRDY|UNUSED||2||||||||||
 P52|||GND|||||||||||||
-P53|||VCCO|||1|||||any******|||||
+P53|||VCCO|||1|||||3.30|||||
 P54||PCIIOB|IO_TRDY|UNUSED||3||||||||||
 P55|||VCCINT||||||||2.5|||||
 P56||IOB|IO|UNUSED||3||||||||||
@@ -82,13 +82,13 @@ P60||IOB|IO_D5|UNUSED||3||||||||||
 P61|||GND|||||||||||||
 P62||IOB|IO_D6|UNUSED||3||||||||||
 P63||IOB|IO_VREF_3|UNUSED||3||||||||||
-P64||IOB|IO|UNUSED||3||||||||||
+P64|dout<0>|IOB|IO|OUTPUT|LVTTL*|3|12|SLOW|NONE**|||LOCATED||NO|NONE|
 P65||IOB|IO_VREF_3|UNUSED||3||||||||||
 P66||IOB|IO|UNUSED||3||||||||||
 P67||IOB|IO_D7|UNUSED||3||||||||||
 P68||IOB|IO_INIT|UNUSED||3||||||||||
 P69|||PROGRAM|||||||||||||
-P70|||VCCO|||1|||||any******|||||
+P70|||VCCO|||1|||||3.30|||||
 P71|||VCCO|||2|||||3.30|||||
 P72|||DONE|||||||||||||
 P73|||GND|||||||||||||
@@ -104,7 +104,7 @@ P82|||VCCINT||||||||2.5|||||
 P83|dout<2>|IOB|IO|OUTPUT|LVTTL*|4|12|SLOW|NONE**|||LOCATED||NO|NONE|
 P84|dout<3>|IOB|IO|OUTPUT|LVTTL*|4|12|SLOW|NONE**|||LOCATED||NO|NONE|
 P85|dout<1>|IOB|IO_VREF_4|OUTPUT|LVTTL*|4|12|SLOW|NONE**|||LOCATED||NO|NONE|
-P86|dout<0>|IOB|IO|OUTPUT|LVTTL*|4|12|SLOW|NONE**|||LOCATED||NO|NONE|
+P86||IOB|IO|UNUSED||4||||||||||
 P87||IOB|IO|UNUSED||4||||||||||
 P88||GCLKIOB|GCK0|UNUSED||4||||||||||
 P89|||GND|||||||||||||

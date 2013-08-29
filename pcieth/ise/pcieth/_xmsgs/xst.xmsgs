@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;pcieth.v&quot; line 299 </arg>Connection to input port &apos;<arg fmt="%s" index="2">WRdata</arg>&apos; does not match port size
+<msg type="warning" file="HDLCompilers" num="259" delta="unknown" ><arg fmt="%s" index="1">&quot;pcieth.v&quot; line 303 </arg>Connection to input port &apos;<arg fmt="%s" index="2">WRdata</arg>&apos; does not match port size
 </msg>
 
 <msg type="warning" file="Xst" num="905" delta="unknown" >&quot;<arg fmt="%s" index="1">pcieth.v</arg>&quot; line <arg fmt="%d" index="2">203</arg>: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
@@ -13,6 +13,9 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1305" delta="unknown" >Output &lt;<arg fmt="%s" index="1">R</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="unknown" >Output &lt;<arg fmt="%s" index="1">LED</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">00</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="2109" delta="unknown" >Contents of latch &lt;<arg fmt="%s" index="1">RDdata</arg>&gt; never changes during circuit operation. The latch is removed and the signal is tied to value <arg fmt="%s" index="2">00000000</arg>.
@@ -46,6 +49,9 @@
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">PCI_IOTransferRead</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">LED_unused</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="737" delta="unknown" >Found <arg fmt="%d" index="1">32</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">PCI_DATAread</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.

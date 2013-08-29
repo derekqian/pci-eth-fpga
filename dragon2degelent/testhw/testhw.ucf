@@ -1,5 +1,6 @@
-NET "CLK"  LOC = "p15"  ;
-NET "DOUT<0>"  LOC = "P86"  ;
+# NET "CLK"  LOC = "p15"  ;
+NET "CLK"  LOC = "p18"  ;
+NET "DOUT<0>"  LOC = "P64"  ;
 NET "DOUT<1>"  LOC = "P85"  ;
 NET "DOUT<2>"  LOC = "P83"  ;
 NET "DOUT<3>"  LOC = "P84"  ;

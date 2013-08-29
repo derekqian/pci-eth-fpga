@@ -2,10 +2,11 @@ Release 10.1.03 ngdbuild K.39 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
 Command Line: /software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/ngdbuild -ise
-/home/derek/iseproject/testhw/testhw.ise -intstyle ise -dd _ngo -nt timestamp -i
--p xc2s100-tq144-5 testhw.ngc testhw.ngd
+/home/derek/pci-eth-fpga/dragon2degelent/testhw/testhw.ise -intstyle ise -dd
+_ngo -nt timestamp -i -p xc2s100-tq144-5 testhw.ngc testhw.ngd
 
-Reading NGO file "/home/derek/iseproject/testhw/testhw.ngc" ...
+Reading NGO file "/home/derek/pci-eth-fpga/dragon2degelent/testhw/testhw.ngc"
+...
 Reading in constraint information from 'testhw.ucf'...
 Gathering constraint information from source properties...
 Done.
@@ -28,7 +29,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 64684 kilobytes
+Total memory usage is 64732 kilobytes
 
 Writing NGD file "testhw.ngd" ...
 

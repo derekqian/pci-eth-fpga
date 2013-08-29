@@ -3,14 +3,15 @@ Xilinx Map Application Log File for Design 'ten2four'
 
 Design Information
 ------------------
-Command Line   : map -ise /home/derek/iseproject/ten2four/ten2four.ise -intstyle
-ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o ten2four_map.ncd
+Command Line   : map -ise
+/home/derek/pci-eth-fpga/digilent2dragon/ten2four/ten2four.ise -intstyle ise -p
+xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o ten2four_map.ncd
 ten2four.ngd ten2four.pcf 
 Target Device  : xc2s100
 Target Package : tq144
 Target Speed   : -5
 Mapper Version : spartan2 -- $Revision: 1.46.12.2 $
-Mapped Date    : Wed Jul 31 14:58:03 2013
+Mapped Date    : Wed Aug 28 13:18:41 2013
 
 Mapping design into LUTs...
 Running directed packing...

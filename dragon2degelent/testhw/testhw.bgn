@@ -5,7 +5,7 @@ Loading device for application Rf_Device from file 'v100.nph' in environment
    "testhw" is an NCD, version 3.2, device xc2s100, package tq144, speed -5
 Opened constraints file testhw.pcf.
 
-Thu Jul 18 17:14:29 2013
+Wed Aug 28 12:31:20 2013
 
 /software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/bitgen -intstyle ise -w -g DebugBitstream:No -g Binary:no -g Gclkdel0:11111 -g Gclkdel1:11111 -g Gclkdel2:11111 -g Gclkdel3:11111 -g ConfigRate:4 -g CclkPin:PullUp -g M0Pin:PullUp -g M1Pin:PullUp -g M2Pin:PullUp -g ProgPin:PullUp -g DonePin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GSR_cycle:6 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:No -g DriveDone:No testhw.ncd 
 
@@ -95,9 +95,7 @@ Summary of Bitgen Options:
  ** The specified setting matches the default setting.
 
 Running DRC.
-WARNING:PhysDesignRules:367 - The signal <clk_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+DRC detected 0 errors and 0 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 Creating bit map...
 Saving bit stream in "testhw.bit".

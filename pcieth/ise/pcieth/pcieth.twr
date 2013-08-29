@@ -3,8 +3,8 @@ Release 10.1.03 Trace  (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
 /software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/trce -ise
-/home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise -intstyle ise -v 3 -s 5 -xml
-pcieth pcieth.ncd -o pcieth.twr pcieth.pcf -ucf pcieth.ucf
+/home/derek/pci-eth-fpga/pcieth/ise/pcieth/pcieth.ise -intstyle ise -v 3 -s 5
+-xml pcieth pcieth.ncd -o pcieth.twr pcieth.pcf -ucf pcieth.ucf
 
 Design file:              pcieth.ncd
 Physical constraint file: pcieth.pcf
@@ -25,128 +25,226 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
    please see the device datasheet.
 
 ================================================================================
+Timing constraint: TS_CLK24 = PERIOD TIMEGRP "CLK24" 24 MHz HIGH 50%;
+
+ 186 paths analyzed, 79 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is  12.835ns.
+--------------------------------------------------------------------------------
+Slack:                  28.831ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mram_RAM_LA1.B (RAM)
+  Destination:          USB_Data_2 (FF)
+  Requirement:          41.666ns
+  Data Path Delay:      12.835ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK24_BUFGP rising at 0.000ns
+  Destination Clock:    CLK24_BUFGP rising at 41.666ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Mram_RAM_LA1.B to USB_Data_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB4_R1C0.DOB2      Tbcko                 3.985   Mram_RAM_LA1
+                                                       Mram_RAM_LA1.B
+    CLB_R7C2.S1.G1       net (fanout=1)        5.030   dob<2>
+    CLB_R7C2.S1.X        Tif5x                 1.028   Mmux_USB_Data_mux0000_5_f52
+                                                       Mmux_USB_Data_mux0000_72
+                                                       Mmux_USB_Data_mux0000_5_f5_1
+    CLB_R12C3.S0.G3      net (fanout=1)        1.440   Mmux_USB_Data_mux0000_5_f52
+    CLB_R12C3.S0.CLK     Tick                  1.352   USB_Data<2>
+                                                       addrb<2>2
+                                                       USB_Data_2
+    -------------------------------------------------  ---------------------------
+    Total                                     12.835ns (6.365ns logic, 6.470ns route)
+                                                       (49.6% logic, 50.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  29.062ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mram_RAM_LA1.B (RAM)
+  Destination:          USB_Data_7 (FF)
+  Requirement:          41.666ns
+  Data Path Delay:      12.604ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK24_BUFGP rising at 0.000ns
+  Destination Clock:    CLK24_BUFGP rising at 41.666ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Mram_RAM_LA1.B to USB_Data_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB4_R1C0.DOB15     Tbcko                 3.985   Mram_RAM_LA1
+                                                       Mram_RAM_LA1.B
+    CLB_R8C1.S1.G4       net (fanout=1)        5.288   dob<15>
+    CLB_R8C1.S1.X        Tif5x                 1.028   Mmux_USB_Data_mux0000_5_f57
+                                                       Mmux_USB_Data_mux0000_77
+                                                       Mmux_USB_Data_mux0000_5_f5_6
+    CLB_R10C1.S1.G3      net (fanout=1)        0.951   Mmux_USB_Data_mux0000_5_f57
+    CLB_R10C1.S1.CLK     Tick                  1.352   USB_Data<7>
+                                                       addrb<2>7
+                                                       USB_Data_7
+    -------------------------------------------------  ---------------------------
+    Total                                     12.604ns (6.365ns logic, 6.239ns route)
+                                                       (50.5% logic, 49.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  29.193ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mram_RAM_LA1.B (RAM)
+  Destination:          USB_Data_6 (FF)
+  Requirement:          41.666ns
+  Data Path Delay:      12.473ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK24_BUFGP rising at 0.000ns
+  Destination Clock:    CLK24_BUFGP rising at 41.666ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Mram_RAM_LA1.B to USB_Data_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB4_R1C0.DOB14     Tbcko                 3.985   Mram_RAM_LA1
+                                                       Mram_RAM_LA1.B
+    CLB_R8C2.S1.G1       net (fanout=1)        5.007   dob<14>
+    CLB_R8C2.S1.X        Tif5x                 1.028   Mmux_USB_Data_mux0000_5_f56
+                                                       Mmux_USB_Data_mux0000_76
+                                                       Mmux_USB_Data_mux0000_5_f5_5
+    CLB_R9C2.S0.G2       net (fanout=1)        1.101   Mmux_USB_Data_mux0000_5_f56
+    CLB_R9C2.S0.CLK      Tick                  1.352   USB_Data<6>
+                                                       addrb<2>6
+                                                       USB_Data_6
+    -------------------------------------------------  ---------------------------
+    Total                                     12.473ns (6.365ns logic, 6.108ns route)
+                                                       (51.0% logic, 49.0% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
 Timing constraint: TS_PCI_CLK = PERIOD TIMEGRP "PCI_CLK" 30 ns HIGH 50%;
 
- 1249 paths analyzed, 299 endpoints analyzed, 0 failing endpoints
+ 1493 paths analyzed, 340 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum period is  10.694ns.
+ Minimum period is  10.610ns.
 --------------------------------------------------------------------------------
-Slack:                  19.306ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               acquisition (FF)
-  Destination:          Mram_RAM_LA2.A (RAM)
+Slack:                  19.390ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               PCI_CSBAR0_0 (FF)
+  Destination:          PCI_TargetReady (FF)
   Requirement:          30.000ns
-  Data Path Delay:      10.306ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.388ns (2.052 - 2.440)
-  Source Clock:         PCI_CLK_BUFGP rising at 0.000ns
-  Destination Clock:    PCI_CLK_BUFGP rising at 30.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: acquisition to Mram_RAM_LA2.A
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    CLB_R11C5.S0.YQ      Tcko                  1.292   acquisition
-                                                       acquisition
-    RAMB4_R0C1.WEA       net (fanout=7)        6.268   acquisition
-    RAMB4_R0C1.CLKA      Tbwck                 2.746   Mram_RAM_LA2
-                                                       Mram_RAM_LA2.A
-    -------------------------------------------------  ---------------------------
-    Total                                     10.306ns (4.038ns logic, 6.268ns route)
-                                                       (39.2% logic, 60.8% route)
-
---------------------------------------------------------------------------------
-Slack:                  19.798ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               PCI_MEMBAR1_0 (FF)
-  Destination:          acquisition (FF)
-  Requirement:          30.000ns
-  Data Path Delay:      10.202ns (Levels of Logic = 6)
+  Data Path Delay:      10.610ns (Levels of Logic = 6)
   Clock Path Skew:      0.000ns
   Source Clock:         PCI_CLK_BUFGP rising at 0.000ns
   Destination Clock:    PCI_CLK_BUFGP rising at 30.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: PCI_MEMBAR1_0 to acquisition
+  Maximum Data Path: PCI_CSBAR0_0 to PCI_TargetReady
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    CLB_R13C5.S0.YQ      Tcko                  1.292   PCI_MEMBAR1<1>
-                                                       PCI_MEMBAR1_0
-    CLB_R15C7.S0.F2      net (fanout=2)        1.883   PCI_MEMBAR1<0>
-    CLB_R15C7.S0.COUT    Topcyf                1.487   Mcompar_PCI_Targeted_cmp_eq0002_cy<1>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_lut<0>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<0>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<1>
-    CLB_R14C7.S0.CIN     net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0002_cy<1>
-    CLB_R14C7.S0.COUT    Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0002_cy<3>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<2>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<3>
-    CLB_R13C7.S0.CIN     net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0002_cy<3>
-    CLB_R13C7.S0.COUT    Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<4>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-    CLB_R12C7.S0.CIN     net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-    CLB_R12C7.S0.COUT    Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<6>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-    CLB_R11C5.S1.F4      net (fanout=2)        1.631   Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-    CLB_R11C5.S1.X       Tilo                  0.653   PCI_Targeted2
-                                                       PCI_Targeted2
-    CLB_R11C5.S1.G3      net (fanout=3)        0.742   PCI_Targeted2
-    CLB_R11C5.S1.Y       Tilo                  0.653   PCI_Targeted2
+    CLB_R6C8.S0.YQ       Tcko                  1.292   PCI_CSBAR0<1>
+                                                       PCI_CSBAR0_0
+    CLB_R6C4.S0.F1       net (fanout=2)        1.775   PCI_CSBAR0<0>
+    CLB_R6C4.S0.COUT     Topcyf                1.487   Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_lut<0>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<0>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+    CLB_R5C4.S0.CIN      net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+    CLB_R5C4.S0.COUT     Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<2>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+    CLB_R4C4.S0.CIN      net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+    CLB_R4C4.S0.XB       Tcinxb                0.046   PCI_read<15>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<4>
+    CLB_R9C4.S0.G4       net (fanout=1)        1.783   Mcompar_PCI_Targeted_cmp_eq0000_cy<4>
+    CLB_R9C4.S0.Y        Tilo                  0.653   PCI_Targeted6/O
+                                                       PCI_Targeted32
+    CLB_R10C3.S1.G4      net (fanout=3)        0.896   PCI_Targeted32
+    CLB_R10C3.S1.Y       Tilo                  0.653   PCI_Targeted2
                                                        PCI_Targeted58
-    CLB_R11C5.S0.CE      net (fanout=1)        0.687   PCI_Targeted
-    CLB_R11C5.S0.CLK     Tceck                 0.886   acquisition
-                                                       acquisition
+    CLB_R10C2.S1.G2      net (fanout=2)        0.577   PCI_Targeted
+    CLB_R10C2.S1.CLK     Tick                  1.352   PCI_TargetReady
+                                                       PCI_TargetReady_mux00001
+                                                       PCI_TargetReady
     -------------------------------------------------  ---------------------------
-    Total                                     10.202ns (5.259ns logic, 4.943ns route)
-                                                       (51.5% logic, 48.5% route)
+    Total                                     10.610ns (5.579ns logic, 5.031ns route)
+                                                       (52.6% logic, 47.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  19.805ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               PCI_MEMBAR1_1 (FF)
-  Destination:          acquisition (FF)
+Slack:                  19.417ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               PCI_CSBAR0_1 (FF)
+  Destination:          PCI_TargetReady (FF)
   Requirement:          30.000ns
-  Data Path Delay:      10.195ns (Levels of Logic = 6)
+  Data Path Delay:      10.583ns (Levels of Logic = 6)
   Clock Path Skew:      0.000ns
   Source Clock:         PCI_CLK_BUFGP rising at 0.000ns
   Destination Clock:    PCI_CLK_BUFGP rising at 30.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: PCI_MEMBAR1_1 to acquisition
+  Maximum Data Path: PCI_CSBAR0_1 to PCI_TargetReady
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    CLB_R13C5.S0.XQ      Tcko                  1.292   PCI_MEMBAR1<1>
-                                                       PCI_MEMBAR1_1
-    CLB_R15C7.S0.F1      net (fanout=2)        1.876   PCI_MEMBAR1<1>
-    CLB_R15C7.S0.COUT    Topcyf                1.487   Mcompar_PCI_Targeted_cmp_eq0002_cy<1>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_lut<0>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<0>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<1>
-    CLB_R14C7.S0.CIN     net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0002_cy<1>
-    CLB_R14C7.S0.COUT    Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0002_cy<3>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<2>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<3>
-    CLB_R13C7.S0.CIN     net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0002_cy<3>
-    CLB_R13C7.S0.COUT    Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<4>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-    CLB_R12C7.S0.CIN     net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-    CLB_R12C7.S0.COUT    Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<6>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-    CLB_R11C5.S1.F4      net (fanout=2)        1.631   Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-    CLB_R11C5.S1.X       Tilo                  0.653   PCI_Targeted2
-                                                       PCI_Targeted2
-    CLB_R11C5.S1.G3      net (fanout=3)        0.742   PCI_Targeted2
-    CLB_R11C5.S1.Y       Tilo                  0.653   PCI_Targeted2
+    CLB_R6C8.S0.XQ       Tcko                  1.292   PCI_CSBAR0<1>
+                                                       PCI_CSBAR0_1
+    CLB_R6C4.S0.F2       net (fanout=2)        1.748   PCI_CSBAR0<1>
+    CLB_R6C4.S0.COUT     Topcyf                1.487   Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_lut<0>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<0>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+    CLB_R5C4.S0.CIN      net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+    CLB_R5C4.S0.COUT     Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<2>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+    CLB_R4C4.S0.CIN      net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+    CLB_R4C4.S0.XB       Tcinxb                0.046   PCI_read<15>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<4>
+    CLB_R9C4.S0.G4       net (fanout=1)        1.783   Mcompar_PCI_Targeted_cmp_eq0000_cy<4>
+    CLB_R9C4.S0.Y        Tilo                  0.653   PCI_Targeted6/O
+                                                       PCI_Targeted32
+    CLB_R10C3.S1.G4      net (fanout=3)        0.896   PCI_Targeted32
+    CLB_R10C3.S1.Y       Tilo                  0.653   PCI_Targeted2
                                                        PCI_Targeted58
-    CLB_R11C5.S0.CE      net (fanout=1)        0.687   PCI_Targeted
-    CLB_R11C5.S0.CLK     Tceck                 0.886   acquisition
-                                                       acquisition
+    CLB_R10C2.S1.G2      net (fanout=2)        0.577   PCI_Targeted
+    CLB_R10C2.S1.CLK     Tick                  1.352   PCI_TargetReady
+                                                       PCI_TargetReady_mux00001
+                                                       PCI_TargetReady
     -------------------------------------------------  ---------------------------
-    Total                                     10.195ns (5.259ns logic, 4.936ns route)
-                                                       (51.6% logic, 48.4% route)
+    Total                                     10.583ns (5.579ns logic, 5.004ns route)
+                                                       (52.7% logic, 47.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  19.478ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               PCI_MEMBAR1_14 (FF)
+  Destination:          PCI_TargetReady (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      10.522ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         PCI_CLK_BUFGP rising at 0.000ns
+  Destination Clock:    PCI_CLK_BUFGP rising at 30.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: PCI_MEMBAR1_14 to PCI_TargetReady
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    CLB_R15C7.S0.YQ      Tcko                  1.292   PCI_MEMBAR1<15>
+                                                       PCI_MEMBAR1_14
+    CLB_R11C2.S1.G4      net (fanout=2)        2.427   PCI_MEMBAR1<14>
+    CLB_R11C2.S1.COUT    Topcyg                1.396   Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
+                                                       Mcompar_PCI_Targeted_cmp_eq0002_lut<7>
+                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
+    CLB_R10C3.S1.F4      net (fanout=1)        1.427   Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
+    CLB_R10C3.S1.X       Tilo                  0.653   PCI_Targeted2
+                                                       PCI_Targeted2
+    CLB_R10C3.S1.G3      net (fanout=3)        0.745   PCI_Targeted2
+    CLB_R10C3.S1.Y       Tilo                  0.653   PCI_Targeted2
+                                                       PCI_Targeted58
+    CLB_R10C2.S1.G2      net (fanout=2)        0.577   PCI_Targeted
+    CLB_R10C2.S1.CLK     Tick                  1.352   PCI_TargetReady
+                                                       PCI_TargetReady_mux00001
+                                                       PCI_TargetReady
+    -------------------------------------------------  ---------------------------
+    Total                                     10.522ns (5.346ns logic, 5.176ns route)
+                                                       (50.8% logic, 49.2% route)
 
 --------------------------------------------------------------------------------
 
@@ -155,15 +253,15 @@ Timing constraint: COMP "PCI_DEVSELn" OFFSET = OUT 11 ns AFTER COMP "PCI_CLK";
 
  2 paths analyzed, 1 endpoint analyzed, 1 failing endpoint
  1 timing error detected.
- Minimum allowable offset is  12.923ns.
+ Minimum allowable offset is  12.739ns.
 --------------------------------------------------------------------------------
-Slack:                  -1.923ns (requirement - (clock arrival + clock path + data path + uncertainty))
+Slack:                  -1.739ns (requirement - (clock arrival + clock path + data path + uncertainty))
   Source:               PCI_DevSelOE (FF)
   Destination:          PCI_DEVSELn (PAD)
   Source Clock:         PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          11.000ns
-  Data Path Delay:      10.485ns (Levels of Logic = 1)
-  Clock Path Delay:     2.438ns (Levels of Logic = 2)
+  Data Path Delay:      10.276ns (Levels of Logic = 1)
+  Clock Path Delay:     2.463ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
   Maximum Clock Path: PCI_CLK to PCI_DevSelOE
@@ -176,33 +274,33 @@ Slack:                  -1.923ns (requirement - (clock arrival + clock path + da
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R11C4.S1.CLK     net (fanout=126)      0.576   PCI_CLK_BUFGP
+    CLB_R10C4.S0.CLK     net (fanout=135)      0.601   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.438ns (1.855ns logic, 0.583ns route)
-                                                       (76.1% logic, 23.9% route)
+    Total                                      2.463ns (1.855ns logic, 0.608ns route)
+                                                       (75.3% logic, 24.7% route)
 
   Maximum Data Path: PCI_DevSelOE to PCI_DEVSELn
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    CLB_R11C4.S1.YQ      Tcko                  1.292   PCI_DevSelOE
+    CLB_R10C4.S0.YQ      Tcko                  1.292   PCI_DevSelOE
                                                        PCI_DevSelOE
-    P131.T               net (fanout=3)        2.228   PCI_DevSelOE
+    P131.T               net (fanout=3)        2.019   PCI_DevSelOE
     P131.PAD             Tioton                6.965   PCI_DEVSELn
                                                        PCI_DEVSELn_IOBUF/OBUFT
                                                        PCI_DEVSELn
     -------------------------------------------------  ---------------------------
-    Total                                     10.485ns (8.257ns logic, 2.228ns route)
-                                                       (78.8% logic, 21.2% route)
+    Total                                     10.276ns (8.257ns logic, 2.019ns route)
+                                                       (80.4% logic, 19.6% route)
 
 --------------------------------------------------------------------------------
-Slack:                  -1.778ns (requirement - (clock arrival + clock path + data path + uncertainty))
+Slack:                  -1.358ns (requirement - (clock arrival + clock path + data path + uncertainty))
   Source:               PCI_DevSel (FF)
   Destination:          PCI_DEVSELn (PAD)
   Source Clock:         PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          11.000ns
-  Data Path Delay:      10.336ns (Levels of Logic = 1)
-  Clock Path Delay:     2.442ns (Levels of Logic = 2)
+  Data Path Delay:      9.895ns (Levels of Logic = 1)
+  Clock Path Delay:     2.463ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
   Maximum Clock Path: PCI_CLK to PCI_DevSel
@@ -215,255 +313,63 @@ Slack:                  -1.778ns (requirement - (clock arrival + clock path + da
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R11C6.S0.CLK     net (fanout=126)      0.580   PCI_CLK_BUFGP
+    CLB_R10C4.S1.CLK     net (fanout=135)      0.601   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.442ns (1.855ns logic, 0.587ns route)
-                                                       (76.0% logic, 24.0% route)
+    Total                                      2.463ns (1.855ns logic, 0.608ns route)
+                                                       (75.3% logic, 24.7% route)
 
   Maximum Data Path: PCI_DevSel to PCI_DEVSELn
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    CLB_R11C6.S0.XQ      Tcko                  1.292   PCI_DevSel
+    CLB_R10C4.S1.YQ      Tcko                  1.292   PCI_DevSel
                                                        PCI_DevSel
-    P131.O               net (fanout=5)        2.245   PCI_DevSel
+    P131.O               net (fanout=4)        1.804   PCI_DevSel
     P131.PAD             Tioop                 6.799   PCI_DEVSELn
                                                        PCI_DEVSELn_IOBUF/OBUFT
                                                        PCI_DEVSELn
     -------------------------------------------------  ---------------------------
-    Total                                     10.336ns (8.091ns logic, 2.245ns route)
-                                                       (78.3% logic, 21.7% route)
+    Total                                      9.895ns (8.091ns logic, 1.804ns route)
+                                                       (81.8% logic, 18.2% route)
 
 --------------------------------------------------------------------------------
 
 ================================================================================
 Timing constraint: COMP "PCI_FRAMEn" OFFSET = IN 7 ns BEFORE COMP "PCI_CLK";
 
- 34 paths analyzed, 34 endpoints analyzed, 0 failing endpoints
+ 31 paths analyzed, 29 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum allowable offset is   5.278ns.
+ Minimum allowable offset is   4.829ns.
 --------------------------------------------------------------------------------
-Slack:                  1.722ns (requirement - (data path - clock path - clock arrival + uncertainty))
+Slack:                  2.171ns (requirement - (data path - clock path - clock arrival + uncertainty))
   Source:               PCI_FRAMEn (PAD)
-  Destination:          PCI_TransactionAddr_1_2 (FF)
-  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
-  Requirement:          7.000ns
-  Data Path Delay:      7.701ns (Levels of Logic = 3)
-  Clock Path Delay:     2.423ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: PCI_FRAMEn to PCI_TransactionAddr_1_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P126.I               Tiopi                 1.224   PCI_FRAMEn
-                                                       PCI_FRAMEn
-                                                       PCI_FRAMEn_IBUF
-    CLB_R10C5.S1.F4      net (fanout=10)       1.627   PCI_FRAMEn_IBUF
-    CLB_R10C5.S1.X       Tilo                  0.653   PCI_TransactionAddr_0_1
-                                                       PCI_TransactionStart1
-    CLB_R9C6.S1.G2       net (fanout=10)       2.010   PCI_TransactionStart
-    CLB_R9C6.S1.Y        Tilo                  0.653   PCI_TransactionAddr_1_1
-                                                       Mcount_PCI_TransactionAddr_xor<1>11
-    CLB_R9C6.S0.BY       net (fanout=2)        0.702   Mcount_PCI_TransactionAddr3
-    CLB_R9C6.S0.CLK      Tdick                 0.832   PCI_TransactionAddr_1_2
-                                                       PCI_TransactionAddr_1_2
-    -------------------------------------------------  ---------------------------
-    Total                                      7.701ns (3.362ns logic, 4.339ns route)
-                                                       (43.7% logic, 56.3% route)
-
-  Minimum Clock Path: PCI_CLK to PCI_TransactionAddr_1_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
-                                                       PCI_CLK
-                                                       PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
-                                                       PCI_CLK_BUFGP/BUFG
-    CLB_R9C6.S0.CLK      net (fanout=126)      0.561   PCI_CLK_BUFGP
-    -------------------------------------------------  ---------------------------
-    Total                                      2.423ns (1.855ns logic, 0.568ns route)
-                                                       (76.6% logic, 23.4% route)
-
---------------------------------------------------------------------------------
-Slack:                  1.762ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               PCI_FRAMEn (PAD)
-  Destination:          PCI_TransactionAddr_1_1 (FF)
-  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
-  Requirement:          7.000ns
-  Data Path Delay:      7.661ns (Levels of Logic = 3)
-  Clock Path Delay:     2.423ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: PCI_FRAMEn to PCI_TransactionAddr_1_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P126.I               Tiopi                 1.224   PCI_FRAMEn
-                                                       PCI_FRAMEn
-                                                       PCI_FRAMEn_IBUF
-    CLB_R10C5.S1.F4      net (fanout=10)       1.627   PCI_FRAMEn_IBUF
-    CLB_R10C5.S1.X       Tilo                  0.653   PCI_TransactionAddr_0_1
-                                                       PCI_TransactionStart1
-    CLB_R9C6.S1.G2       net (fanout=10)       2.010   PCI_TransactionStart
-    CLB_R9C6.S1.Y        Tilo                  0.653   PCI_TransactionAddr_1_1
-                                                       Mcount_PCI_TransactionAddr_xor<1>11
-    CLB_R9C6.S1.BX       net (fanout=2)        0.741   Mcount_PCI_TransactionAddr3
-    CLB_R9C6.S1.CLK      Tdick                 0.753   PCI_TransactionAddr_1_1
-                                                       PCI_TransactionAddr_1_1
-    -------------------------------------------------  ---------------------------
-    Total                                      7.661ns (3.283ns logic, 4.378ns route)
-                                                       (42.9% logic, 57.1% route)
-
-  Minimum Clock Path: PCI_CLK to PCI_TransactionAddr_1_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
-                                                       PCI_CLK
-                                                       PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
-                                                       PCI_CLK_BUFGP/BUFG
-    CLB_R9C6.S1.CLK      net (fanout=126)      0.561   PCI_CLK_BUFGP
-    -------------------------------------------------  ---------------------------
-    Total                                      2.423ns (1.855ns logic, 0.568ns route)
-                                                       (76.6% logic, 23.4% route)
-
---------------------------------------------------------------------------------
-Slack:                  1.948ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               PCI_FRAMEn (PAD)
-  Destination:          acquisition (FF)
-  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
-  Requirement:          7.000ns
-  Data Path Delay:      7.492ns (Levels of Logic = 3)
-  Clock Path Delay:     2.440ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: PCI_FRAMEn to acquisition
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P126.I               Tiopi                 1.224   PCI_FRAMEn
-                                                       PCI_FRAMEn
-                                                       PCI_FRAMEn_IBUF
-    CLB_R10C5.S1.F4      net (fanout=10)       1.627   PCI_FRAMEn_IBUF
-    CLB_R10C5.S1.X       Tilo                  0.653   PCI_TransactionAddr_0_1
-                                                       PCI_TransactionStart1
-    CLB_R11C5.S1.G1      net (fanout=10)       1.762   PCI_TransactionStart
-    CLB_R11C5.S1.Y       Tilo                  0.653   PCI_Targeted2
-                                                       PCI_Targeted58
-    CLB_R11C5.S0.CE      net (fanout=1)        0.687   PCI_Targeted
-    CLB_R11C5.S0.CLK     Tceck                 0.886   acquisition
-                                                       acquisition
-    -------------------------------------------------  ---------------------------
-    Total                                      7.492ns (3.416ns logic, 4.076ns route)
-                                                       (45.6% logic, 54.4% route)
-
-  Minimum Clock Path: PCI_CLK to acquisition
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
-                                                       PCI_CLK
-                                                       PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
-                                                       PCI_CLK_BUFGP/BUFG
-    CLB_R11C5.S0.CLK     net (fanout=126)      0.578   PCI_CLK_BUFGP
-    -------------------------------------------------  ---------------------------
-    Total                                      2.440ns (1.855ns logic, 0.585ns route)
-                                                       (76.0% logic, 24.0% route)
-
---------------------------------------------------------------------------------
-
-================================================================================
-Timing constraint: COMP "PCI_IDSEL" OFFSET = IN 7 ns BEFORE COMP "PCI_CLK";
-
- 5 paths analyzed, 5 endpoints analyzed, 0 failing endpoints
- 0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum allowable offset is   5.550ns.
---------------------------------------------------------------------------------
-Slack:                  1.450ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               PCI_IDSEL (PAD)
-  Destination:          acquisition (FF)
-  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
-  Requirement:          7.000ns
-  Data Path Delay:      7.990ns (Levels of Logic = 4)
-  Clock Path Delay:     2.440ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: PCI_IDSEL to acquisition
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P114.I               Tiopi                 1.224   PCI_IDSEL
-                                                       PCI_IDSEL
-                                                       PCI_IDSEL_IBUF
-    CLB_R11C2.S0.G3      net (fanout=2)        1.675   PCI_IDSEL_IBUF
-    CLB_R11C2.S0.Y       Tilo                  0.653   PCI_Targeted3
-                                                       PCI_Targeted3
-    CLB_R11C4.S0.G1      net (fanout=1)        1.145   PCI_Targeted3
-    CLB_R11C4.S0.Y       Tilo                  0.653   PCI_Targeted6/O
-                                                       PCI_Targeted32
-    CLB_R11C5.S1.G4      net (fanout=4)        0.414   PCI_Targeted32
-    CLB_R11C5.S1.Y       Tilo                  0.653   PCI_Targeted2
-                                                       PCI_Targeted58
-    CLB_R11C5.S0.CE      net (fanout=1)        0.687   PCI_Targeted
-    CLB_R11C5.S0.CLK     Tceck                 0.886   acquisition
-                                                       acquisition
-    -------------------------------------------------  ---------------------------
-    Total                                      7.990ns (4.069ns logic, 3.921ns route)
-                                                       (50.9% logic, 49.1% route)
-
-  Minimum Clock Path: PCI_CLK to acquisition
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
-                                                       PCI_CLK
-                                                       PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
-                                                       PCI_CLK_BUFGP/BUFG
-    CLB_R11C5.S0.CLK     net (fanout=126)      0.578   PCI_CLK_BUFGP
-    -------------------------------------------------  ---------------------------
-    Total                                      2.440ns (1.855ns logic, 0.585ns route)
-                                                       (76.0% logic, 24.0% route)
-
---------------------------------------------------------------------------------
-Slack:                  1.549ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               PCI_IDSEL (PAD)
   Destination:          PCI_DevSel (FF)
   Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          7.000ns
-  Data Path Delay:      7.893ns (Levels of Logic = 4)
-  Clock Path Delay:     2.442ns (Levels of Logic = 2)
+  Data Path Delay:      7.292ns (Levels of Logic = 4)
+  Clock Path Delay:     2.463ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: PCI_IDSEL to PCI_DevSel
+  Maximum Data Path: PCI_FRAMEn to PCI_DevSel
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    P114.I               Tiopi                 1.224   PCI_IDSEL
-                                                       PCI_IDSEL
-                                                       PCI_IDSEL_IBUF
-    CLB_R11C2.S0.G3      net (fanout=2)        1.675   PCI_IDSEL_IBUF
-    CLB_R11C2.S0.Y       Tilo                  0.653   PCI_Targeted3
-                                                       PCI_Targeted3
-    CLB_R11C4.S0.G1      net (fanout=1)        1.145   PCI_Targeted3
-    CLB_R11C4.S0.Y       Tilo                  0.653   PCI_Targeted6/O
-                                                       PCI_Targeted32
-    CLB_R11C6.S0.F4      net (fanout=4)        0.828   PCI_Targeted32
-    CLB_R11C6.S0.CLK     Tif5ck                1.715   PCI_DevSel
-                                                       PCI_DevSel_mux00001_G
+    P126.I               Tiopi                 1.224   PCI_FRAMEn
+                                                       PCI_FRAMEn
+                                                       PCI_FRAMEn_IBUF
+    CLB_R10C2.S1.F3      net (fanout=9)        1.252   PCI_FRAMEn_IBUF
+    CLB_R10C2.S1.X       Tilo                  0.653   PCI_TargetReady
+                                                       PCI_TransactionStart1
+    CLB_R11C3.S1.G4      net (fanout=11)       0.990   PCI_TransactionStart
+    CLB_R11C3.S1.Y       Tilo                  0.653   PCI_DataTransfer
+                                                       PCI_TargetReady_mux000011
+    CLB_R10C4.S1.G2      net (fanout=2)        1.168   N211
+    CLB_R10C4.S1.CLK     Tick                  1.352   PCI_DevSel
                                                        PCI_DevSel_mux00001
                                                        PCI_DevSel
     -------------------------------------------------  ---------------------------
-    Total                                      7.893ns (4.245ns logic, 3.648ns route)
-                                                       (53.8% logic, 46.2% route)
+    Total                                      7.292ns (3.882ns logic, 3.410ns route)
+                                                       (53.2% logic, 46.8% route)
 
   Minimum Clock Path: PCI_CLK to PCI_DevSel
     Location             Delay type         Delay(ns)  Physical Resource
@@ -475,42 +381,41 @@ Slack:                  1.549ns (requirement - (data path - clock path - clock a
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R11C6.S0.CLK     net (fanout=126)      0.580   PCI_CLK_BUFGP
+    CLB_R10C4.S1.CLK     net (fanout=135)      0.601   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.442ns (1.855ns logic, 0.587ns route)
-                                                       (76.0% logic, 24.0% route)
+    Total                                      2.463ns (1.855ns logic, 0.608ns route)
+                                                       (75.3% logic, 24.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  1.653ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               PCI_IDSEL (PAD)
+Slack:                  2.363ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               PCI_FRAMEn (PAD)
   Destination:          PCI_TargetReady (FF)
   Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          7.000ns
-  Data Path Delay:      7.782ns (Levels of Logic = 4)
-  Clock Path Delay:     2.435ns (Levels of Logic = 2)
+  Data Path Delay:      7.092ns (Levels of Logic = 4)
+  Clock Path Delay:     2.455ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: PCI_IDSEL to PCI_TargetReady
+  Maximum Data Path: PCI_FRAMEn to PCI_TargetReady
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    P114.I               Tiopi                 1.224   PCI_IDSEL
-                                                       PCI_IDSEL
-                                                       PCI_IDSEL_IBUF
-    CLB_R11C2.S0.G3      net (fanout=2)        1.675   PCI_IDSEL_IBUF
-    CLB_R11C2.S0.Y       Tilo                  0.653   PCI_Targeted3
-                                                       PCI_Targeted3
-    CLB_R11C4.S0.G1      net (fanout=1)        1.145   PCI_Targeted3
-    CLB_R11C4.S0.Y       Tilo                  0.653   PCI_Targeted6/O
-                                                       PCI_Targeted32
-    CLB_R11C3.S0.F3      net (fanout=4)        0.717   PCI_Targeted32
-    CLB_R11C3.S0.CLK     Tif5ck                1.715   PCI_TargetReady
-                                                       PCI_TargetReady_mux00001_G
+    P126.I               Tiopi                 1.224   PCI_FRAMEn
+                                                       PCI_FRAMEn
+                                                       PCI_FRAMEn_IBUF
+    CLB_R10C2.S1.F3      net (fanout=9)        1.252   PCI_FRAMEn_IBUF
+    CLB_R10C2.S1.X       Tilo                  0.653   PCI_TargetReady
+                                                       PCI_TransactionStart1
+    CLB_R11C3.S1.G4      net (fanout=11)       0.990   PCI_TransactionStart
+    CLB_R11C3.S1.Y       Tilo                  0.653   PCI_DataTransfer
+                                                       PCI_TargetReady_mux000011
+    CLB_R10C2.S1.G3      net (fanout=2)        0.968   N211
+    CLB_R10C2.S1.CLK     Tick                  1.352   PCI_TargetReady
                                                        PCI_TargetReady_mux00001
                                                        PCI_TargetReady
     -------------------------------------------------  ---------------------------
-    Total                                      7.782ns (4.245ns logic, 3.537ns route)
-                                                       (54.5% logic, 45.5% route)
+    Total                                      7.092ns (3.882ns logic, 3.210ns route)
+                                                       (54.7% logic, 45.3% route)
 
   Minimum Clock Path: PCI_CLK to PCI_TargetReady
     Location             Delay type         Delay(ns)  Physical Resource
@@ -522,50 +427,251 @@ Slack:                  1.653ns (requirement - (data path - clock path - clock a
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R11C3.S0.CLK     net (fanout=126)      0.573   PCI_CLK_BUFGP
+    CLB_R10C2.S1.CLK     net (fanout=135)      0.593   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.435ns (1.855ns logic, 0.580ns route)
-                                                       (76.2% logic, 23.8% route)
+    Total                                      2.455ns (1.855ns logic, 0.600ns route)
+                                                       (75.6% logic, 24.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.470ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               PCI_FRAMEn (PAD)
+  Destination:          PCI_TransactionAddr_1_1 (FF)
+  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
+  Requirement:          7.000ns
+  Data Path Delay:      6.996ns (Levels of Logic = 3)
+  Clock Path Delay:     2.466ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: PCI_FRAMEn to PCI_TransactionAddr_1_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P126.I               Tiopi                 1.224   PCI_FRAMEn
+                                                       PCI_FRAMEn
+                                                       PCI_FRAMEn_IBUF
+    CLB_R10C2.S1.F3      net (fanout=9)        1.252   PCI_FRAMEn_IBUF
+    CLB_R10C2.S1.X       Tilo                  0.653   PCI_TargetReady
+                                                       PCI_TransactionStart1
+    CLB_R10C6.S1.G2      net (fanout=11)       1.764   PCI_TransactionStart
+    CLB_R10C6.S1.Y       Tilo                  0.653   PCI_TransactionAddr_1_1
+                                                       Mcount_PCI_TransactionAddr_xor<1>11
+    CLB_R10C6.S1.BX      net (fanout=1)        0.697   Mcount_PCI_TransactionAddr3
+    CLB_R10C6.S1.CLK     Tdick                 0.753   PCI_TransactionAddr_1_1
+                                                       PCI_TransactionAddr_1_1
+    -------------------------------------------------  ---------------------------
+    Total                                      6.996ns (3.283ns logic, 3.713ns route)
+                                                       (46.9% logic, 53.1% route)
+
+  Minimum Clock Path: PCI_CLK to PCI_TransactionAddr_1_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
+                                                       PCI_CLK
+                                                       PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
+                                                       PCI_CLK_BUFGP/BUFG
+    CLB_R10C6.S1.CLK     net (fanout=135)      0.604   PCI_CLK_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.466ns (1.855ns logic, 0.611ns route)
+                                                       (75.2% logic, 24.8% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: COMP "PCI_IDSEL" OFFSET = IN 7 ns BEFORE COMP "PCI_CLK";
+
+ 5 paths analyzed, 5 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   6.150ns.
+--------------------------------------------------------------------------------
+Slack:                  0.850ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               PCI_IDSEL (PAD)
+  Destination:          PCI_TargetReady (FF)
+  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
+  Requirement:          7.000ns
+  Data Path Delay:      8.605ns (Levels of Logic = 5)
+  Clock Path Delay:     2.455ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: PCI_IDSEL to PCI_TargetReady
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P114.I               Tiopi                 1.224   PCI_IDSEL
+                                                       PCI_IDSEL
+                                                       PCI_IDSEL_IBUF
+    CLB_R9C3.S0.G2       net (fanout=2)        1.971   PCI_IDSEL_IBUF
+    CLB_R9C3.S0.Y        Tilo                  0.653   PCI_Targeted3
+                                                       PCI_Targeted3
+    CLB_R9C4.S0.G1       net (fanout=1)        0.626   PCI_Targeted3
+    CLB_R9C4.S0.Y        Tilo                  0.653   PCI_Targeted6/O
+                                                       PCI_Targeted32
+    CLB_R10C3.S1.G4      net (fanout=3)        0.896   PCI_Targeted32
+    CLB_R10C3.S1.Y       Tilo                  0.653   PCI_Targeted2
+                                                       PCI_Targeted58
+    CLB_R10C2.S1.G2      net (fanout=2)        0.577   PCI_Targeted
+    CLB_R10C2.S1.CLK     Tick                  1.352   PCI_TargetReady
+                                                       PCI_TargetReady_mux00001
+                                                       PCI_TargetReady
+    -------------------------------------------------  ---------------------------
+    Total                                      8.605ns (4.535ns logic, 4.070ns route)
+                                                       (52.7% logic, 47.3% route)
+
+  Minimum Clock Path: PCI_CLK to PCI_TargetReady
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
+                                                       PCI_CLK
+                                                       PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
+                                                       PCI_CLK_BUFGP/BUFG
+    CLB_R10C2.S1.CLK     net (fanout=135)      0.593   PCI_CLK_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.455ns (1.855ns logic, 0.600ns route)
+                                                       (75.6% logic, 24.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  1.210ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               PCI_IDSEL (PAD)
+  Destination:          acquisition (FF)
+  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
+  Requirement:          7.000ns
+  Data Path Delay:      8.249ns (Levels of Logic = 4)
+  Clock Path Delay:     2.459ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: PCI_IDSEL to acquisition
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P114.I               Tiopi                 1.224   PCI_IDSEL
+                                                       PCI_IDSEL
+                                                       PCI_IDSEL_IBUF
+    CLB_R9C3.S0.G2       net (fanout=2)        1.971   PCI_IDSEL_IBUF
+    CLB_R9C3.S0.Y        Tilo                  0.653   PCI_Targeted3
+                                                       PCI_Targeted3
+    CLB_R9C4.S0.G1       net (fanout=1)        0.626   PCI_Targeted3
+    CLB_R9C4.S0.Y        Tilo                  0.653   PCI_Targeted6/O
+                                                       PCI_Targeted32
+    CLB_R10C3.S1.G4      net (fanout=3)        0.896   PCI_Targeted32
+    CLB_R10C3.S1.Y       Tilo                  0.653   PCI_Targeted2
+                                                       PCI_Targeted58
+    CLB_R10C3.S0.CE      net (fanout=2)        0.687   PCI_Targeted
+    CLB_R10C3.S0.CLK     Tceck                 0.886   acquisition
+                                                       acquisition
+    -------------------------------------------------  ---------------------------
+    Total                                      8.249ns (4.069ns logic, 4.180ns route)
+                                                       (49.3% logic, 50.7% route)
+
+  Minimum Clock Path: PCI_CLK to acquisition
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
+                                                       PCI_CLK
+                                                       PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
+                                                       PCI_CLK_BUFGP/BUFG
+    CLB_R10C3.S0.CLK     net (fanout=135)      0.597   PCI_CLK_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.459ns (1.855ns logic, 0.604ns route)
+                                                       (75.4% logic, 24.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.211ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               PCI_IDSEL (PAD)
+  Destination:          PCI_DevSel (FF)
+  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
+  Requirement:          7.000ns
+  Data Path Delay:      7.252ns (Levels of Logic = 4)
+  Clock Path Delay:     2.463ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: PCI_IDSEL to PCI_DevSel
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P114.I               Tiopi                 1.224   PCI_IDSEL
+                                                       PCI_IDSEL
+                                                       PCI_IDSEL_IBUF
+    CLB_R9C3.S0.G2       net (fanout=2)        1.971   PCI_IDSEL_IBUF
+    CLB_R9C3.S0.Y        Tilo                  0.653   PCI_Targeted3
+                                                       PCI_Targeted3
+    CLB_R9C4.S0.G1       net (fanout=1)        0.626   PCI_Targeted3
+    CLB_R9C4.S0.Y        Tilo                  0.653   PCI_Targeted6/O
+                                                       PCI_Targeted32
+    CLB_R10C4.S1.G3      net (fanout=3)        0.773   PCI_Targeted32
+    CLB_R10C4.S1.CLK     Tick                  1.352   PCI_DevSel
+                                                       PCI_DevSel_mux00001
+                                                       PCI_DevSel
+    -------------------------------------------------  ---------------------------
+    Total                                      7.252ns (3.882ns logic, 3.370ns route)
+                                                       (53.5% logic, 46.5% route)
+
+  Minimum Clock Path: PCI_CLK to PCI_DevSel
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
+                                                       PCI_CLK
+                                                       PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
+                                                       PCI_CLK_BUFGP/BUFG
+    CLB_R10C4.S1.CLK     net (fanout=135)      0.601   PCI_CLK_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.463ns (1.855ns logic, 0.608ns route)
+                                                       (75.3% logic, 24.7% route)
 
 --------------------------------------------------------------------------------
 
 ================================================================================
 Timing constraint: COMP "PCI_IRDYn" OFFSET = IN 7 ns BEFORE COMP "PCI_CLK";
 
- 98 paths analyzed, 98 endpoints analyzed, 0 failing endpoints
+ 105 paths analyzed, 105 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum allowable offset is   6.142ns.
+ Minimum allowable offset is   6.853ns.
 --------------------------------------------------------------------------------
-Slack:                  0.858ns (requirement - (data path - clock path - clock arrival + uncertainty))
+Slack:                  0.147ns (requirement - (data path - clock path - clock arrival + uncertainty))
   Source:               PCI_IRDYn (PAD)
-  Destination:          InterruptLine_2 (FF)
+  Destination:          U_txtx/cnt_4 (FF)
   Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          7.000ns
-  Data Path Delay:      8.580ns (Levels of Logic = 3)
-  Clock Path Delay:     2.438ns (Levels of Logic = 2)
+  Data Path Delay:      9.394ns (Levels of Logic = 5)
+  Clock Path Delay:     2.541ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: PCI_IRDYn to InterruptLine_2
+  Maximum Data Path: PCI_IRDYn to U_txtx/cnt_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
     P129.I               Tiopi                 1.224   PCI_IRDYn
                                                        PCI_IRDYn
                                                        PCI_IRDYn_IBUF
-    CLB_R11C7.S1.F2      net (fanout=8)        1.816   PCI_IRDYn_IBUF
-    CLB_R11C7.S1.X       Tilo                  0.653   N2
+    CLB_R11C7.S0.F3      net (fanout=6)        1.669   PCI_IRDYn_IBUF
+    CLB_R11C7.S0.X       Tilo                  0.653   N2
                                                        PCI_CSTransferWrite11
-    CLB_R9C7.S1.G1       net (fanout=13)       1.267   N2
-    CLB_R9C7.S1.Y        Tilo                  0.653   PCI_CSread_27_cmp_eq0004
-                                                       InterruptLine_and00001
-    CLB_R5C14.S0.CE      net (fanout=4)        2.081   InterruptLine_and0000
-    CLB_R5C14.S0.CLK     Tceck                 0.886   InterruptLine<3>
-                                                       InterruptLine_2
+    CLB_R13C12.S1.F3     net (fanout=14)       1.647   N2
+    CLB_R13C12.S1.X      Tilo                  0.653   U_txtx/N19
+                                                       U_txtx/cnt_mux0000<3>111
+    CLB_R13C12.S1.G4     net (fanout=3)        0.222   U_txtx/N19
+    CLB_R13C12.S1.Y      Tilo                  0.653   U_txtx/N19
+                                                       U_txtx/cnt_mux0000<5>11
+    CLB_R12C11.S1.G4     net (fanout=6)        0.946   U_txtx/N11
+    CLB_R12C11.S1.CLK    Tif5ck                1.727   U_txtx/cnt<4>
+                                                       U_txtx/cnt_mux0000<5>182
+                                                       U_txtx/cnt_mux0000<5>18_f5
+                                                       U_txtx/cnt_4
     -------------------------------------------------  ---------------------------
-    Total                                      8.580ns (3.416ns logic, 5.164ns route)
-                                                       (39.8% logic, 60.2% route)
+    Total                                      9.394ns (4.910ns logic, 4.484ns route)
+                                                       (52.3% logic, 47.7% route)
 
-  Minimum Clock Path: PCI_CLK to InterruptLine_2
+  Minimum Clock Path: PCI_CLK to U_txtx/cnt_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
@@ -575,42 +681,46 @@ Slack:                  0.858ns (requirement - (data path - clock path - clock a
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R5C14.S0.CLK     net (fanout=126)      0.576   PCI_CLK_BUFGP
+    CLB_R12C11.S1.CLK    net (fanout=135)      0.679   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.438ns (1.855ns logic, 0.583ns route)
-                                                       (76.1% logic, 23.9% route)
+    Total                                      2.541ns (1.855ns logic, 0.686ns route)
+                                                       (73.0% logic, 27.0% route)
 
 --------------------------------------------------------------------------------
-Slack:                  0.858ns (requirement - (data path - clock path - clock arrival + uncertainty))
+Slack:                  0.277ns (requirement - (data path - clock path - clock arrival + uncertainty))
   Source:               PCI_IRDYn (PAD)
-  Destination:          InterruptLine_3 (FF)
+  Destination:          U_txtx/cnt_0 (FF)
   Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          7.000ns
-  Data Path Delay:      8.580ns (Levels of Logic = 3)
-  Clock Path Delay:     2.438ns (Levels of Logic = 2)
+  Data Path Delay:      9.200ns (Levels of Logic = 5)
+  Clock Path Delay:     2.477ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: PCI_IRDYn to InterruptLine_3
+  Maximum Data Path: PCI_IRDYn to U_txtx/cnt_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
     P129.I               Tiopi                 1.224   PCI_IRDYn
                                                        PCI_IRDYn
                                                        PCI_IRDYn_IBUF
-    CLB_R11C7.S1.F2      net (fanout=8)        1.816   PCI_IRDYn_IBUF
-    CLB_R11C7.S1.X       Tilo                  0.653   N2
+    CLB_R11C7.S0.F3      net (fanout=6)        1.669   PCI_IRDYn_IBUF
+    CLB_R11C7.S0.X       Tilo                  0.653   N2
                                                        PCI_CSTransferWrite11
-    CLB_R9C7.S1.G1       net (fanout=13)       1.267   N2
-    CLB_R9C7.S1.Y        Tilo                  0.653   PCI_CSread_27_cmp_eq0004
-                                                       InterruptLine_and00001
-    CLB_R5C14.S0.CE      net (fanout=4)        2.081   InterruptLine_and0000
-    CLB_R5C14.S0.CLK     Tceck                 0.886   InterruptLine<3>
-                                                       InterruptLine_3
+    CLB_R13C12.S1.F3     net (fanout=14)       1.647   N2
+    CLB_R13C12.S1.X      Tilo                  0.653   U_txtx/N19
+                                                       U_txtx/cnt_mux0000<3>111
+    CLB_R13C12.S1.G4     net (fanout=3)        0.222   U_txtx/N19
+    CLB_R13C12.S1.Y      Tilo                  0.653   U_txtx/N19
+                                                       U_txtx/cnt_mux0000<5>11
+    CLB_R13C10.S0.G2     net (fanout=6)        1.127   U_txtx/N11
+    CLB_R13C10.S0.CLK    Tick                  1.352   U_txtx/cnt<0>
+                                                       U_txtx/cnt_mux0000<9>
+                                                       U_txtx/cnt_0
     -------------------------------------------------  ---------------------------
-    Total                                      8.580ns (3.416ns logic, 5.164ns route)
-                                                       (39.8% logic, 60.2% route)
+    Total                                      9.200ns (4.535ns logic, 4.665ns route)
+                                                       (49.3% logic, 50.7% route)
 
-  Minimum Clock Path: PCI_CLK to InterruptLine_3
+  Minimum Clock Path: PCI_CLK to U_txtx/cnt_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
@@ -620,42 +730,46 @@ Slack:                  0.858ns (requirement - (data path - clock path - clock a
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R5C14.S0.CLK     net (fanout=126)      0.576   PCI_CLK_BUFGP
+    CLB_R13C10.S0.CLK    net (fanout=135)      0.615   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.438ns (1.855ns logic, 0.583ns route)
-                                                       (76.1% logic, 23.9% route)
+    Total                                      2.477ns (1.855ns logic, 0.622ns route)
+                                                       (74.9% logic, 25.1% route)
 
 --------------------------------------------------------------------------------
-Slack:                  1.049ns (requirement - (data path - clock path - clock arrival + uncertainty))
+Slack:                  0.340ns (requirement - (data path - clock path - clock arrival + uncertainty))
   Source:               PCI_IRDYn (PAD)
-  Destination:          InterruptLine_0 (FF)
+  Destination:          U_txtx/cnt_2 (FF)
   Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          7.000ns
-  Data Path Delay:      8.396ns (Levels of Logic = 3)
-  Clock Path Delay:     2.445ns (Levels of Logic = 2)
+  Data Path Delay:      9.137ns (Levels of Logic = 5)
+  Clock Path Delay:     2.477ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: PCI_IRDYn to InterruptLine_0
+  Maximum Data Path: PCI_IRDYn to U_txtx/cnt_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
     P129.I               Tiopi                 1.224   PCI_IRDYn
                                                        PCI_IRDYn
                                                        PCI_IRDYn_IBUF
-    CLB_R11C7.S1.F2      net (fanout=8)        1.816   PCI_IRDYn_IBUF
-    CLB_R11C7.S1.X       Tilo                  0.653   N2
+    CLB_R11C7.S0.F3      net (fanout=6)        1.669   PCI_IRDYn_IBUF
+    CLB_R11C7.S0.X       Tilo                  0.653   N2
                                                        PCI_CSTransferWrite11
-    CLB_R9C7.S1.G1       net (fanout=13)       1.267   N2
-    CLB_R9C7.S1.Y        Tilo                  0.653   PCI_CSread_27_cmp_eq0004
-                                                       InterruptLine_and00001
-    CLB_R7C13.S0.CE      net (fanout=4)        1.897   InterruptLine_and0000
-    CLB_R7C13.S0.CLK     Tceck                 0.886   InterruptLine<1>
-                                                       InterruptLine_0
+    CLB_R13C12.S1.F3     net (fanout=14)       1.647   N2
+    CLB_R13C12.S1.X      Tilo                  0.653   U_txtx/N19
+                                                       U_txtx/cnt_mux0000<3>111
+    CLB_R13C12.S1.G4     net (fanout=3)        0.222   U_txtx/N19
+    CLB_R13C12.S1.Y      Tilo                  0.653   U_txtx/N19
+                                                       U_txtx/cnt_mux0000<5>11
+    CLB_R13C10.S1.G1     net (fanout=6)        1.064   U_txtx/N11
+    CLB_R13C10.S1.CLK    Tick                  1.352   U_txtx/cnt<2>
+                                                       U_txtx/cnt_mux0000<7>
+                                                       U_txtx/cnt_2
     -------------------------------------------------  ---------------------------
-    Total                                      8.396ns (3.416ns logic, 4.980ns route)
-                                                       (40.7% logic, 59.3% route)
+    Total                                      9.137ns (4.535ns logic, 4.602ns route)
+                                                       (49.6% logic, 50.4% route)
 
-  Minimum Clock Path: PCI_CLK to InterruptLine_0
+  Minimum Clock Path: PCI_CLK to U_txtx/cnt_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
@@ -665,10 +779,10 @@ Slack:                  1.049ns (requirement - (data path - clock path - clock a
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R7C13.S0.CLK     net (fanout=126)      0.583   PCI_CLK_BUFGP
+    CLB_R13C10.S1.CLK    net (fanout=135)      0.615   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.445ns (1.855ns logic, 0.590ns route)
-                                                       (75.9% logic, 24.1% route)
+    Total                                      2.477ns (1.855ns logic, 0.622ns route)
+                                                       (74.9% logic, 25.1% route)
 
 --------------------------------------------------------------------------------
 
@@ -677,15 +791,15 @@ Timing constraint: COMP "PCI_STOPn" OFFSET = OUT 11 ns AFTER COMP "PCI_CLK";
 
  1 path analyzed, 1 endpoint analyzed, 1 failing endpoint
  1 timing error detected.
- Minimum allowable offset is  12.969ns.
+ Minimum allowable offset is  13.159ns.
 --------------------------------------------------------------------------------
-Slack:                  -1.969ns (requirement - (clock arrival + clock path + data path + uncertainty))
+Slack:                  -2.159ns (requirement - (clock arrival + clock path + data path + uncertainty))
   Source:               PCI_DevSelOE (FF)
   Destination:          PCI_STOPn (PAD)
   Source Clock:         PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          11.000ns
-  Data Path Delay:      10.531ns (Levels of Logic = 1)
-  Clock Path Delay:     2.438ns (Levels of Logic = 2)
+  Data Path Delay:      10.696ns (Levels of Logic = 1)
+  Clock Path Delay:     2.463ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
   Maximum Clock Path: PCI_CLK to PCI_DevSelOE
@@ -698,24 +812,24 @@ Slack:                  -1.969ns (requirement - (clock arrival + clock path + da
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R11C4.S1.CLK     net (fanout=126)      0.576   PCI_CLK_BUFGP
+    CLB_R10C4.S0.CLK     net (fanout=135)      0.601   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.438ns (1.855ns logic, 0.583ns route)
-                                                       (76.1% logic, 23.9% route)
+    Total                                      2.463ns (1.855ns logic, 0.608ns route)
+                                                       (75.3% logic, 24.7% route)
 
   Maximum Data Path: PCI_DevSelOE to PCI_STOPn
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    CLB_R11C4.S1.YQ      Tcko                  1.292   PCI_DevSelOE
+    CLB_R10C4.S0.YQ      Tcko                  1.292   PCI_DevSelOE
                                                        PCI_DevSelOE
-    P133.T               net (fanout=3)        2.274   PCI_DevSelOE
+    P133.T               net (fanout=3)        2.439   PCI_DevSelOE
     P133.PAD             Tioton                6.965   PCI_STOPn
                                                        PCI_STOPn_IOBUF/OBUFT
                                                        PCI_STOPn
     -------------------------------------------------  ---------------------------
-    Total                                     10.531ns (8.257ns logic, 2.274ns route)
-                                                       (78.4% logic, 21.6% route)
+    Total                                     10.696ns (8.257ns logic, 2.439ns route)
+                                                       (77.2% logic, 22.8% route)
 
 --------------------------------------------------------------------------------
 
@@ -724,15 +838,15 @@ Timing constraint: COMP "PCI_TRDYn" OFFSET = OUT 11 ns AFTER COMP "PCI_CLK";
 
  2 paths analyzed, 1 endpoint analyzed, 1 failing endpoint
  1 timing error detected.
- Minimum allowable offset is  12.919ns.
+ Minimum allowable offset is  12.816ns.
 --------------------------------------------------------------------------------
-Slack:                  -1.919ns (requirement - (clock arrival + clock path + data path + uncertainty))
+Slack:                  -1.816ns (requirement - (clock arrival + clock path + data path + uncertainty))
   Source:               PCI_DevSelOE (FF)
   Destination:          PCI_TRDYn (PAD)
   Source Clock:         PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          11.000ns
-  Data Path Delay:      10.481ns (Levels of Logic = 1)
-  Clock Path Delay:     2.438ns (Levels of Logic = 2)
+  Data Path Delay:      10.353ns (Levels of Logic = 1)
+  Clock Path Delay:     2.463ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
   Maximum Clock Path: PCI_CLK to PCI_DevSelOE
@@ -745,33 +859,33 @@ Slack:                  -1.919ns (requirement - (clock arrival + clock path + da
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R11C4.S1.CLK     net (fanout=126)      0.576   PCI_CLK_BUFGP
+    CLB_R10C4.S0.CLK     net (fanout=135)      0.601   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.438ns (1.855ns logic, 0.583ns route)
-                                                       (76.1% logic, 23.9% route)
+    Total                                      2.463ns (1.855ns logic, 0.608ns route)
+                                                       (75.3% logic, 24.7% route)
 
   Maximum Data Path: PCI_DevSelOE to PCI_TRDYn
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    CLB_R11C4.S1.YQ      Tcko                  1.292   PCI_DevSelOE
+    CLB_R10C4.S0.YQ      Tcko                  1.292   PCI_DevSelOE
                                                        PCI_DevSelOE
-    P130.T               net (fanout=3)        2.224   PCI_DevSelOE
+    P130.T               net (fanout=3)        2.096   PCI_DevSelOE
     P130.PAD             Tioton                6.965   PCI_TRDYn
                                                        PCI_TRDYn_IOBUF/OBUFT
                                                        PCI_TRDYn
     -------------------------------------------------  ---------------------------
-    Total                                     10.481ns (8.257ns logic, 2.224ns route)
-                                                       (78.8% logic, 21.2% route)
+    Total                                     10.353ns (8.257ns logic, 2.096ns route)
+                                                       (79.8% logic, 20.2% route)
 
 --------------------------------------------------------------------------------
-Slack:                  -1.561ns (requirement - (clock arrival + clock path + data path + uncertainty))
+Slack:                  -1.068ns (requirement - (clock arrival + clock path + data path + uncertainty))
   Source:               PCI_TargetReady (FF)
   Destination:          PCI_TRDYn (PAD)
   Source Clock:         PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          11.000ns
-  Data Path Delay:      10.126ns (Levels of Logic = 1)
-  Clock Path Delay:     2.435ns (Levels of Logic = 2)
+  Data Path Delay:      9.613ns (Levels of Logic = 1)
+  Clock Path Delay:     2.455ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
   Maximum Clock Path: PCI_CLK to PCI_TargetReady
@@ -784,24 +898,24 @@ Slack:                  -1.561ns (requirement - (clock arrival + clock path + da
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R11C3.S0.CLK     net (fanout=126)      0.573   PCI_CLK_BUFGP
+    CLB_R10C2.S1.CLK     net (fanout=135)      0.593   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.435ns (1.855ns logic, 0.580ns route)
-                                                       (76.2% logic, 23.8% route)
+    Total                                      2.455ns (1.855ns logic, 0.600ns route)
+                                                       (75.6% logic, 24.4% route)
 
   Maximum Data Path: PCI_TargetReady to PCI_TRDYn
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    CLB_R11C3.S0.XQ      Tcko                  1.292   PCI_TargetReady
+    CLB_R10C2.S1.YQ      Tcko                  1.292   PCI_TargetReady
                                                        PCI_TargetReady
-    P130.O               net (fanout=1)        2.035   PCI_TargetReady
+    P130.O               net (fanout=1)        1.522   PCI_TargetReady
     P130.PAD             Tioop                 6.799   PCI_TRDYn
                                                        PCI_TRDYn_IOBUF/OBUFT
                                                        PCI_TRDYn
     -------------------------------------------------  ---------------------------
-    Total                                     10.126ns (8.091ns logic, 2.035ns route)
-                                                       (79.9% logic, 20.1% route)
+    Total                                      9.613ns (8.091ns logic, 1.522ns route)
+                                                       (84.2% logic, 15.8% route)
 
 --------------------------------------------------------------------------------
 
@@ -809,135 +923,42 @@ Slack:                  -1.561ns (requirement - (clock arrival + clock path + da
 Timing constraint: TIMEGRP "PCI_CBE_GRP" OFFSET = IN 7 ns BEFORE COMP 
 "PCI_CLK";
 
- 51 paths analyzed, 24 endpoints analyzed, 0 failing endpoints
+ 51 paths analyzed, 23 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors)
- Minimum allowable offset is   6.470ns.
+ Minimum allowable offset is   6.709ns.
 --------------------------------------------------------------------------------
-Slack:                  0.530ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               PCI_CBE<1> (PAD)
-  Destination:          acquisition (FF)
-  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
-  Requirement:          7.000ns
-  Data Path Delay:      8.910ns (Levels of Logic = 4)
-  Clock Path Delay:     2.440ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: PCI_CBE<1> to acquisition
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P138.I               Tiopi                 1.224   PCI_CBE<1>
-                                                       PCI_CBE<1>
-                                                       PCI_CBE_1_IBUF
-    CLB_R14C8.S0.G1      net (fanout=5)        2.149   PCI_CBE_1_IBUF
-    CLB_R14C8.S0.Y       Tilo                  0.653   PCI_Targeted29
-                                                       PCI_Targeted29
-    CLB_R11C4.S0.G4      net (fanout=1)        1.591   PCI_Targeted29
-    CLB_R11C4.S0.Y       Tilo                  0.653   PCI_Targeted6/O
-                                                       PCI_Targeted32
-    CLB_R11C5.S1.G4      net (fanout=4)        0.414   PCI_Targeted32
-    CLB_R11C5.S1.Y       Tilo                  0.653   PCI_Targeted2
-                                                       PCI_Targeted58
-    CLB_R11C5.S0.CE      net (fanout=1)        0.687   PCI_Targeted
-    CLB_R11C5.S0.CLK     Tceck                 0.886   acquisition
-                                                       acquisition
-    -------------------------------------------------  ---------------------------
-    Total                                      8.910ns (4.069ns logic, 4.841ns route)
-                                                       (45.7% logic, 54.3% route)
-
-  Minimum Clock Path: PCI_CLK to acquisition
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
-                                                       PCI_CLK
-                                                       PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
-                                                       PCI_CLK_BUFGP/BUFG
-    CLB_R11C5.S0.CLK     net (fanout=126)      0.578   PCI_CLK_BUFGP
-    -------------------------------------------------  ---------------------------
-    Total                                      2.440ns (1.855ns logic, 0.585ns route)
-                                                       (76.0% logic, 24.0% route)
-
---------------------------------------------------------------------------------
-Slack:                  0.629ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               PCI_CBE<1> (PAD)
-  Destination:          PCI_DevSel (FF)
-  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
-  Requirement:          7.000ns
-  Data Path Delay:      8.813ns (Levels of Logic = 4)
-  Clock Path Delay:     2.442ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: PCI_CBE<1> to PCI_DevSel
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P138.I               Tiopi                 1.224   PCI_CBE<1>
-                                                       PCI_CBE<1>
-                                                       PCI_CBE_1_IBUF
-    CLB_R14C8.S0.G1      net (fanout=5)        2.149   PCI_CBE_1_IBUF
-    CLB_R14C8.S0.Y       Tilo                  0.653   PCI_Targeted29
-                                                       PCI_Targeted29
-    CLB_R11C4.S0.G4      net (fanout=1)        1.591   PCI_Targeted29
-    CLB_R11C4.S0.Y       Tilo                  0.653   PCI_Targeted6/O
-                                                       PCI_Targeted32
-    CLB_R11C6.S0.F4      net (fanout=4)        0.828   PCI_Targeted32
-    CLB_R11C6.S0.CLK     Tif5ck                1.715   PCI_DevSel
-                                                       PCI_DevSel_mux00001_G
-                                                       PCI_DevSel_mux00001
-                                                       PCI_DevSel
-    -------------------------------------------------  ---------------------------
-    Total                                      8.813ns (4.245ns logic, 4.568ns route)
-                                                       (48.2% logic, 51.8% route)
-
-  Minimum Clock Path: PCI_CLK to PCI_DevSel
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
-                                                       PCI_CLK
-                                                       PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
-                                                       PCI_CLK_BUFGP/BUFG
-    CLB_R11C6.S0.CLK     net (fanout=126)      0.580   PCI_CLK_BUFGP
-    -------------------------------------------------  ---------------------------
-    Total                                      2.442ns (1.855ns logic, 0.587ns route)
-                                                       (76.0% logic, 24.0% route)
-
---------------------------------------------------------------------------------
-Slack:                  0.733ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               PCI_CBE<1> (PAD)
+Slack:                  0.291ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               PCI_CBE<3> (PAD)
   Destination:          PCI_TargetReady (FF)
   Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          7.000ns
-  Data Path Delay:      8.702ns (Levels of Logic = 4)
-  Clock Path Delay:     2.435ns (Levels of Logic = 2)
+  Data Path Delay:      9.164ns (Levels of Logic = 5)
+  Clock Path Delay:     2.455ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: PCI_CBE<1> to PCI_TargetReady
+  Maximum Data Path: PCI_CBE<3> to PCI_TargetReady
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    P138.I               Tiopi                 1.224   PCI_CBE<1>
-                                                       PCI_CBE<1>
-                                                       PCI_CBE_1_IBUF
-    CLB_R14C8.S0.G1      net (fanout=5)        2.149   PCI_CBE_1_IBUF
-    CLB_R14C8.S0.Y       Tilo                  0.653   PCI_Targeted29
-                                                       PCI_Targeted29
-    CLB_R11C4.S0.G4      net (fanout=1)        1.591   PCI_Targeted29
-    CLB_R11C4.S0.Y       Tilo                  0.653   PCI_Targeted6/O
+    P113.I               Tiopi                 1.224   PCI_CBE<3>
+                                                       PCI_CBE<3>
+                                                       PCI_CBE_3_IBUF
+    CLB_R9C3.S0.G4       net (fanout=6)        2.530   PCI_CBE_3_IBUF
+    CLB_R9C3.S0.Y        Tilo                  0.653   PCI_Targeted3
+                                                       PCI_Targeted3
+    CLB_R9C4.S0.G1       net (fanout=1)        0.626   PCI_Targeted3
+    CLB_R9C4.S0.Y        Tilo                  0.653   PCI_Targeted6/O
                                                        PCI_Targeted32
-    CLB_R11C3.S0.F3      net (fanout=4)        0.717   PCI_Targeted32
-    CLB_R11C3.S0.CLK     Tif5ck                1.715   PCI_TargetReady
-                                                       PCI_TargetReady_mux00001_G
+    CLB_R10C3.S1.G4      net (fanout=3)        0.896   PCI_Targeted32
+    CLB_R10C3.S1.Y       Tilo                  0.653   PCI_Targeted2
+                                                       PCI_Targeted58
+    CLB_R10C2.S1.G2      net (fanout=2)        0.577   PCI_Targeted
+    CLB_R10C2.S1.CLK     Tick                  1.352   PCI_TargetReady
                                                        PCI_TargetReady_mux00001
                                                        PCI_TargetReady
     -------------------------------------------------  ---------------------------
-    Total                                      8.702ns (4.245ns logic, 4.457ns route)
-                                                       (48.8% logic, 51.2% route)
+    Total                                      9.164ns (4.535ns logic, 4.629ns route)
+                                                       (49.5% logic, 50.5% route)
 
   Minimum Clock Path: PCI_CLK to PCI_TargetReady
     Location             Delay type         Delay(ns)  Physical Resource
@@ -949,121 +970,161 @@ Slack:                  0.733ns (requirement - (data path - clock path - clock a
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R11C3.S0.CLK     net (fanout=126)      0.573   PCI_CLK_BUFGP
+    CLB_R10C2.S1.CLK     net (fanout=135)      0.593   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.435ns (1.855ns logic, 0.580ns route)
-                                                       (76.2% logic, 23.8% route)
+    Total                                      2.455ns (1.855ns logic, 0.600ns route)
+                                                       (75.6% logic, 24.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  0.387ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               PCI_CBE<3> (PAD)
+  Destination:          PCI_TargetReady (FF)
+  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
+  Requirement:          7.000ns
+  Data Path Delay:      9.068ns (Levels of Logic = 5)
+  Clock Path Delay:     2.455ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: PCI_CBE<3> to PCI_TargetReady
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P113.I               Tiopi                 1.224   PCI_CBE<3>
+                                                       PCI_CBE<3>
+                                                       PCI_CBE_3_IBUF
+    CLB_R10C2.S0.F1      net (fanout=6)        2.815   PCI_CBE_3_IBUF
+    CLB_R10C2.S0.X       Tilo                  0.653   PCI_MEMSpace
+                                                       PCI_CBE_MEM1
+    CLB_R10C3.S1.F3      net (fanout=1)        0.396   PCI_CBE_MEM
+    CLB_R10C3.S1.X       Tilo                  0.653   PCI_Targeted2
+                                                       PCI_Targeted2
+    CLB_R10C3.S1.G3      net (fanout=3)        0.745   PCI_Targeted2
+    CLB_R10C3.S1.Y       Tilo                  0.653   PCI_Targeted2
+                                                       PCI_Targeted58
+    CLB_R10C2.S1.G2      net (fanout=2)        0.577   PCI_Targeted
+    CLB_R10C2.S1.CLK     Tick                  1.352   PCI_TargetReady
+                                                       PCI_TargetReady_mux00001
+                                                       PCI_TargetReady
+    -------------------------------------------------  ---------------------------
+    Total                                      9.068ns (4.535ns logic, 4.533ns route)
+                                                       (50.0% logic, 50.0% route)
+
+  Minimum Clock Path: PCI_CLK to PCI_TargetReady
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
+                                                       PCI_CLK
+                                                       PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
+                                                       PCI_CLK_BUFGP/BUFG
+    CLB_R10C2.S1.CLK     net (fanout=135)      0.593   PCI_CLK_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.455ns (1.855ns logic, 0.600ns route)
+                                                       (75.6% logic, 24.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  0.485ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               PCI_CBE<0> (PAD)
+  Destination:          PCI_TargetReady (FF)
+  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
+  Requirement:          7.000ns
+  Data Path Delay:      8.970ns (Levels of Logic = 5)
+  Clock Path Delay:     2.455ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: PCI_CBE<0> to PCI_TargetReady
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P7.I                 Tiopi                 1.224   PCI_CBE<0>
+                                                       PCI_CBE<0>
+                                                       PCI_CBE_0_IBUF
+    CLB_R10C2.S0.F3      net (fanout=4)        2.717   PCI_CBE_0_IBUF
+    CLB_R10C2.S0.X       Tilo                  0.653   PCI_MEMSpace
+                                                       PCI_CBE_MEM1
+    CLB_R10C3.S1.F3      net (fanout=1)        0.396   PCI_CBE_MEM
+    CLB_R10C3.S1.X       Tilo                  0.653   PCI_Targeted2
+                                                       PCI_Targeted2
+    CLB_R10C3.S1.G3      net (fanout=3)        0.745   PCI_Targeted2
+    CLB_R10C3.S1.Y       Tilo                  0.653   PCI_Targeted2
+                                                       PCI_Targeted58
+    CLB_R10C2.S1.G2      net (fanout=2)        0.577   PCI_Targeted
+    CLB_R10C2.S1.CLK     Tick                  1.352   PCI_TargetReady
+                                                       PCI_TargetReady_mux00001
+                                                       PCI_TargetReady
+    -------------------------------------------------  ---------------------------
+    Total                                      8.970ns (4.535ns logic, 4.435ns route)
+                                                       (50.6% logic, 49.4% route)
+
+  Minimum Clock Path: PCI_CLK to PCI_TargetReady
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
+                                                       PCI_CLK
+                                                       PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
+                                                       PCI_CLK_BUFGP/BUFG
+    CLB_R10C2.S1.CLK     net (fanout=135)      0.593   PCI_CLK_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.455ns (1.855ns logic, 0.600ns route)
+                                                       (75.6% logic, 24.4% route)
 
 --------------------------------------------------------------------------------
 
 ================================================================================
 Timing constraint: TIMEGRP "PCI_AD_GRP" OFFSET = IN 7 ns BEFORE COMP "PCI_CLK";
 
- 235 paths analyzed, 130 endpoints analyzed, 4 failing endpoints
- 4 timing errors detected. (4 setup errors, 0 hold errors)
- Minimum allowable offset is   7.537ns.
+ 232 paths analyzed, 126 endpoints analyzed, 2 failing endpoints
+ 2 timing errors detected. (2 setup errors, 0 hold errors)
+ Minimum allowable offset is   8.042ns.
 --------------------------------------------------------------------------------
-Slack:                  -0.537ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               PCI_AD<25> (PAD)
-  Destination:          acquisition (FF)
+Slack:                  -1.042ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               PCI_AD<6> (PAD)
+  Destination:          PCI_TargetReady (FF)
   Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          7.000ns
-  Data Path Delay:      9.977ns (Levels of Logic = 5)
-  Clock Path Delay:     2.440ns (Levels of Logic = 2)
+  Data Path Delay:      10.497ns (Levels of Logic = 7)
+  Clock Path Delay:     2.455ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: PCI_AD<25> to acquisition
+  Maximum Data Path: PCI_AD<6> to PCI_TargetReady
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    P103.I               Tiopi                 1.224   PCI_AD<25>
-                                                       PCI_AD<25>
-                                                       PCI_AD_25_IOBUF/IBUF
-    CLB_R13C7.S0.F4      net (fanout=4)        1.918   N90
-    CLB_R13C7.S0.COUT    Topcyf                1.487   Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_lut<4>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<4>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-    CLB_R12C7.S0.CIN     net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-    CLB_R12C7.S0.COUT    Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<6>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-    CLB_R11C5.S1.F4      net (fanout=2)        1.631   Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-    CLB_R11C5.S1.X       Tilo                  0.653   PCI_Targeted2
-                                                       PCI_Targeted2
-    CLB_R11C5.S1.G3      net (fanout=3)        0.742   PCI_Targeted2
-    CLB_R11C5.S1.Y       Tilo                  0.653   PCI_Targeted2
+    P11.I                Tiopi                 1.224   PCI_AD<6>
+                                                       PCI_AD<6>
+                                                       PCI_AD_6_IOBUF/IBUF
+    CLB_R6C4.S0.F3       net (fanout=6)        1.730   N125
+    CLB_R6C4.S0.COUT     Topcyf                1.487   Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_lut<0>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<0>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+    CLB_R5C4.S0.CIN      net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+    CLB_R5C4.S0.COUT     Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<2>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+    CLB_R4C4.S0.CIN      net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+    CLB_R4C4.S0.XB       Tcinxb                0.046   PCI_read<15>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<4>
+    CLB_R9C4.S0.G4       net (fanout=1)        1.783   Mcompar_PCI_Targeted_cmp_eq0000_cy<4>
+    CLB_R9C4.S0.Y        Tilo                  0.653   PCI_Targeted6/O
+                                                       PCI_Targeted32
+    CLB_R10C3.S1.G4      net (fanout=3)        0.896   PCI_Targeted32
+    CLB_R10C3.S1.Y       Tilo                  0.653   PCI_Targeted2
                                                        PCI_Targeted58
-    CLB_R11C5.S0.CE      net (fanout=1)        0.687   PCI_Targeted
-    CLB_R11C5.S0.CLK     Tceck                 0.886   acquisition
-                                                       acquisition
+    CLB_R10C2.S1.G2      net (fanout=2)        0.577   PCI_Targeted
+    CLB_R10C2.S1.CLK     Tick                  1.352   PCI_TargetReady
+                                                       PCI_TargetReady_mux00001
+                                                       PCI_TargetReady
     -------------------------------------------------  ---------------------------
-    Total                                      9.977ns (4.999ns logic, 4.978ns route)
-                                                       (50.1% logic, 49.9% route)
-
-  Minimum Clock Path: PCI_CLK to acquisition
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
-                                                       PCI_CLK
-                                                       PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
-                                                       PCI_CLK_BUFGP/BUFG
-    CLB_R11C5.S0.CLK     net (fanout=126)      0.578   PCI_CLK_BUFGP
-    -------------------------------------------------  ---------------------------
-    Total                                      2.440ns (1.855ns logic, 0.585ns route)
-                                                       (76.0% logic, 24.0% route)
-
---------------------------------------------------------------------------------
-Slack:                  -0.439ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               PCI_AD<17> (PAD)
-  Destination:          acquisition (FF)
-  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
-  Requirement:          7.000ns
-  Data Path Delay:      9.879ns (Levels of Logic = 7)
-  Clock Path Delay:     2.440ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: PCI_AD<17> to acquisition
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P122.I               Tiopi                 1.224   PCI_AD<17>
-                                                       PCI_AD<17>
-                                                       PCI_AD_17_IOBUF/IBUF
-    CLB_R15C7.S0.F4      net (fanout=4)        1.628   N98
-    CLB_R15C7.S0.COUT    Topcyf                1.487   Mcompar_PCI_Targeted_cmp_eq0002_cy<1>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_lut<0>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<0>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<1>
-    CLB_R14C7.S0.CIN     net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0002_cy<1>
-    CLB_R14C7.S0.COUT    Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0002_cy<3>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<2>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<3>
-    CLB_R13C7.S0.CIN     net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0002_cy<3>
-    CLB_R13C7.S0.COUT    Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<4>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-    CLB_R12C7.S0.CIN     net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-    CLB_R12C7.S0.COUT    Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<6>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-    CLB_R11C5.S1.F4      net (fanout=2)        1.631   Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-    CLB_R11C5.S1.X       Tilo                  0.653   PCI_Targeted2
-                                                       PCI_Targeted2
-    CLB_R11C5.S1.G3      net (fanout=3)        0.742   PCI_Targeted2
-    CLB_R11C5.S1.Y       Tilo                  0.653   PCI_Targeted2
-                                                       PCI_Targeted58
-    CLB_R11C5.S0.CE      net (fanout=1)        0.687   PCI_Targeted
-    CLB_R11C5.S0.CLK     Tceck                 0.886   acquisition
-                                                       acquisition
-    -------------------------------------------------  ---------------------------
-    Total                                      9.879ns (5.191ns logic, 4.688ns route)
+    Total                                     10.497ns (5.511ns logic, 4.986ns route)
                                                        (52.5% logic, 47.5% route)
 
-  Minimum Clock Path: PCI_CLK to acquisition
+  Minimum Clock Path: PCI_CLK to PCI_TargetReady
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
@@ -1073,54 +1134,54 @@ Slack:                  -0.439ns (requirement - (data path - clock path - clock 
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R11C5.S0.CLK     net (fanout=126)      0.578   PCI_CLK_BUFGP
+    CLB_R10C2.S1.CLK     net (fanout=135)      0.593   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.440ns (1.855ns logic, 0.585ns route)
-                                                       (76.0% logic, 24.0% route)
+    Total                                      2.455ns (1.855ns logic, 0.600ns route)
+                                                       (75.6% logic, 24.4% route)
 
 --------------------------------------------------------------------------------
-Slack:                  -0.393ns (requirement - (data path - clock path - clock arrival + uncertainty))
-  Source:               PCI_AD<22> (PAD)
-  Destination:          acquisition (FF)
+Slack:                  -1.025ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               PCI_AD<8> (PAD)
+  Destination:          PCI_TargetReady (FF)
   Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          7.000ns
-  Data Path Delay:      9.833ns (Levels of Logic = 6)
-  Clock Path Delay:     2.440ns (Levels of Logic = 2)
+  Data Path Delay:      10.480ns (Levels of Logic = 7)
+  Clock Path Delay:     2.455ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: PCI_AD<22> to acquisition
+  Maximum Data Path: PCI_AD<8> to PCI_TargetReady
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    P116.I               Tiopi                 1.224   PCI_AD<22>
-                                                       PCI_AD<22>
-                                                       PCI_AD_22_IOBUF/IBUF
-    CLB_R14C7.S0.G1      net (fanout=4)        1.769   N93
-    CLB_R14C7.S0.COUT    Topcyg                1.396   Mcompar_PCI_Targeted_cmp_eq0002_cy<3>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_lut<3>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<3>
-    CLB_R13C7.S0.CIN     net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0002_cy<3>
-    CLB_R13C7.S0.COUT    Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<4>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-    CLB_R12C7.S0.CIN     net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0002_cy<5>
-    CLB_R12C7.S0.COUT    Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<6>
-                                                       Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-    CLB_R11C5.S1.F4      net (fanout=2)        1.631   Mcompar_PCI_Targeted_cmp_eq0002_cy<7>
-    CLB_R11C5.S1.X       Tilo                  0.653   PCI_Targeted2
-                                                       PCI_Targeted2
-    CLB_R11C5.S1.G3      net (fanout=3)        0.742   PCI_Targeted2
-    CLB_R11C5.S1.Y       Tilo                  0.653   PCI_Targeted2
+    P10.I                Tiopi                 1.224   PCI_AD<8>
+                                                       PCI_AD<8>
+                                                       PCI_AD_8_IOBUF/IBUF
+    CLB_R6C4.S0.G1       net (fanout=4)        1.804   N123
+    CLB_R6C4.S0.COUT     Topcyg                1.396   Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_lut<1>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+    CLB_R5C4.S0.CIN      net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+    CLB_R5C4.S0.COUT     Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<2>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+    CLB_R4C4.S0.CIN      net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+    CLB_R4C4.S0.XB       Tcinxb                0.046   PCI_read<15>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<4>
+    CLB_R9C4.S0.G4       net (fanout=1)        1.783   Mcompar_PCI_Targeted_cmp_eq0000_cy<4>
+    CLB_R9C4.S0.Y        Tilo                  0.653   PCI_Targeted6/O
+                                                       PCI_Targeted32
+    CLB_R10C3.S1.G4      net (fanout=3)        0.896   PCI_Targeted32
+    CLB_R10C3.S1.Y       Tilo                  0.653   PCI_Targeted2
                                                        PCI_Targeted58
-    CLB_R11C5.S0.CE      net (fanout=1)        0.687   PCI_Targeted
-    CLB_R11C5.S0.CLK     Tceck                 0.886   acquisition
-                                                       acquisition
+    CLB_R10C2.S1.G2      net (fanout=2)        0.577   PCI_Targeted
+    CLB_R10C2.S1.CLK     Tick                  1.352   PCI_TargetReady
+                                                       PCI_TargetReady_mux00001
+                                                       PCI_TargetReady
     -------------------------------------------------  ---------------------------
-    Total                                      9.833ns (5.004ns logic, 4.829ns route)
-                                                       (50.9% logic, 49.1% route)
+    Total                                     10.480ns (5.420ns logic, 5.060ns route)
+                                                       (51.7% logic, 48.3% route)
 
-  Minimum Clock Path: PCI_CLK to acquisition
+  Minimum Clock Path: PCI_CLK to PCI_TargetReady
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
@@ -1130,10 +1191,68 @@ Slack:                  -0.393ns (requirement - (data path - clock path - clock 
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R11C5.S0.CLK     net (fanout=126)      0.578   PCI_CLK_BUFGP
+    CLB_R10C2.S1.CLK     net (fanout=135)      0.593   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.440ns (1.855ns logic, 0.585ns route)
-                                                       (76.0% logic, 24.0% route)
+    Total                                      2.455ns (1.855ns logic, 0.600ns route)
+                                                       (75.6% logic, 24.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -1.010ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               PCI_AD<7> (PAD)
+  Destination:          PCI_TargetReady (FF)
+  Destination Clock:    PCI_CLK_BUFGP rising at 0.000ns
+  Requirement:          7.000ns
+  Data Path Delay:      10.465ns (Levels of Logic = 7)
+  Clock Path Delay:     2.455ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: PCI_AD<7> to PCI_TargetReady
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P12.I                Tiopi                 1.224   PCI_AD<7>
+                                                       PCI_AD<7>
+                                                       PCI_AD_7_IOBUF/IBUF
+    CLB_R6C4.S0.F4       net (fanout=6)        1.698   N124
+    CLB_R6C4.S0.COUT     Topcyf                1.487   Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_lut<0>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<0>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+    CLB_R5C4.S0.CIN      net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0000_cy<1>
+    CLB_R5C4.S0.COUT     Tbyp                  0.096   Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<2>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+    CLB_R4C4.S0.CIN      net (fanout=1)        0.000   Mcompar_PCI_Targeted_cmp_eq0000_cy<3>
+    CLB_R4C4.S0.XB       Tcinxb                0.046   PCI_read<15>
+                                                       Mcompar_PCI_Targeted_cmp_eq0000_cy<4>
+    CLB_R9C4.S0.G4       net (fanout=1)        1.783   Mcompar_PCI_Targeted_cmp_eq0000_cy<4>
+    CLB_R9C4.S0.Y        Tilo                  0.653   PCI_Targeted6/O
+                                                       PCI_Targeted32
+    CLB_R10C3.S1.G4      net (fanout=3)        0.896   PCI_Targeted32
+    CLB_R10C3.S1.Y       Tilo                  0.653   PCI_Targeted2
+                                                       PCI_Targeted58
+    CLB_R10C2.S1.G2      net (fanout=2)        0.577   PCI_Targeted
+    CLB_R10C2.S1.CLK     Tick                  1.352   PCI_TargetReady
+                                                       PCI_TargetReady_mux00001
+                                                       PCI_TargetReady
+    -------------------------------------------------  ---------------------------
+    Total                                     10.465ns (5.511ns logic, 4.954ns route)
+                                                       (52.7% logic, 47.3% route)
+
+  Minimum Clock Path: PCI_CLK to PCI_TargetReady
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
+                                                       PCI_CLK
+                                                       PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
+                                                       PCI_CLK_BUFGP/BUFG
+    CLB_R10C2.S1.CLK     net (fanout=135)      0.593   PCI_CLK_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.455ns (1.855ns logic, 0.600ns route)
+                                                       (75.6% logic, 24.4% route)
 
 --------------------------------------------------------------------------------
 
@@ -1143,18 +1262,18 @@ Timing constraint: TIMEGRP "PCI_AD_GRP" OFFSET = OUT 41 ns AFTER COMP
 
  300 paths analyzed, 32 endpoints analyzed, 0 failing endpoints
  0 timing errors detected.
- Minimum allowable offset is  19.938ns.
+ Minimum allowable offset is  20.959ns.
 --------------------------------------------------------------------------------
-Slack:                  21.062ns (requirement - (clock arrival + clock path + data path + uncertainty))
-  Source:               PCI_MEMSpace (FF)
-  Destination:          PCI_AD<4> (PAD)
+Slack:                  20.041ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               PCI_TransactionAddr_2 (FF)
+  Destination:          PCI_AD<1> (PAD)
   Source Clock:         PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          41.000ns
-  Data Path Delay:      17.496ns (Levels of Logic = 3)
-  Clock Path Delay:     2.442ns (Levels of Logic = 2)
+  Data Path Delay:      18.494ns (Levels of Logic = 4)
+  Clock Path Delay:     2.465ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
-  Maximum Clock Path: PCI_CLK to PCI_MEMSpace
+  Maximum Clock Path: PCI_CLK to PCI_TransactionAddr_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
@@ -1164,87 +1283,45 @@ Slack:                  21.062ns (requirement - (clock arrival + clock path + da
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R11C6.S1.CLK     net (fanout=126)      0.580   PCI_CLK_BUFGP
+    CLB_R10C5.S1.CLK     net (fanout=135)      0.603   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.442ns (1.855ns logic, 0.587ns route)
-                                                       (76.0% logic, 24.0% route)
+    Total                                      2.465ns (1.855ns logic, 0.610ns route)
+                                                       (75.3% logic, 24.7% route)
 
-  Maximum Data Path: PCI_MEMSpace to PCI_AD<4>
+  Maximum Data Path: PCI_TransactionAddr_2 to PCI_AD<1>
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    CLB_R11C6.S1.XQ      Tcko                  1.292   PCI_MEMSpace
-                                                       PCI_MEMSpace
-    CLB_R16C12.S0.G1     net (fanout=14)       2.695   PCI_MEMSpace
-    CLB_R16C12.S0.Y      Tilo                  0.653   PCI_DATAread_not00011
-                                                       PCI_WorkSpace1
-    CLB_R12C8.S0.F3      net (fanout=28)       1.809   PCI_WorkSpace
-    CLB_R12C8.S0.X       Tilo                  0.653   PCI_read<4>
-                                                       PCI_read<4>1
-    P19.O                net (fanout=1)        3.595   PCI_read<4>
-    P19.PAD              Tioop                 6.799   PCI_AD<4>
-                                                       PCI_AD_4_IOBUF/OBUFT
-                                                       PCI_AD<4>
+    CLB_R10C5.S1.XQ      Tcko                  1.292   PCI_TransactionAddr<2>
+                                                       PCI_TransactionAddr_2
+    CLB_R10C10.S1.F4     net (fanout=11)       2.272   PCI_TransactionAddr<2>
+    CLB_R10C10.S1.X      Tilo                  0.653   PCI_CSread_27_cmp_eq0004
+                                                       PCI_CSread_27_cmp_eq00041
+    CLB_R8C12.S1.F2      net (fanout=10)       1.931   PCI_CSread_27_cmp_eq0004
+    CLB_R8C12.S1.X       Tilo                  0.653   N216
+                                                       PCI_read<1>_SW1
+    CLB_R8C12.S1.G3      net (fanout=1)        0.773   N216
+    CLB_R8C12.S1.Y       Tilo                  0.653   N216
+                                                       PCI_read<1>
+    P22.O                net (fanout=1)        3.468   PCI_read<1>
+    P22.PAD              Tioop                 6.799   PCI_AD<1>
+                                                       PCI_AD_1_IOBUF/OBUFT
+                                                       PCI_AD<1>
     -------------------------------------------------  ---------------------------
-    Total                                     17.496ns (9.397ns logic, 8.099ns route)
-                                                       (53.7% logic, 46.3% route)
-
---------------------------------------------------------------------------------
-Slack:                  21.263ns (requirement - (clock arrival + clock path + data path + uncertainty))
-  Source:               PCI_MEMSpace (FF)
-  Destination:          PCI_AD<15> (PAD)
-  Source Clock:         PCI_CLK_BUFGP rising at 0.000ns
-  Requirement:          41.000ns
-  Data Path Delay:      17.295ns (Levels of Logic = 3)
-  Clock Path Delay:     2.442ns (Levels of Logic = 2)
-  Clock Uncertainty:    0.000ns
-
-  Maximum Clock Path: PCI_CLK to PCI_MEMSpace
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
-                                                       PCI_CLK
-                                                       PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
-    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
-                                                       PCI_CLK_BUFGP/BUFG
-    CLB_R11C6.S1.CLK     net (fanout=126)      0.580   PCI_CLK_BUFGP
-    -------------------------------------------------  ---------------------------
-    Total                                      2.442ns (1.855ns logic, 0.587ns route)
-                                                       (76.0% logic, 24.0% route)
-
-  Maximum Data Path: PCI_MEMSpace to PCI_AD<15>
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    CLB_R11C6.S1.XQ      Tcko                  1.292   PCI_MEMSpace
-                                                       PCI_MEMSpace
-    CLB_R16C12.S0.G1     net (fanout=14)       2.695   PCI_MEMSpace
-    CLB_R16C12.S0.Y      Tilo                  0.653   PCI_DATAread_not00011
-                                                       PCI_WorkSpace1
-    CLB_R5C5.S0.G2       net (fanout=28)       2.946   PCI_WorkSpace
-    CLB_R5C5.S0.Y        Tilo                  0.653   PCI_read<15>
-                                                       PCI_read<15>1
-    P139.O               net (fanout=1)        2.257   PCI_read<15>
-    P139.PAD             Tioop                 6.799   PCI_AD<15>
-                                                       PCI_AD_15_IOBUF/OBUFT
-                                                       PCI_AD<15>
-    -------------------------------------------------  ---------------------------
-    Total                                     17.295ns (9.397ns logic, 7.898ns route)
+    Total                                     18.494ns (10.050ns logic, 8.444ns route)
                                                        (54.3% logic, 45.7% route)
 
 --------------------------------------------------------------------------------
-Slack:                  21.357ns (requirement - (clock arrival + clock path + data path + uncertainty))
-  Source:               PCI_MEMSpace (FF)
-  Destination:          PCI_AD<13> (PAD)
+Slack:                  20.094ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               PCI_TransactionAddr_2 (FF)
+  Destination:          PCI_AD<1> (PAD)
   Source Clock:         PCI_CLK_BUFGP rising at 0.000ns
   Requirement:          41.000ns
-  Data Path Delay:      17.201ns (Levels of Logic = 3)
-  Clock Path Delay:     2.442ns (Levels of Logic = 2)
+  Data Path Delay:      18.441ns (Levels of Logic = 4)
+  Clock Path Delay:     2.465ns (Levels of Logic = 2)
   Clock Uncertainty:    0.000ns
 
-  Maximum Clock Path: PCI_CLK to PCI_MEMSpace
+  Maximum Clock Path: PCI_CLK to PCI_TransactionAddr_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
@@ -1254,30 +1331,81 @@ Slack:                  21.357ns (requirement - (clock arrival + clock path + da
     GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
     GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
                                                        PCI_CLK_BUFGP/BUFG
-    CLB_R11C6.S1.CLK     net (fanout=126)      0.580   PCI_CLK_BUFGP
+    CLB_R10C5.S1.CLK     net (fanout=135)      0.603   PCI_CLK_BUFGP
     -------------------------------------------------  ---------------------------
-    Total                                      2.442ns (1.855ns logic, 0.587ns route)
-                                                       (76.0% logic, 24.0% route)
+    Total                                      2.465ns (1.855ns logic, 0.610ns route)
+                                                       (75.3% logic, 24.7% route)
 
-  Maximum Data Path: PCI_MEMSpace to PCI_AD<13>
+  Maximum Data Path: PCI_TransactionAddr_2 to PCI_AD<1>
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    CLB_R11C6.S1.XQ      Tcko                  1.292   PCI_MEMSpace
-                                                       PCI_MEMSpace
-    CLB_R16C12.S0.G1     net (fanout=14)       2.695   PCI_MEMSpace
-    CLB_R16C12.S0.Y      Tilo                  0.653   PCI_DATAread_not00011
-                                                       PCI_WorkSpace1
-    CLB_R5C4.S1.G1       net (fanout=28)       3.178   PCI_WorkSpace
-    CLB_R5C4.S1.Y        Tilo                  0.653   PCI_read<14>
-                                                       PCI_read<13>1
-    P141.O               net (fanout=1)        1.931   PCI_read<13>
-    P141.PAD             Tioop                 6.799   PCI_AD<13>
-                                                       PCI_AD_13_IOBUF/OBUFT
-                                                       PCI_AD<13>
+    CLB_R10C5.S1.XQ      Tcko                  1.292   PCI_TransactionAddr<2>
+                                                       PCI_TransactionAddr_2
+    CLB_R10C10.S0.F1     net (fanout=11)       2.538   PCI_TransactionAddr<2>
+    CLB_R10C10.S0.X      Tilo                  0.653   PCI_CSread_27_cmp_eq0000
+                                                       PCI_CSread_27_cmp_eq00001
+    CLB_R8C12.S1.F4      net (fanout=4)        1.612   PCI_CSread_27_cmp_eq0000
+    CLB_R8C12.S1.X       Tilo                  0.653   N216
+                                                       PCI_read<1>_SW1
+    CLB_R8C12.S1.G3      net (fanout=1)        0.773   N216
+    CLB_R8C12.S1.Y       Tilo                  0.653   N216
+                                                       PCI_read<1>
+    P22.O                net (fanout=1)        3.468   PCI_read<1>
+    P22.PAD              Tioop                 6.799   PCI_AD<1>
+                                                       PCI_AD_1_IOBUF/OBUFT
+                                                       PCI_AD<1>
     -------------------------------------------------  ---------------------------
-    Total                                     17.201ns (9.397ns logic, 7.804ns route)
-                                                       (54.6% logic, 45.4% route)
+    Total                                     18.441ns (10.050ns logic, 8.391ns route)
+                                                       (54.5% logic, 45.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  20.189ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               PCI_TransactionAddr_1 (FF)
+  Destination:          PCI_AD<1> (PAD)
+  Source Clock:         PCI_CLK_BUFGP rising at 0.000ns
+  Requirement:          41.000ns
+  Data Path Delay:      18.345ns (Levels of Logic = 4)
+  Clock Path Delay:     2.466ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: PCI_CLK to PCI_TransactionAddr_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P91.GCLKOUT          Tgpio                 1.082   PCI_CLK
+                                                       PCI_CLK
+                                                       PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.IN          net (fanout=1)        0.007   PCI_CLK_BUFGP/IBUFG
+    GCLKBUF1.OUT         Tgio                  0.773   PCI_CLK_BUFGP/BUFG
+                                                       PCI_CLK_BUFGP/BUFG
+    CLB_R10C6.S1.CLK     net (fanout=135)      0.604   PCI_CLK_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.466ns (1.855ns logic, 0.611ns route)
+                                                       (75.2% logic, 24.8% route)
+
+  Maximum Data Path: PCI_TransactionAddr_1 to PCI_AD<1>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    CLB_R10C6.S1.YQ      Tcko                  1.292   PCI_TransactionAddr_1_1
+                                                       PCI_TransactionAddr_1
+    CLB_R10C10.S1.F2     net (fanout=43)       2.123   PCI_TransactionAddr<1>
+    CLB_R10C10.S1.X      Tilo                  0.653   PCI_CSread_27_cmp_eq0004
+                                                       PCI_CSread_27_cmp_eq00041
+    CLB_R8C12.S1.F2      net (fanout=10)       1.931   PCI_CSread_27_cmp_eq0004
+    CLB_R8C12.S1.X       Tilo                  0.653   N216
+                                                       PCI_read<1>_SW1
+    CLB_R8C12.S1.G3      net (fanout=1)        0.773   N216
+    CLB_R8C12.S1.Y       Tilo                  0.653   N216
+                                                       PCI_read<1>
+    P22.O                net (fanout=1)        3.468   PCI_read<1>
+    P22.PAD              Tioop                 6.799   PCI_AD<1>
+                                                       PCI_AD_1_IOBUF/OBUFT
+                                                       PCI_AD<1>
+    -------------------------------------------------  ---------------------------
+    Total                                     18.345ns (10.050ns logic, 8.295ns route)
+                                                       (54.8% logic, 45.2% route)
 
 --------------------------------------------------------------------------------
 
@@ -1294,45 +1422,45 @@ Setup/Hold to clock PCI_CLK
             |  Setup to  |  Hold to   |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-PCI_AD<0>   |    7.257(R)|   -0.577(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<1>   |    7.293(R)|   -0.834(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<2>   |    4.954(R)|   -0.708(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<3>   |    3.485(R)|   -0.821(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<4>   |    3.075(R)|   -1.253(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<5>   |    2.450(R)|   -0.705(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<6>   |    7.248(R)|   -0.198(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<7>   |    7.224(R)|   -0.761(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<8>   |    6.928(R)|   -0.446(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<9>   |    6.866(R)|    0.004(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<10>  |    6.624(R)|   -0.065(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<11>  |    6.751(R)|   -0.383(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<12>  |    6.686(R)|   -0.538(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<13>  |    7.096(R)|   -0.327(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<14>  |    6.854(R)|   -0.294(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<15>  |    6.514(R)|   -0.998(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<16>  |    7.299(R)|   -0.130(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<17>  |    7.439(R)|   -0.381(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<18>  |    6.774(R)|   -0.439(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<19>  |    7.064(R)|   -0.234(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<20>  |    7.311(R)|   -0.500(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<21>  |    7.330(R)|   -0.083(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<22>  |    7.393(R)|   -0.843(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<23>  |    7.249(R)|   -0.833(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<24>  |    7.210(R)|   -0.702(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<25>  |    7.537(R)|   -0.735(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<26>  |    7.200(R)|   -0.291(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<27>  |    7.020(R)|   -0.562(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<28>  |    7.159(R)|   -0.466(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<29>  |    7.173(R)|   -0.451(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<30>  |    7.253(R)|   -0.678(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<31>  |    7.217(R)|   -0.514(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_CBE<0>  |    6.232(R)|   -1.155(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_CBE<1>  |    6.470(R)|   -1.191(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_CBE<2>  |    6.133(R)|   -0.771(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_CBE<3>  |    6.086(R)|   -1.456(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_FRAMEn  |    5.278(R)|   -0.084(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_IDSEL   |    5.550(R)|   -2.076(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_IRDYn   |    6.142(R)|   -1.150(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<0>   |    6.706(R)|   -0.985(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<1>   |    6.727(R)|   -1.190(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<2>   |    3.747(R)|   -0.948(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<3>   |    4.035(R)|   -0.919(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<4>   |    3.509(R)|   -0.901(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<5>   |    3.298(R)|   -0.925(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<6>   |    8.042(R)|   -0.853(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<7>   |    8.010(R)|   -0.607(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<8>   |    8.025(R)|   -0.508(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<9>   |    7.935(R)|   -0.183(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<10>  |    7.357(R)|   -0.209(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<11>  |    7.571(R)|    0.097(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<12>  |    7.716(R)|   -0.193(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<13>  |    7.744(R)|   -0.137(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<14>  |    7.701(R)|    0.152(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<15>  |    7.450(R)|    0.187(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<16>  |    7.256(R)|   -0.140(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<17>  |    6.974(R)|    0.027(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<18>  |    7.072(R)|   -0.129(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<19>  |    7.248(R)|    0.171(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<20>  |    7.041(R)|   -0.235(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<21>  |    7.362(R)|    0.011(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<22>  |    6.995(R)|    0.403(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<23>  |    7.209(R)|   -0.192(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<24>  |    7.422(R)|   -0.388(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<25>  |    7.482(R)|   -0.190(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<26>  |    7.503(R)|   -0.154(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<27>  |    7.648(R)|   -0.661(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<28>  |    7.682(R)|   -0.479(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<29>  |    7.635(R)|   -0.714(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<30>  |    7.874(R)|   -0.935(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<31>  |    7.614(R)|   -0.474(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_CBE<0>  |    6.515(R)|   -0.285(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_CBE<1>  |    6.036(R)|   -0.169(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_CBE<2>  |    6.052(R)|   -0.775(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_CBE<3>  |    6.709(R)|   -1.031(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_FRAMEn  |    4.829(R)|   -0.620(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_IDSEL   |    6.150(R)|   -0.556(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_IRDYn   |    6.853(R)|    0.056(R)|PCI_CLK_BUFGP     |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock PCI_CLK to Pad
@@ -1340,49 +1468,57 @@ Clock PCI_CLK to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-PCI_AD<0>   |   19.100(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<1>   |   18.896(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<2>   |   19.446(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<3>   |   19.029(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<4>   |   19.938(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<5>   |   18.771(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<6>   |   17.332(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<7>   |   17.917(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<8>   |   18.866(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<9>   |   18.971(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<10>  |   18.804(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<11>  |   18.748(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<12>  |   18.647(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<13>  |   19.643(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<14>  |   19.565(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<15>  |   19.737(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<16>  |   17.341(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<17>  |   17.917(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<18>  |   18.228(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<19>  |   18.171(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<20>  |   18.431(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<21>  |   17.877(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<22>  |   18.828(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<23>  |   18.933(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<24>  |   19.042(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<25>  |   18.539(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<26>  |   18.167(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<27>  |   18.230(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<28>  |   17.368(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<29>  |   18.531(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<30>  |   18.971(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_AD<31>  |   18.465(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_DEVSELn |   12.923(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_STOPn   |   12.969(R)|PCI_CLK_BUFGP     |   0.000|
-PCI_TRDYn   |   12.919(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<0>   |   19.755(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<1>   |   20.959(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<2>   |   19.505(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<3>   |   18.958(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<4>   |   18.856(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<5>   |   18.668(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<6>   |   18.131(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<7>   |   19.836(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<8>   |   19.595(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<9>   |   17.778(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<10>  |   17.986(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<11>  |   18.063(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<12>  |   19.063(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<13>  |   18.663(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<14>  |   18.843(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<15>  |   18.341(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<16>  |   17.690(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<17>  |   18.752(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<18>  |   17.165(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<19>  |   17.157(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<20>  |   18.997(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<21>  |   17.216(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<22>  |   17.982(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<23>  |   19.008(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<24>  |   18.886(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<25>  |   18.237(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<26>  |   18.310(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<27>  |   18.213(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<28>  |   18.213(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<29>  |   16.904(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<30>  |   17.972(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_AD<31>  |   17.879(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_DEVSELn |   12.739(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_STOPn   |   13.159(R)|PCI_CLK_BUFGP     |   0.000|
+PCI_TRDYn   |   12.816(R)|PCI_CLK_BUFGP     |   0.000|
 ------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK24
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK24          |   12.835|         |         |         |
+---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock PCI_CLK
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-PCI_CLK        |   10.694|         |         |         |
+PCI_CLK        |   10.610|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 COMP "PCI_DEVSELn" OFFSET = OUT 11 ns AFTER COMP "PCI_CLK";
@@ -1390,7 +1526,7 @@ Bus Skew: 0.000 ns;
 -----------------------------------------------+-------------+-------------+
 PAD                                            | Delay (ns)  |Edge Skew (ns)|
 -----------------------------------------------+-------------+-------------+
-PCI_DEVSELn                                    |       12.923|        0.000|
+PCI_DEVSELn                                    |       12.739|        0.000|
 -----------------------------------------------+-------------+-------------+
 
 COMP "PCI_STOPn" OFFSET = OUT 11 ns AFTER COMP "PCI_CLK";
@@ -1398,7 +1534,7 @@ Bus Skew: 0.000 ns;
 -----------------------------------------------+-------------+-------------+
 PAD                                            | Delay (ns)  |Edge Skew (ns)|
 -----------------------------------------------+-------------+-------------+
-PCI_STOPn                                      |       12.969|        0.000|
+PCI_STOPn                                      |       13.159|        0.000|
 -----------------------------------------------+-------------+-------------+
 
 COMP "PCI_TRDYn" OFFSET = OUT 11 ns AFTER COMP "PCI_CLK";
@@ -1406,73 +1542,73 @@ Bus Skew: 0.000 ns;
 -----------------------------------------------+-------------+-------------+
 PAD                                            | Delay (ns)  |Edge Skew (ns)|
 -----------------------------------------------+-------------+-------------+
-PCI_TRDYn                                      |       12.919|        0.000|
+PCI_TRDYn                                      |       12.816|        0.000|
 -----------------------------------------------+-------------+-------------+
 
 TIMEGRP "PCI_AD_GRP" OFFSET = OUT 41 ns AFTER COMP "PCI_CLK";
-Bus Skew: 2.606 ns; 
+Bus Skew: 4.055 ns; 
 -----------------------------------------------+-------------+-------------+
 PAD                                            | Delay (ns)  |Edge Skew (ns)|
 -----------------------------------------------+-------------+-------------+
-PCI_AD<0>                                      |       19.100|        1.768|
-PCI_AD<1>                                      |       18.896|        1.564|
-PCI_AD<2>                                      |       19.446|        2.114|
-PCI_AD<3>                                      |       19.029|        1.697|
-PCI_AD<4>                                      |       19.938|        2.606|
-PCI_AD<5>                                      |       18.771|        1.439|
-PCI_AD<6>                                      |       17.332|        0.000|
-PCI_AD<7>                                      |       17.917|        0.585|
-PCI_AD<8>                                      |       18.866|        1.534|
-PCI_AD<9>                                      |       18.971|        1.639|
-PCI_AD<10>                                     |       18.804|        1.472|
-PCI_AD<11>                                     |       18.748|        1.416|
-PCI_AD<12>                                     |       18.647|        1.315|
-PCI_AD<13>                                     |       19.643|        2.311|
-PCI_AD<14>                                     |       19.565|        2.233|
-PCI_AD<15>                                     |       19.737|        2.405|
-PCI_AD<16>                                     |       17.341|        0.009|
-PCI_AD<17>                                     |       17.917|        0.585|
-PCI_AD<18>                                     |       18.228|        0.896|
-PCI_AD<19>                                     |       18.171|        0.839|
-PCI_AD<20>                                     |       18.431|        1.099|
-PCI_AD<21>                                     |       17.877|        0.545|
-PCI_AD<22>                                     |       18.828|        1.496|
-PCI_AD<23>                                     |       18.933|        1.601|
-PCI_AD<24>                                     |       19.042|        1.710|
-PCI_AD<25>                                     |       18.539|        1.207|
-PCI_AD<26>                                     |       18.167|        0.835|
-PCI_AD<27>                                     |       18.230|        0.898|
-PCI_AD<28>                                     |       17.368|        0.036|
-PCI_AD<29>                                     |       18.531|        1.199|
-PCI_AD<30>                                     |       18.971|        1.639|
-PCI_AD<31>                                     |       18.465|        1.133|
+PCI_AD<0>                                      |       19.755|        2.851|
+PCI_AD<1>                                      |       20.959|        4.055|
+PCI_AD<2>                                      |       19.505|        2.601|
+PCI_AD<3>                                      |       18.958|        2.054|
+PCI_AD<4>                                      |       18.856|        1.952|
+PCI_AD<5>                                      |       18.668|        1.764|
+PCI_AD<6>                                      |       18.131|        1.227|
+PCI_AD<7>                                      |       19.836|        2.932|
+PCI_AD<8>                                      |       19.595|        2.691|
+PCI_AD<9>                                      |       17.778|        0.874|
+PCI_AD<10>                                     |       17.986|        1.082|
+PCI_AD<11>                                     |       18.063|        1.159|
+PCI_AD<12>                                     |       19.063|        2.159|
+PCI_AD<13>                                     |       18.663|        1.759|
+PCI_AD<14>                                     |       18.843|        1.939|
+PCI_AD<15>                                     |       18.341|        1.437|
+PCI_AD<16>                                     |       17.690|        0.786|
+PCI_AD<17>                                     |       18.752|        1.848|
+PCI_AD<18>                                     |       17.165|        0.261|
+PCI_AD<19>                                     |       17.157|        0.253|
+PCI_AD<20>                                     |       18.997|        2.093|
+PCI_AD<21>                                     |       17.216|        0.312|
+PCI_AD<22>                                     |       17.982|        1.078|
+PCI_AD<23>                                     |       19.008|        2.104|
+PCI_AD<24>                                     |       18.886|        1.982|
+PCI_AD<25>                                     |       18.237|        1.333|
+PCI_AD<26>                                     |       18.310|        1.406|
+PCI_AD<27>                                     |       18.213|        1.309|
+PCI_AD<28>                                     |       18.213|        1.309|
+PCI_AD<29>                                     |       16.904|        0.000|
+PCI_AD<30>                                     |       17.972|        1.068|
+PCI_AD<31>                                     |       17.879|        0.975|
 -----------------------------------------------+-------------+-------------+
 
 
 Timing summary:
 ---------------
 
-Timing errors: 7  Score: 6726
+Timing errors: 5  Score: 7438
 
-Constraints cover 1977 paths, 0 nets, and 878 connections
+Constraints cover 2408 paths, 0 nets, and 1210 connections
 
 Design statistics:
-   Minimum period:  10.694ns{1}   (Maximum frequency:  93.510MHz)
-   Minimum input required time before clock:   7.537ns
-   Minimum output required time after clock:  19.938ns
+   Minimum period:  12.835ns{1}   (Maximum frequency:  77.912MHz)
+   Minimum input required time before clock:   8.042ns
+   Minimum output required time after clock:  20.959ns
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Mon Aug 26 17:20:53 2013 
+Analysis completed Thu Aug 29 12:44:15 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 63 MB
+Peak Memory Usage: 64 MB
 
 
 

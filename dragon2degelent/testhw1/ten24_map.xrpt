@@ -5,42 +5,26 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Thu Jul 18 16:57:40 2013">
+  <application stringID="Map" timeStamp="Wed Aug 28 12:28:11 2013">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
-          <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="/software/ISE_DS/ISE"/>
-        </row>
-        <row stringID="row" value="1">
-          <item stringID="variable" value="LD_LIBRARY_PATH"/>
-          <item stringID="value" value="/software/ISE_DS/ISE//lib/lin64:/software/ISE_DS/common/lib/lin64:/software/ISE_DS/ISE/sysgen/lib:/software/ISE_DS/ISE/lib/lin64:/software/ISE_DS/ISE/smartmodel/lin64/installed_lin64/lib:/software/ISE_DS/EDK/lib/lin64"/>
-        </row>
-        <row stringID="row" value="2">
-          <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="/software/ISE_DS/EDK"/>
-        </row>
-        <row stringID="row" value="3">
           <item stringID="variable" value="XILINXD_LICENSE_FILE"/>
           <item stringID="value" value="2100@svl6"/>
         </row>
-        <row stringID="row" value="4">
+        <row stringID="row" value="1">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/software/ISE_DS/ISE//bin/lin64:/software/ISE_DS/common/bin/lin64:/software/ISE_DS/ISE/sysgen/bin:/software/ISE_DS/PlanAhead/bin:/software/ISE_DS/ISE/bin/lin64:/software/ISE_DS/ISE/sysgen/util:/software/ISE_DS/EDK/bin/lin64:/software/ISE_DS/EDK/gnu/microblaze/lin64/bin:/software/ISE_DS/EDK/gnu/powerpc-eabi/lin64/bin:/home/derek/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/derek/software/modelsim/modeltech/bin"/>
+          <item stringID="value" value="/software/ISE_DS/ISE//bin/lin64:/home/derek/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/derek/software/modelsim/modeltech/bin"/>
         </row>
-        <row stringID="row" value="5">
-          <item stringID="variable" value="LMC_HOME"/>
-          <item stringID="value" value="/software/ISE_DS/ISE/smartmodel/lin64/installed_lin64"/>
-        </row>
-        <row stringID="row" value="6">
-          <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="/software/ISE_DS/PlanAhead"/>
-        </row>
-        <row stringID="row" value="7">
+        <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
           <item stringID="value" value="/software/ISE_DS/ISE/"/>
+        </row>
+        <row stringID="row" value="3">
+          <item stringID="variable" value="LD_LIBRARY_PATH"/>
+          <item stringID="value" value="/software/ISE_DS/ISE//lib/lin64"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
@@ -53,7 +37,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Xeon(R) CPU           X3470  @ 2.93GHz"/>
-          <item stringID="speed" value="2925.607 MHz"/>
+          <item stringID="speed" value="2926.341 MHz"/>
         </row>
       </table>
     </section>
@@ -102,7 +86,7 @@
         <item dataType="int" stringID="MAP_NUM_LUT_RT_DRIVES_CARRY4" value="0"/>
         <item dataType="int" stringID="MAP_NUM_LUT_RT_DRIVES_OTHERS" value="0"/>
       </item>
-      <item AVAILABLE="218" dataType="int" stringID="MAP_AGG_BONDED_IO" value="14"/>
+      <item AVAILABLE="218" dataType="int" stringID="MAP_AGG_BONDED_IO" value="18"/>
       <item AVAILABLE="152" dataType="int" stringID="MAP_AGG_UNBONDED_IO" value="0"/>
       <item AVAILABLE="0" dataType="int" label="IOB Flip Flops" stringID="MAP_NUM_IOB_FF" value="0"/>
       <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_IOB_LATCH" value="0"/>
@@ -125,7 +109,7 @@
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="0"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="730988"/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="730576"/>
         <item stringID="MAP_TOTAL_REAL_TIME" value="8 secs "/>
         <item stringID="MAP_TOTAL_CPU_TIME" value="7 secs "/>
       </section>
@@ -171,7 +155,7 @@
         </item>
       </section>
       <section stringID="MAP_IOB_REPORTING">
-        <item AVAILABLE="218" dataType="int" stringID="MAP_AGG_BONDED_IO" value="14"/>
+        <item AVAILABLE="218" dataType="int" stringID="MAP_AGG_BONDED_IO" value="18"/>
         <item AVAILABLE="152" dataType="int" stringID="MAP_AGG_UNBONDED_IO" value="0"/>
         <item AVAILABLE="0" dataType="int" label="IOB Flip Flops" stringID="MAP_NUM_IOB_FF" value="0"/>
         <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_IOB_LATCH" value="0"/>
@@ -312,6 +296,38 @@
           </row>
           <row stringID="row" value="14">
             <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="outdata&lt;3>"/>
+            <item stringID="Type" value="IOB"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
+          </row>
+          <row stringID="row" value="15">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="outdata&lt;4>"/>
+            <item stringID="Type" value="IOB"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
+          </row>
+          <row stringID="row" value="16">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="outdata&lt;5>"/>
+            <item stringID="Type" value="IOB"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
+          </row>
+          <row stringID="row" value="17">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="outdata&lt;6>"/>
+            <item stringID="Type" value="IOB"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
+          </row>
+          <row stringID="row" value="18">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="outdata&lt;7>"/>
             <item stringID="Type" value="IOB"/>
             <item stringID="Direction" value="OUTPUT"/>
             <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>

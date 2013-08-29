@@ -291,29 +291,36 @@ wire [31:0] PCI_read = PCI_WorkSpace ? PCI_DATAread : PCI_CSread;
 assign PCI_AD = PCI_AD_OE ? PCI_read : 32'hZZZZZZZZ;
 
 
+//reg [24:0] cnt_haha;
+//always @ (posedge PCI_CLK) cnt_haha <= cnt_haha + 1;
 wire [7:0] RDdata_unused;   // TODO: remove this 
+wire [1:0] LED_unused;
 txrx U_txtx(
-            .clk        (CLK24),
+            .reset      (PCI_RSTn),
+            .clk        (PCI_CLK),
             .RDdata     (RDdata_unused),
             .RDen       (1'b0),
             .WRdata     (REG_WRdata),
             .WRen       (PCI_TransferWrite),
+				//.WRen       (1'b1),
             .W          (LOW_w),
             .R          (LOW_r),
             .DATA       (LOW_data),
-				.LED        (LED)
+				//.LED        (LED)
+				.LED        (LED_unused)
             );
 
 
 `ifdef INTERRUPT
-reg [23:0] counter; always @(posedge PCI_CLK) counter<=counter+24'h1;
+reg [24:0] counter; always @(posedge PCI_CLK) counter<=counter+25'h1;
 always @(posedge PCI_CLK) PCI_INTA<=&counter;
+//always @(posedge PCI_CLK) PCI_INTA<=counter[23];
 //always @(posedge PCI_CLK) if(PCI_TransferWrite) PCI_INTA <= (PCI_AD==32'h12345678);
 `endif
 
 ////////////////////////////////////////////////////////////////////////////////
-// assign LED[0] = REG_led[0];
-// assign LED[1] = PCI_INTA;
+assign LED[0] = REG_led[0];
+assign LED[1] = PCI_INTA;
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -406,7 +413,8 @@ endmodule
 
 ///////////////////////////////////////////////////////////////////////////////
 // this is the transmit and receive module from PCI
-module txrx (clk, RDdata, RDen, WRdata, WRen, W, R, DATA, LED);
+module txrx (reset, clk, RDdata, RDen, WRdata, WRen, W, R, DATA, LED);
+   input        reset;
    input        clk;
    // from PCI module
    output [7:0] RDdata;         // read data
@@ -420,29 +428,41 @@ module txrx (clk, RDdata, RDen, WRdata, WRen, W, R, DATA, LED);
    inout [7:0]  DATA;           // w/r data
 	output [1:0] LED;
 
-   reg [1:0]    cnt;
+   reg [9:0]    cnt;
    reg W;
 
-   always@(posedge clk) begin
-	
+   always@(posedge clk or negedge reset) begin
+	if (~reset) begin
+	    cnt <= 10'h3ff;
+		 W <= 1'b0;		 
+	end
+	else begin
 	case(cnt)
-		2'b00: begin
+		10'h000: begin
 			W <= 1'b1;
-			cnt <= 2'b01;
+			cnt<= cnt + 1;
 		end
-		2'b01: begin
-			W <= 1'b0;
-         cnt<= 2'b11;
+		10'h200: begin
+		   W <= 1'b0;
+         cnt<= cnt + 1;
 		end
-		2'b10: cnt<= 2'b11;
-		2'b11: begin
+		10'h3ff: begin
 		  if(WRen)
-			  cnt <= 2'b00;
+			  cnt<= cnt + 1;
+		end
+		default: begin
+         cnt<= cnt + 1;
 		end
    endcase
 	end
-   assign LED = cnt;
+   end
+	
+//	assign W = WRen;
+//   assign LED = cnt;
    assign DATA   = WRen ? WRdata : DATA;
+//   assign DATA[3:0]   = WRen ? WRdata[3:0] : DATA[3:0];
+//	assign DATA[5:4]   = cnt[24:23];
+//	assign DATA[7:6] =2'b00;
    assign RDdata = RDen ? DATA   : RDdata;
 
 endmodule

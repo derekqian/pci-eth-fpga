@@ -32,3 +32,38 @@ map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off ten24_map.ncd ten24.ncd ten24.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ten24.twx ten24.ncd -o ten24.twr ten24.pcf -ucf ten24.ucf 
 bitgen -intstyle ise -f ten24.ut ten24.ncd 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.xst" -ofn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ten24.ucf -p xc6slx45-csg324-3 ten24.ngc ten24.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ten24_map.ncd ten24.ngd ten24.pcf 
+par -w -intstyle ise -ol high -mt off ten24_map.ncd ten24.ncd ten24.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ten24.twx ten24.ncd -o ten24.twr ten24.pcf -ucf ten24.ucf 
+bitgen -intstyle ise -f ten24.ut ten24.ncd 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.xst" -ofn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.syr" 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.xst" -ofn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ten24.ucf -p xc6slx45-csg324-3 ten24.ngc ten24.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ten24_map.ncd ten24.ngd ten24.pcf 
+par -w -intstyle ise -ol high -mt off ten24_map.ncd ten24.ncd ten24.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ten24.twx ten24.ncd -o ten24.twr ten24.pcf -ucf ten24.ucf 
+bitgen -intstyle ise -f ten24.ut ten24.ncd 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.xst" -ofn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ten24.ucf -p xc6slx45-csg324-3 ten24.ngc ten24.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ten24_map.ncd ten24.ngd ten24.pcf 
+par -w -intstyle ise -ol high -mt off ten24_map.ncd ten24.ncd ten24.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ten24.twx ten24.ncd -o ten24.twr ten24.pcf -ucf ten24.ucf 
+bitgen -intstyle ise -f ten24.ut ten24.ncd 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.xst" -ofn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ten24.ucf -p xc6slx45-csg324-3 ten24.ngc ten24.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ten24_map.ncd ten24.ngd ten24.pcf 
+par -w -intstyle ise -ol high -mt off ten24_map.ncd ten24.ncd ten24.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ten24.twx ten24.ncd -o ten24.twr ten24.pcf -ucf ten24.ucf 
+bitgen -intstyle ise -f ten24.ut ten24.ncd 
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.xst" -ofn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ten24.ucf -p xc6slx45-csg324-3 ten24.ngc ten24.ngd  
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.xst" -ofn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ten24.ucf -p xc6slx45-csg324-3 ten24.ngc ten24.ngd  
+xst -intstyle ise -ifn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.xst" -ofn "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ten24.ucf -p xc6slx45-csg324-3 ten24.ngc ten24.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ten24_map.ncd ten24.ngd ten24.pcf 
+par -w -intstyle ise -ol high -mt off ten24_map.ncd ten24.ncd ten24.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ten24.twx ten24.ncd -o ten24.twr ten24.pcf -ucf ten24.ucf 
+bitgen -intstyle ise -f ten24.ut ten24.ncd 

@@ -1,18 +1,18 @@
 Release 10.1.03 - xst K.39 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 --> 
-Parameter TMPDIR set to /home/derek/pci-eth-fpga/pcieth/ise/xst/projnav.tmp
+Parameter TMPDIR set to /home/derek/pci-eth-fpga/pcieth/ise/pcieth/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
-Parameter xsthdpdir set to /home/derek/pci-eth-fpga/pcieth/ise/xst
+Parameter xsthdpdir set to /home/derek/pci-eth-fpga/pcieth/ise/pcieth/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: pcieth.prj
@@ -179,14 +179,15 @@ Performing bidirectional port resolution...
 Synthesizing Unit <txrx>.
     Related source file is "pcieth.v".
 WARNING:Xst:1305 - Output <R> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <LED> is never assigned. Tied to value 00.
 WARNING:Xst:2109 - Contents of latch <RDdata> never changes during circuit operation. The latch is removed and the signal is tied to value 00000000.
 WARNING:Xst:737 - Found 8-bit latch for signal <DATA>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 1-bit register for signal <W>.
-    Found 2-bit register for signal <cnt>.
-    Found 2-bit 4-to-1 multiplexer for signal <cnt$mux0000> created at line 428.
+    Found 10-bit register for signal <cnt>.
+    Found 10-bit adder for signal <cnt$addsub0000> created at line 454.
     Summary:
-	inferred   3 D-type flip-flop(s).
-	inferred   2 Multiplexer(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
 Unit <txrx> synthesized.
 
 
@@ -214,6 +215,7 @@ WARNING:Xst:646 - Signal <RDdata_unused> is assigned but never used. This unconn
 WARNING:Xst:646 - Signal <PCI_TransferRead> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <PCI_MEMTransferRead> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <PCI_IOTransferRead> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <LED_unused> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 256x48-bit dual-port RAM <Mram_RAM_LA> for signal <RAM_LA>.
 WARNING:Xst:737 - Found 32-bit latch for signal <PCI_DATAread>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
@@ -228,7 +230,7 @@ INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and 
     Found 8-bit register for signal <addr_regb>.
     Found 8-bit up counter for signal <addra>.
     Found 11-bit up counter for signal <addrb>.
-    Found 24-bit up counter for signal <counter>.
+    Found 25-bit up counter for signal <counter>.
     Found 8-bit register for signal <InterruptLine>.
     Found 1-bit register for signal <PCI_AD_OE>.
     Found 1-bit register for signal <PCI_ConfSpace>.
@@ -255,7 +257,7 @@ INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and 
     Found 32-bit register for signal <REG_status>.
     Found 32-bit register for signal <REG_WRdata>.
     Found 8-bit register for signal <USB_Data>.
-    Found 8-bit 8-to-1 multiplexer for signal <USB_Data$mux0000> created at line 364.
+    Found 8-bit 8-to-1 multiplexer for signal <USB_Data$mux0000> created at line 371.
     Summary:
 	inferred   1 RAM(s).
 	inferred   4 Counter(s).
@@ -272,16 +274,17 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  256x48-bit dual-port RAM                              : 1
+# Adders/Subtractors                                   : 1
+ 10-bit adder                                          : 1
 # Counters                                             : 4
  11-bit up counter                                     : 1
- 24-bit up counter                                     : 1
+ 25-bit up counter                                     : 1
  4-bit up counter                                      : 1
  8-bit up counter                                      : 1
 # Registers                                            : 72
  1-bit register                                        : 15
- 10-bit register                                       : 1
+ 10-bit register                                       : 2
  16-bit register                                       : 49
- 2-bit register                                        : 1
  32-bit register                                       : 3
  8-bit register                                        : 3
 # Latches                                              : 2
@@ -290,8 +293,7 @@ Macro Statistics
 # Comparators                                          : 2
  10-bit comparator equal                               : 1
  16-bit comparator equal                               : 1
-# Multiplexers                                         : 5
- 2-bit 4-to-1 multiplexer                              : 1
+# Multiplexers                                         : 4
  32-bit 4-to-1 multiplexer                             : 2
  32-bit 8-to-1 multiplexer                             : 1
  8-bit 8-to-1 multiplexer                              : 1
@@ -405,21 +407,22 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  256x48-bit dual-port block RAM                        : 1
+# Adders/Subtractors                                   : 1
+ 10-bit adder                                          : 1
 # Counters                                             : 4
  11-bit up counter                                     : 1
- 24-bit up counter                                     : 1
+ 25-bit up counter                                     : 1
  4-bit up counter                                      : 1
  8-bit up counter                                      : 1
-# Registers                                            : 294
- Flip-Flops                                            : 294
+# Registers                                            : 302
+ Flip-Flops                                            : 302
 # Latches                                              : 2
  32-bit latch                                          : 1
  8-bit latch                                           : 1
 # Comparators                                          : 2
  10-bit comparator equal                               : 1
  16-bit comparator equal                               : 1
-# Multiplexers                                         : 5
- 2-bit 4-to-1 multiplexer                              : 1
+# Multiplexers                                         : 4
  32-bit 4-to-1 multiplexer                             : 2
  32-bit 8-to-1 multiplexer                             : 1
  8-bit 8-to-1 multiplexer                              : 1
@@ -432,12 +435,14 @@ Macro Statistics
 
 Optimizing unit <pcieth> ...
 
+Optimizing unit <txrx> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block pcieth, actual ratio is 20.
+Found area constraint ratio of 100 (+ 5) on block pcieth, actual ratio is 21.
 FlipFlop PCI_IOSpace has been replicated 1 time(s)
-FlipFlop PCI_TransactionAddr_0 has been replicated 3 time(s)
-FlipFlop PCI_TransactionAddr_1 has been replicated 2 time(s)
+FlipFlop PCI_TransactionAddr_0 has been replicated 1 time(s)
+FlipFlop PCI_TransactionAddr_1 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -496,8 +501,8 @@ Unit <pcieth> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 160
- Flip-Flops                                            : 160
+# Registers                                            : 166
+ Flip-Flops                                            : 166
 # Shift Registers                                      : 48
  3-bit shift register                                  : 5
  4-bit shift register                                  : 43
@@ -529,27 +534,28 @@ Design Statistics
 # IOs                              : 73
 
 Cell Usage :
-# BELS                             : 361
+# BELS                             : 407
 #      GND                         : 1
 #      INV                         : 11
-#      LUT1                        : 40
-#      LUT2                        : 7
-#      LUT2_L                      : 1
-#      LUT3                        : 43
+#      LUT1                        : 42
+#      LUT2                        : 10
+#      LUT2_L                      : 3
+#      LUT3                        : 45
 #      LUT3_D                      : 1
-#      LUT3_L                      : 7
-#      LUT4                        : 120
-#      LUT4_D                      : 5
-#      LUT4_L                      : 3
-#      MUXCY                       : 59
-#      MUXF5                       : 19
+#      LUT3_L                      : 9
+#      LUT4                        : 144
+#      LUT4_D                      : 6
+#      LUT4_L                      : 8
+#      MUXCY                       : 61
+#      MUXF5                       : 21
 #      VCC                         : 1
-#      XORCY                       : 43
-# FlipFlops/Latches                : 248
-#      FD                          : 89
-#      FDC                         : 4
+#      XORCY                       : 44
+# FlipFlops/Latches                : 254
+#      FD                          : 87
+#      FDC                         : 5
 #      FDCE                        : 42
-#      FDE                         : 71
+#      FDE                         : 68
+#      FDP                         : 10
 #      FDR                         : 1
 #      FDRE                        : 1
 #      LD                          : 40
@@ -572,10 +578,10 @@ Device utilization summary:
 
 Selected Device : 2s100tq144-5 
 
- Number of Slices:                      167  out of   1200    13%  
- Number of Slice Flip Flops:            240  out of   2400    10%  
- Number of 4 input LUTs:                286  out of   2400    11%  
-    Number used as logic:               238
+ Number of Slices:                      185  out of   1200    15%  
+ Number of Slice Flip Flops:            246  out of   2400    10%  
+ Number of 4 input LUTs:                327  out of   2400    13%  
+    Number used as logic:               279
     Number used as Shift registers:      48
  Number of IOs:                          73
  Number of bonded IOBs:                  73  out of     92    79%  
@@ -604,10 +610,10 @@ Clock Information:
 ----------------------------------------------+------------------------+-------+
 Clock Signal                                  | Clock buffer(FF name)  | Load  |
 ----------------------------------------------+------------------------+-------+
-PCI_CLK                                       | BUFGP                  | 237   |
-CLK24                                         | BUFGP                  | 25    |
-PCI_TransferWrite(PCI_TransferWrite1:O)       | NONE(*)(U_txtx/DATA_7) | 8     |
+PCI_CLK                                       | BUFGP                  | 246   |
+CLK24                                         | BUFGP                  | 22    |
 PCI_DATAread_not00011(PCI_DATAread_not00011:O)| BUFG(*)(PCI_DATAread_0)| 32    |
+PCI_TransferWrite(PCI_TransferWrite1:O)       | NONE(*)(U_txtx/DATA_7) | 8     |
 ----------------------------------------------+------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -616,20 +622,20 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------+------------------------+-------+
-Control Signal                     | Buffer(FF name)        | Load  |
------------------------------------+------------------------+-------+
-PCI_RSTn_inv(PCI_RSTn_inv1_INV_0:O)| NONE(PCI_MEMBAR1_3)    | 46    |
------------------------------------+------------------------+-------+
+---------------------------------------+--------------------------+-------+
+Control Signal                         | Buffer(FF name)          | Load  |
+---------------------------------------+--------------------------+-------+
+PCI_RSTn_inv(U_txtx/reset_inv1_INV_0:O)| NONE(PCI_CSCMD_IOenabled)| 57    |
+---------------------------------------+--------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 11.034ns (Maximum Frequency: 90.629MHz)
-   Minimum input arrival time before clock: 10.503ns
-   Maximum output required time after clock: 17.088ns
-   Maximum combinational path delay: 13.000ns
+   Minimum period: 12.634ns (Maximum Frequency: 79.151MHz)
+   Minimum input arrival time before clock: 11.266ns
+   Maximum output required time after clock: 18.208ns
+   Maximum combinational path delay: 13.550ns
 
 Timing Detail:
 --------------
@@ -637,31 +643,31 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'PCI_CLK'
-  Clock period: 11.034ns (frequency: 90.629MHz)
-  Total number of paths / destination ports: 1297 / 282
+  Clock period: 12.634ns (frequency: 79.151MHz)
+  Total number of paths / destination ports: 1541 / 288
 -------------------------------------------------------------------------
-Delay:               11.034ns (Levels of Logic = 2)
-  Source:            PCI_MEMSpace (FF)
-  Destination:       REG_status_0 (FF)
+Delay:               12.634ns (Levels of Logic = 2)
+  Source:            PCI_TransactionAddr_0 (FF)
+  Destination:       REG_WRdata_0 (FF)
   Source Clock:      PCI_CLK rising
   Destination Clock: PCI_CLK rising
 
-  Data Path: PCI_MEMSpace to REG_status_0
+  Data Path: PCI_TransactionAddr_0 to REG_WRdata_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            14   1.292   2.600  PCI_MEMSpace (PCI_MEMSpace)
-     LUT4:I2->O            1   0.653   1.150  REG_status_not0001_SW1_1 (REG_status_not0001_SW1)
-     LUT4:I3->O           32   0.653   3.800  REG_status_not0001 (REG_status_not0001)
-     FDE:CE                    0.886          REG_status_0
+     FDE:C->Q             50   1.292   4.700  PCI_TransactionAddr_0 (PCI_TransactionAddr_0)
+     LUT4_D:I2->O         12   0.653   2.400  PCI_CSread_27_cmp_eq00021 (PCI_CSread_27_cmp_eq0002)
+     LUT4:I2->O            8   0.653   2.050  REG_WRdata_not00011 (REG_WRdata_not0001)
+     FDE:CE                    0.886          REG_WRdata_0
     ----------------------------------------
-    Total                     11.034ns (3.484ns logic, 7.550ns route)
-                                       (31.6% logic, 68.4% route)
+    Total                     12.634ns (3.484ns logic, 9.150ns route)
+                                       (27.6% logic, 72.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK24'
   Clock period: 8.508ns (frequency: 117.536MHz)
-  Total number of paths / destination ports: 193 / 46
+  Total number of paths / destination ports: 186 / 43
 -------------------------------------------------------------------------
 Delay:               8.508ns (Levels of Logic = 3)
   Source:            Mram_RAM_LA1 (RAM)
@@ -684,92 +690,66 @@ Delay:               8.508ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'PCI_CLK'
-  Total number of paths / destination ports: 527 / 243
+  Total number of paths / destination ports: 535 / 247
 -------------------------------------------------------------------------
-Offset:              10.503ns (Levels of Logic = 9)
-  Source:            PCI_AD<6> (PAD)
-  Destination:       acquisition (FF)
+Offset:              11.266ns (Levels of Logic = 3)
+  Source:            PCI_IRDYn (PAD)
+  Destination:       REG_status_0 (FF)
   Destination Clock: PCI_CLK rising
 
-  Data Path: PCI_AD<6> to acquisition
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IOBUF:IO->O           6   0.924   1.850  PCI_AD_6_IOBUF (N109)
-     LUT4:I0->O            1   0.653   0.000  Mcompar_PCI_Targeted_cmp_eq0000_lut<0> (Mcompar_PCI_Targeted_cmp_eq0000_lut<0>)
-     MUXCY:S->O            1   0.784   0.000  Mcompar_PCI_Targeted_cmp_eq0000_cy<0> (Mcompar_PCI_Targeted_cmp_eq0000_cy<0>)
-     MUXCY:CI->O           1   0.050   0.000  Mcompar_PCI_Targeted_cmp_eq0000_cy<1> (Mcompar_PCI_Targeted_cmp_eq0000_cy<1>)
-     MUXCY:CI->O           1   0.050   0.000  Mcompar_PCI_Targeted_cmp_eq0000_cy<2> (Mcompar_PCI_Targeted_cmp_eq0000_cy<2>)
-     MUXCY:CI->O           1   0.050   0.000  Mcompar_PCI_Targeted_cmp_eq0000_cy<3> (Mcompar_PCI_Targeted_cmp_eq0000_cy<3>)
-     MUXCY:CI->O           1   0.050   1.150  Mcompar_PCI_Targeted_cmp_eq0000_cy<4> (Mcompar_PCI_Targeted_cmp_eq0000_cy<4>)
-     LUT4:I0->O            4   0.653   1.600  PCI_Targeted32 (PCI_Targeted32)
-     LUT3:I2->O            1   0.653   1.150  PCI_Targeted58 (PCI_Targeted)
-     FDRE:CE                   0.886          acquisition
-    ----------------------------------------
-    Total                     10.503ns (4.753ns logic, 5.750ns route)
-                                       (45.3% logic, 54.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK24'
-  Total number of paths / destination ports: 15 / 13
--------------------------------------------------------------------------
-Offset:              7.233ns (Levels of Logic = 3)
-  Source:            PCI_IRDYn (PAD)
-  Destination:       U_txtx/cnt_1 (FF)
-  Destination Clock: CLK24 rising
-
-  Data Path: PCI_IRDYn to U_txtx/cnt_1
+  Data Path: PCI_IRDYn to REG_status_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             6   0.924   1.850  PCI_IRDYn_IBUF (PCI_IRDYn_IBUF)
-     LUT4_D:I0->O         12   0.653   2.400  PCI_CSTransferWrite11 (N2)
-     LUT4:I2->O            1   0.653   0.000  U_txtx/Mmux_cnt_mux000021 (U_txtx/cnt_mux0000<1>)
-     FD:D                      0.753          U_txtx/cnt_0
+     LUT4_D:I0->O         13   0.653   2.500  PCI_CSTransferWrite11 (N2)
+     LUT4:I1->O           32   0.653   3.800  REG_status_not0001 (REG_status_not0001)
+     FDE:CE                    0.886          REG_status_0
     ----------------------------------------
-    Total                      7.233ns (2.983ns logic, 4.250ns route)
-                                       (41.2% logic, 58.8% route)
+    Total                     11.266ns (3.116ns logic, 8.150ns route)
+                                       (27.7% logic, 72.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK24'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              6.883ns (Levels of Logic = 2)
+  Source:            USB_FRDn (PAD)
+  Destination:       addrb_0 (FF)
+  Destination Clock: CLK24 rising
+
+  Data Path: USB_FRDn to addrb_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   0.924   2.120  USB_FRDn_IBUF (USB_D_USB_Data_not0000_inv)
+     INV:I->O             11   0.653   2.300  USB_D_USB_Data_not0000_inv_inv1_INV_0 (USB_D_USB_Data_not0000_inv_inv)
+     FDE:CE                    0.886          addrb_0
+    ----------------------------------------
+    Total                      6.883ns (2.463ns logic, 4.420ns route)
+                                       (35.8% logic, 64.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'PCI_CLK'
-  Total number of paths / destination ports: 306 / 36
+  Total number of paths / destination ports: 309 / 39
 -------------------------------------------------------------------------
-Offset:              17.088ns (Levels of Logic = 4)
+Offset:              18.208ns (Levels of Logic = 4)
   Source:            PCI_TransactionAddr_0 (FF)
-  Destination:       PCI_AD<16> (PAD)
+  Destination:       PCI_AD<8> (PAD)
   Source Clock:      PCI_CLK rising
 
-  Data Path: PCI_TransactionAddr_0 to PCI_AD<16>
+  Data Path: PCI_TransactionAddr_0 to PCI_AD<8>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             46   1.292   4.500  PCI_TransactionAddr_0 (PCI_TransactionAddr_0)
-     LUT2:I0->O            3   0.653   1.480  Mmux_PCI_DATAread_mux00002331 (N8)
-     LUT4:I2->O            1   0.653   1.150  PCI_read<8>18_SW0 (N175)
+     FDE:C->Q             50   1.292   4.700  PCI_TransactionAddr_0 (PCI_TransactionAddr_0)
+     LUT4_D:I2->O         12   0.653   2.400  PCI_CSread_27_cmp_eq00021 (PCI_CSread_27_cmp_eq0002)
+     LUT4:I1->O            1   0.653   1.150  PCI_read<8>18_SW0 (N208)
      LUT4:I2->O            1   0.653   1.150  PCI_read<8>18 (PCI_read<8>)
      IOBUF:I->IO               5.557          PCI_AD_8_IOBUF (PCI_AD<8>)
     ----------------------------------------
-    Total                     17.088ns (8.808ns logic, 8.280ns route)
-                                       (51.5% logic, 48.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK24'
-  Total number of paths / destination ports: 11 / 11
--------------------------------------------------------------------------
-Offset:              8.449ns (Levels of Logic = 1)
-  Source:            U_txtx/cnt_1 (FF)
-  Destination:       LED<1> (PAD)
-  Source Clock:      CLK24 rising
-
-  Data Path: U_txtx/cnt_1 to LED<1>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q               4   1.292   1.600  U_txtx/cnt_1 (U_txtx/cnt_1)
-     OBUF:I->O                 5.557          LED_1_OBUF (LED<1>)
-    ----------------------------------------
-    Total                      8.449ns (6.849ns logic, 1.600ns route)
-                                       (81.1% logic, 18.9% route)
+    Total                     18.208ns (8.808ns logic, 9.400ns route)
+                                       (48.4% logic, 51.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'PCI_TransferWrite'
@@ -789,6 +769,25 @@ Offset:              8.128ns (Levels of Logic = 1)
     ----------------------------------------
     Total                      8.128ns (6.978ns logic, 1.150ns route)
                                        (85.9% logic, 14.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK24'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              7.999ns (Levels of Logic = 1)
+  Source:            USB_Data_7 (FF)
+  Destination:       USB_D<7> (PAD)
+  Source Clock:      CLK24 rising
+
+  Data Path: USB_Data_7 to USB_D<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   1.292   1.150  USB_Data_7 (USB_Data_7)
+     OBUFT:I->O                5.557          USB_D_7_OBUFT (USB_D<7>)
+    ----------------------------------------
+    Total                      7.999ns (6.849ns logic, 1.150ns route)
+                                       (85.6% logic, 14.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'PCI_DATAread_not00011'
@@ -814,7 +813,7 @@ Offset:              9.931ns (Levels of Logic = 2)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 9 / 9
 -------------------------------------------------------------------------
-Delay:               13.000ns (Levels of Logic = 3)
+Delay:               13.550ns (Levels of Logic = 3)
   Source:            PCI_RSTn (PAD)
   Destination:       PCI_REQn (PAD)
 
@@ -823,24 +822,24 @@ Delay:               13.000ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   0.924   1.150  PCI_RSTn_IBUF (PCI_RSTn_IBUF)
-     INV:I->O             47   0.653   4.550  PCI_RSTn_inv1_INV_0 (PCI_RSTn_inv)
+     INV:I->O             58   0.653   5.100  U_txtx/reset_inv1_INV_0 (PCI_RSTn_inv)
      IOBUF:T->IO               5.723          PCI_REQn_IOBUF (PCI_REQn)
     ----------------------------------------
-    Total                     13.000ns (7.300ns logic, 5.700ns route)
-                                       (56.2% logic, 43.8% route)
+    Total                     13.550ns (7.300ns logic, 6.250ns route)
+                                       (53.9% logic, 46.1% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.14 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.45 secs
  
 --> 
 
 
-Total memory usage is 135540 kilobytes
+Total memory usage is 136036 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   80 (   0 filtered)
+Number of warnings :   82 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

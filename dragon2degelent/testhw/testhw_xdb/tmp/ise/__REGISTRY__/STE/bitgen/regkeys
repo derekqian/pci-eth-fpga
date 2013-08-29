@@ -1,5 +1,5 @@
 CommandLine
-/software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/bitgen -ise /home/derek/iseproject/testhw/testhw.ise -intstyle ise -f testhw.ut testhw.ncd
+/software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/bitgen -ise /home/derek/pci-eth-fpga/dragon2degelent/testhw/testhw.ise -intstyle ise -f testhw.ut testhw.ncd
 s
 FormatString
 bitgen [-d] [-j] [-b] [-w] [-l] [-m] [-t] [-n] [-u] [-a] [--p] [-r <bitFile>] [-intstyle ise|xflow|silent] [-ise <projectrepositoryfile>] {-bd <BRAM_data_file> [tag <tagname>]} {-g <setting_value>} <infile[.ncd]> [<outfile>] [<pcffile[.pcf]>]

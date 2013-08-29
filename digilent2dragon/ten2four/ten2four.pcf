@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map K.39 on Wed Jul 31 14:58:03 2013
+// Written by: Map K.39 on Wed Aug 28 13:18:41 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -11,7 +11,7 @@ COMP "outdata<4>" LOCATE = SITE "P39" LEVEL 1;
 COMP "outdata<5>" LOCATE = SITE "P44" LEVEL 1;
 COMP "outdata<6>" LOCATE = SITE "P46" LEVEL 1;
 COMP "outdata<7>" LOCATE = SITE "P49" LEVEL 1;
-COMP "indata<0>" LOCATE = SITE "P86" LEVEL 1;
+COMP "indata<0>" LOCATE = SITE "P64" LEVEL 1;
 COMP "indata<1>" LOCATE = SITE "P85" LEVEL 1;
 COMP "indata<2>" LOCATE = SITE "P83" LEVEL 1;
 COMP "indata<3>" LOCATE = SITE "P84" LEVEL 1;

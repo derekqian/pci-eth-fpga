@@ -1,7 +1,7 @@
 Release 10.1.03 par K.39 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-svl6::  Mon Aug 26 17:20:39 2013
+svl6::  Thu Aug 29 12:44:02 2013
 
 par -w -intstyle ise -ol std -t 1 pcieth_map.ncd pcieth.ncd pcieth.pcf 
 
@@ -25,9 +25,9 @@ Device Utilization Summary:
       Number of LOCed GCLKIOBs               2 out of 2     100%
 
    Number of External IOBs                  71 out of 92     77%
-      Number of LOCed IOBs                  70 out of 71     98%
+      Number of LOCed IOBs                  71 out of 71    100%
 
-   Number of SLICEs                        214 out of 1200   17%
+   Number of SLICEs                        236 out of 1200   19%
 
 
 Overall effort level (-ol):   Standard 
@@ -42,89 +42,86 @@ Finished initial Timing Analysis.  REAL time: 0 secs
 Starting Placer
 
 Phase 1.1
-Phase 1.1 (Checksum:1dbb4) REAL time: 0 secs 
+Phase 1.1 (Checksum:200e4) REAL time: 0 secs 
 
 Phase 2.7
-INFO:Place:834 - Only a subset of IOs are locked. Out of 71 IOs, 70 are locked and 1 are not locked. If you would like
-   to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7 (Checksum:1dbb4) REAL time: 0 secs 
+Phase 2.7 (Checksum:200e4) REAL time: 0 secs 
 
 Phase 3.31
-Phase 3.31 (Checksum:1dbb4) REAL time: 0 secs 
+Phase 3.31 (Checksum:200e4) REAL time: 0 secs 
 
 Phase 4.23
-Phase 4.23 (Checksum:1ecc4) REAL time: 0 secs 
+Phase 4.23 (Checksum:211f4) REAL time: 0 secs 
 
 Phase 5.3
-...
-Phase 5.3 (Checksum:1f602) REAL time: 0 secs 
+Phase 5.3 (Checksum:211f4) REAL time: 0 secs 
 
 Phase 6.5
-Phase 6.5 (Checksum:1f602) REAL time: 0 secs 
+Phase 6.5 (Checksum:211f4) REAL time: 0 secs 
 
 Phase 7.8
-................
-.
-.
-.
-.
-.
-.
-Phase 7.8 (Checksum:69005) REAL time: 1 secs 
+...................
+..
+..
+..
+..
+...
+..
+Phase 7.8 (Checksum:4ce0d) REAL time: 1 secs 
 
 Phase 8.5
-Phase 8.5 (Checksum:69005) REAL time: 1 secs 
+Phase 8.5 (Checksum:4ce0d) REAL time: 1 secs 
 
 Phase 9.18
-Phase 9.18 (Checksum:67ee4) REAL time: 1 secs 
+Phase 9.18 (Checksum:4a34e) REAL time: 2 secs 
 
 Phase 10.5
-Phase 10.5 (Checksum:67ee4) REAL time: 1 secs 
+Phase 10.5 (Checksum:4a34e) REAL time: 2 secs 
 
-REAL time consumed by placer: 1 secs 
-CPU  time consumed by placer: 1 secs 
+REAL time consumed by placer: 2 secs 
+CPU  time consumed by placer: 2 secs 
 Writing design to file pcieth.ncd
 
 
-Total REAL time to Placer completion: 1 secs 
-Total CPU time to Placer completion: 1 secs 
+Total REAL time to Placer completion: 2 secs 
+Total CPU time to Placer completion: 2 secs 
 
 Starting Router
 
-Phase 1: 1574 unrouted;       REAL time: 1 secs 
+Phase 1: 1732 unrouted;       REAL time: 2 secs 
 
-Phase 2: 1210 unrouted;       REAL time: 3 secs 
+Phase 2: 1361 unrouted;       REAL time: 4 secs 
 
-Phase 3: 309 unrouted;       REAL time: 3 secs 
+Phase 3: 345 unrouted;       REAL time: 4 secs 
 
-Phase 4: 309 unrouted; (17150)      REAL time: 3 secs 
+Phase 4: 345 unrouted; (10199)      REAL time: 4 secs 
 
-Phase 5: 349 unrouted; (6572)      REAL time: 4 secs 
+Phase 5: 368 unrouted; (7446)      REAL time: 4 secs 
 
-Phase 6: 349 unrouted; (6572)      REAL time: 4 secs 
+Phase 6: 370 unrouted; (7374)      REAL time: 5 secs 
 
-Phase 7: 0 unrouted; (6856)      REAL time: 7 secs 
+Phase 7: 0 unrouted; (7916)      REAL time: 6 secs 
 
-Phase 8: 0 unrouted; (6856)      REAL time: 7 secs 
-
-Updating file: pcieth.ncd with current fully routed design.
-
-Phase 9: 0 unrouted; (6856)      REAL time: 10 secs 
+Phase 8: 0 unrouted; (7916)      REAL time: 6 secs 
 
 Updating file: pcieth.ncd with current fully routed design.
 
-Phase 10: 0 unrouted; (6856)      REAL time: 10 secs 
+Phase 9: 0 unrouted; (7916)      REAL time: 9 secs 
 
-Phase 11: 0 unrouted; (6794)      REAL time: 10 secs 
+Updating file: pcieth.ncd with current fully routed design.
 
-Phase 12: 0 unrouted; (6726)      REAL time: 11 secs 
+Phase 10: 0 unrouted; (7916)      REAL time: 9 secs 
 
-Phase 13: 0 unrouted; (6726)      REAL time: 12 secs 
+Phase 11: 0 unrouted; (7584)      REAL time: 9 secs 
 
-Phase 14: 0 unrouted; (6726)      REAL time: 12 secs 
+Phase 12: 0 unrouted; (7438)      REAL time: 10 secs 
 
-Total REAL time to Router completion: 12 secs 
-Total CPU time to Router completion: 12 secs 
+Phase 13: 0 unrouted; (7438)      REAL time: 11 secs 
+
+Phase 14: 0 unrouted; (7438)      REAL time: 11 secs 
+
+Total REAL time to Router completion: 11 secs 
+Total CPU time to Router completion: 11 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -143,11 +140,11 @@ Generating Clock Report
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
 |PCI_DATAread_not0001 |              |      |      |            |             |
-|                     |      GCLKBUF0| No   |   21 |  0.123     |  0.681      |
+|                     |      GCLKBUF0| No   |   21 |  0.114     |  0.681      |
 +---------------------+--------------+------+------+------------+-------------+
-|       PCI_CLK_BUFGP |      GCLKBUF1| No   |  126 |  0.492     |  0.681      |
+|       PCI_CLK_BUFGP |      GCLKBUF1| No   |  135 |  0.490     |  0.679      |
 +---------------------+--------------+------+------+------------+-------------+
-|         CLK24_BUFGP |      GCLKBUF2| No   |   19 |  0.471     |  0.688      |
+|         CLK24_BUFGP |      GCLKBUF2| No   |   17 |  0.472     |  0.689      |
 +---------------------+--------------+------+------+------------+-------------+
 |   PCI_TransferWrite |         Local|      |    8 |  0.567     |  3.773      |
 +---------------------+--------------+------+------+------------+-------------+
@@ -157,7 +154,7 @@ only delays for the net. Note this is different from Clock Skew which
 is reported in TRCE timing report. Clock Skew is the difference between
 the minimum and maximum path delays which includes logic delays.
 
-Timing Score: 6726
+Timing Score: 7438
 
 WARNING:Par:62 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
    your design.
@@ -181,35 +178,38 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
                                             |         |    Slack   | Achievable | Errors |    Score   
 ------------------------------------------------------------------------------------------------------
-* COMP "PCI_STOPn" OFFSET = OUT 11 ns AFTER | MAXDELAY|    -1.969ns|    12.969ns|       1|        1969
+* COMP "PCI_STOPn" OFFSET = OUT 11 ns AFTER | MAXDELAY|    -2.159ns|    13.159ns|       1|        2159
    COMP "PCI_CLK"                           |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-* COMP "PCI_DEVSELn" OFFSET = OUT 11 ns AFT | MAXDELAY|    -1.923ns|    12.923ns|       1|        1923
+* COMP "PCI_TRDYn" OFFSET = OUT 11 ns AFTER | MAXDELAY|    -1.816ns|    12.816ns|       1|        1816
+   COMP "PCI_CLK"                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* COMP "PCI_DEVSELn" OFFSET = OUT 11 ns AFT | MAXDELAY|    -1.739ns|    12.739ns|       1|        1739
   ER COMP "PCI_CLK"                         |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-* COMP "PCI_TRDYn" OFFSET = OUT 11 ns AFTER | MAXDELAY|    -1.919ns|    12.919ns|       1|        1919
-   COMP "PCI_CLK"                           |         |            |            |        |            
-------------------------------------------------------------------------------------------------------
-* TIMEGRP "PCI_AD_GRP" OFFSET = IN 7 ns BEF | SETUP   |    -0.537ns|     7.537ns|       4|         915
+* TIMEGRP "PCI_AD_GRP" OFFSET = IN 7 ns BEF | SETUP   |    -1.042ns|     8.042ns|       2|        1724
   ORE COMP "PCI_CLK"                        |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  TIMEGRP "PCI_CBE_GRP" OFFSET = IN 7 ns BE | SETUP   |     0.530ns|     6.470ns|       0|           0
+  COMP "PCI_IRDYn" OFFSET = IN 7 ns BEFORE  | SETUP   |     0.147ns|     6.853ns|       0|           0
+  COMP "PCI_CLK"                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "PCI_CBE_GRP" OFFSET = IN 7 ns BE | SETUP   |     0.291ns|     6.709ns|       0|           0
   FORE COMP "PCI_CLK"                       |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  COMP "PCI_IRDYn" OFFSET = IN 7 ns BEFORE  | SETUP   |     0.858ns|     6.142ns|       0|           0
+  COMP "PCI_IDSEL" OFFSET = IN 7 ns BEFORE  | SETUP   |     0.850ns|     6.150ns|       0|           0
   COMP "PCI_CLK"                            |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  COMP "PCI_IDSEL" OFFSET = IN 7 ns BEFORE  | SETUP   |     1.450ns|     5.550ns|       0|           0
-  COMP "PCI_CLK"                            |         |            |            |        |            
-------------------------------------------------------------------------------------------------------
-  COMP "PCI_FRAMEn" OFFSET = IN 7 ns BEFORE | SETUP   |     1.722ns|     5.278ns|       0|           0
+  COMP "PCI_FRAMEn" OFFSET = IN 7 ns BEFORE | SETUP   |     2.171ns|     4.829ns|       0|           0
    COMP "PCI_CLK"                           |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  TS_PCI_CLK = PERIOD TIMEGRP "PCI_CLK" 30  | SETUP   |    19.306ns|    10.694ns|       0|           0
+  TS_PCI_CLK = PERIOD TIMEGRP "PCI_CLK" 30  | SETUP   |    19.390ns|    10.610ns|       0|           0
   ns HIGH 50%                               | HOLD    |     2.265ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  TIMEGRP "PCI_AD_GRP" OFFSET = OUT 41 ns A | MAXDELAY|    21.062ns|    19.938ns|       0|           0
+  TIMEGRP "PCI_AD_GRP" OFFSET = OUT 41 ns A | MAXDELAY|    20.041ns|    20.959ns|       0|           0
   FTER COMP "PCI_CLK"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_CLK24 = PERIOD TIMEGRP "CLK24" 24 MHz  | SETUP   |    28.831ns|    12.835ns|       0|           0
+  HIGH 50%                                  | HOLD    |     3.067ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
 
 
@@ -220,18 +220,18 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 12 secs 
-Total CPU time to PAR completion: 12 secs 
+Total REAL time to PAR completion: 11 secs 
+Total CPU time to PAR completion: 11 secs 
 
 Peak Memory Usage:  106 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
-Timing: Completed - 7 errors found.
+Timing: Completed - 5 errors found.
 
 Number of error messages: 0
 Number of warning messages: 1
-Number of info messages: 1
+Number of info messages: 0
 
 Writing design to file pcieth.ncd
 

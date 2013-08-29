@@ -1,10 +1,10 @@
 //! **************************************************************************
-// Written by: Map K.39 on Thu Jul 18 17:14:25 2013
+// Written by: Map K.39 on Wed Aug 28 12:31:16 2013
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "clk" LOCATE = SITE "P15" LEVEL 1;
-COMP "dout<0>" LOCATE = SITE "P86" LEVEL 1;
+COMP "clk" LOCATE = SITE "P18" LEVEL 1;
+COMP "dout<0>" LOCATE = SITE "P64" LEVEL 1;
 COMP "dout<1>" LOCATE = SITE "P85" LEVEL 1;
 COMP "dout<2>" LOCATE = SITE "P83" LEVEL 1;
 COMP "dout<3>" LOCATE = SITE "P84" LEVEL 1;

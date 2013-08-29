@@ -1,14 +1,14 @@
 Release 10.1.03 - xst K.39 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 --> 
-Parameter TMPDIR set to /home/derek/iseproject/ten2four/xst/projnav.tmp
+Parameter TMPDIR set to /home/derek/pci-eth-fpga/digilent2dragon/ten2four/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.04 secs
  
 --> 
-Parameter xsthdpdir set to /home/derek/iseproject/ten2four/xst
+Parameter xsthdpdir set to /home/derek/pci-eth-fpga/digilent2dragon/ten2four/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -284,12 +284,12 @@ Delay:               14.835ns (Levels of Logic = 6)
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.46 secs
+Total CPU time to Xst completion: 1.44 secs
  
 --> 
 
 
-Total memory usage is 126940 kilobytes
+Total memory usage is 127136 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

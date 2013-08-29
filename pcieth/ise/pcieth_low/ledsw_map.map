@@ -10,7 +10,7 @@ Target Device  : xc6slx45
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Mon Aug 26 16:54:43 2013
+Mapped Date    : Wed Aug 28 17:07:30 2013
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
@@ -36,16 +36,16 @@ INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
 Total REAL time at the beginning of Placer: 6 secs 
-Total CPU  time at the beginning of Placer: 6 secs 
+Total CPU  time at the beginning of Placer: 5 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:ff7bd410) REAL time: 7 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:ff7bd410) REAL time: 6 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:ff7bd410) REAL time: 7 secs 
+Phase 2.7  Design Feasibility Check (Checksum:ff7bd410) REAL time: 6 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:ff7bd410) REAL time: 7 secs 
+Phase 3.31  Local Placement Optimization (Checksum:ff7bd410) REAL time: 6 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
@@ -148,7 +148,7 @@ Average Fanout of Non-Clock Nets:                0.96
 
 Peak Memory Usage:  719 MB
 Total REAL time to MAP completion:  8 secs 
-Total CPU time to MAP completion:   8 secs 
+Total CPU time to MAP completion:   7 secs 
 
 Mapping completed.
 See MAP report file "ledsw_map.mrp" for details.

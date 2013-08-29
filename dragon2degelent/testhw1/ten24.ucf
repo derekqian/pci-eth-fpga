@@ -12,3 +12,16 @@ NET "OUTDATA<0>"  LOC = "U18"  ;
 NET "OUTDATA<1>"  LOC = "M14"  ;
 NET "OUTDATA<2>"  LOC = "N14"  ;
 NET "OUTDATA<3>"  LOC = "L14"  ;
+NET "OUTDATA<4>"  LOC = "M13"  ;
+NET "OUTDATA<5>"  LOC = "D4"  ;
+NET "OUTDATA<6>"  LOC = "P16"  ;
+NET "OUTDATA<7>"  LOC = "N12"  ;
+
+# NET "LED<0>"  LOC = "U18"  ;
+# NET "LED<1>"  LOC = "M14"  ;
+# NET "LED<2>"  LOC = "N14"  ;
+# NET "LED<3>"  LOC = "L14"  ;
+# NET "LED<4>"  LOC = "M13"  ;
+# NET "LED<5>"  LOC = "D4"  ;
+# NET "LED<6>"  LOC = "P16"  ;
+# NET "LED<7>"  LOC = "N12"  ;

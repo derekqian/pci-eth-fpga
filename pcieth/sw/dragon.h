@@ -32,6 +32,7 @@
 #define IOCTL_GET_STATUS _IOR(MAGIC_NUM, 5, unsigned int)
 #define IOCTL_SET_STATUS _IOR(MAGIC_NUM, 6, unsigned int)
 #define IOCTL_GET_SWITCH _IOR(MAGIC_NUM, 7, unsigned int)
+#define IOCTL_SET_LOW _IOR(MAGIC_NUM, 8, unsigned int)
 
 
 #endif

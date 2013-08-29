@@ -10,7 +10,7 @@ Target Device  : xc6slx45
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Jul 18 16:57:32 2013
+Mapped Date    : Wed Aug 28 12:28:03 2013
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
@@ -36,49 +36,49 @@ INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
 Total REAL time at the beginning of Placer: 6 secs 
-Total CPU  time at the beginning of Placer: 5 secs 
+Total CPU  time at the beginning of Placer: 6 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:d9e9fdae) REAL time: 6 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:f22e7f27) REAL time: 6 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:d9e9fdae) REAL time: 6 secs 
+Phase 2.7  Design Feasibility Check (Checksum:f22e7f27) REAL time: 6 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:d9e9fdae) REAL time: 6 secs 
+Phase 3.31  Local Placement Optimization (Checksum:f22e7f27) REAL time: 6 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:d9e9fdae) REAL time: 7 secs 
+(Checksum:f22e7f27) REAL time: 7 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:d9e9fdae) REAL time: 7 secs 
+Phase 5.36  Local Placement Optimization (Checksum:f22e7f27) REAL time: 7 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:d9e9fdae) REAL time: 7 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:f22e7f27) REAL time: 7 secs 
 
 Phase 7.3  Local Placement Optimization
-Phase 7.3  Local Placement Optimization (Checksum:d9e9fdae) REAL time: 7 secs 
+Phase 7.3  Local Placement Optimization (Checksum:f22e7f27) REAL time: 7 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:d9e9fdae) REAL time: 7 secs 
+Phase 8.5  Local Placement Optimization (Checksum:f22e7f27) REAL time: 7 secs 
 
 Phase 9.8  Global Placement
 ..
 ..
-Phase 9.8  Global Placement (Checksum:a6b29091) REAL time: 7 secs 
+Phase 9.8  Global Placement (Checksum:d0fa4d82) REAL time: 7 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:a6b29091) REAL time: 7 secs 
+Phase 10.5  Local Placement Optimization (Checksum:d0fa4d82) REAL time: 7 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:c05e1551) REAL time: 7 secs 
+Phase 11.18  Placement Optimization (Checksum:cfb56c22) REAL time: 7 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:c05e1551) REAL time: 7 secs 
+Phase 12.5  Local Placement Optimization (Checksum:cfb56c22) REAL time: 7 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:c05e1551) REAL time: 7 secs 
+Phase 13.34  Placement Validation (Checksum:cfb56c22) REAL time: 7 secs 
 
 Total REAL time to Placer completion: 7 secs 
 Total CPU  time to Placer completion: 7 secs 
@@ -118,8 +118,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        14 out of     218    6%
-    Number of LOCed IOBs:                       14 out of      14  100%
+  Number of bonded IOBs:                        18 out of     218    8%
+    Number of LOCed IOBs:                       18 out of      18  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of     116    0%
@@ -146,7 +146,7 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                2.83
 
-Peak Memory Usage:  714 MB
+Peak Memory Usage:  713 MB
 Total REAL time to MAP completion:  8 secs 
 Total CPU time to MAP completion:   7 secs 
 

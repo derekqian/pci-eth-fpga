@@ -1,5 +1,5 @@
 CommandLine
-/software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/ngdbuild -ise /home/derek/iseproject/ten2four/ten2four.ise -intstyle ise -dd _ngo -nt timestamp -i -p xc2s100-tq144-5 ten2four.ngc ten2four.ngd
+/software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/ngdbuild -ise /home/derek/pci-eth-fpga/digilent2dragon/ten2four/ten2four.ise -intstyle ise -dd _ngo -nt timestamp -i -p xc2s100-tq144-5 ten2four.ngc ten2four.ngd
 s
 FormatString
 ngdbuild [-p <partname>] {-sd <source_dir>} {-l <library>} [-ur <rules_file[.urf]>] [-dd <output_dir>] [-r] [-a] [-u] [-nt timestamp|on|off] [-uc <ucf_file[.ucf]>] [-aul] [-bm <bmm_file[.bmm]>] [-i] [-modular initial|module|assemble] [-intstyle ise|xflow|silent] [-quiet] [-verbose] [-active <active_module_name>] [-pimpath <pimpath>] {-use_pim <pim_module_name>} [-insert_keep_hierarchy] [--forcengd] {--n <ngl_file>} {--sl <library>} [--global_opt] [--script <tcl_file>] [--incremental] [--csttrans] <design_name> [<ngd_file[.ngd]>]

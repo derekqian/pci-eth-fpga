@@ -10,7 +10,7 @@ Target Device  : xc6slx45
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Jul 18 16:57:32 2013
+Mapped Date    : Wed Aug 28 12:28:03 2013
 
 Design Summary
 --------------
@@ -43,8 +43,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        14 out of     218    6%
-    Number of LOCed IOBs:                       14 out of      14  100%
+  Number of bonded IOBs:                        18 out of     218    8%
+    Number of LOCed IOBs:                       18 out of      18  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of     116    0%
@@ -71,7 +71,7 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                2.83
 
-Peak Memory Usage:  714 MB
+Peak Memory Usage:  713 MB
 Total REAL time to MAP completion:  8 secs 
 Total CPU time to MAP completion:   7 secs 
 
@@ -124,9 +124,14 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
+   1 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
 
 Section 6 - IOB Properties
 --------------------------
@@ -149,6 +154,10 @@ Section 6 - IOB Properties
 | outdata<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | outdata<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | outdata<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| outdata<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| outdata<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| outdata<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| outdata<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

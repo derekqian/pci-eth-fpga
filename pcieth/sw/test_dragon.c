@@ -76,6 +76,15 @@ int main (int ac, char **av) {
   } if (strcmp(av[2], "--get-switch") == 0) {
     ioctl(fd, IOCTL_GET_SWITCH, &value);
     printf ("Get SWITCH: 0x%08X\n\n", value);
+  } else if (strcmp(av[2], "--set-low") == 0) {
+    // Initial value to write
+    if (ac < 4) {
+      fprintf (stderr, "Need parameter for set-low\n");
+      goto clean_operate;
+    }
+    sscanf (av[3], "%x", &value);
+    ioctl(fd, IOCTL_SET_LOW, &value);
+    printf ("Set LOW: 0x%08X\n\n", value);
   }
 
 clean_operate:

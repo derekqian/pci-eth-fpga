@@ -10,13 +10,13 @@
          <ClosedNode>/ten24 |home|derek|iseproject|testhw1|testhw1.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>ten24 (/home/derek/iseproject/testhw1/testhw1.v)</SelectedItem>
+         <SelectedItem>ten24 (/home/derek/pci-eth-fpga/dragon2degelent/testhw1/testhw1.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000c4000000020000000000000000000000000200000064ffffffff000000810000000300000002000000c40000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>ten24 (/home/derek/iseproject/testhw1/testhw1.v)</CurrentItem>
+      <CurrentItem>ten24 (/home/derek/pci-eth-fpga/dragon2degelent/testhw1/testhw1.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -68,7 +68,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f6000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f60000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000011f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000011f0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Generate Programming File</CurrentItem>
    </ItemView>

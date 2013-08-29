@@ -3,14 +3,15 @@ Xilinx Map Application Log File for Design 'testhw'
 
 Design Information
 ------------------
-Command Line   : map -ise /home/derek/iseproject/testhw/testhw.ise -intstyle ise
--p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o testhw_map.ncd
+Command Line   : map -ise
+/home/derek/pci-eth-fpga/dragon2degelent/testhw/testhw.ise -intstyle ise -p
+xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o testhw_map.ncd
 testhw.ngd testhw.pcf 
 Target Device  : xc2s100
 Target Package : tq144
 Target Speed   : -5
 Mapper Version : spartan2 -- $Revision: 1.46.12.2 $
-Mapped Date    : Thu Jul 18 17:14:25 2013
+Mapped Date    : Wed Aug 28 12:31:16 2013
 
 Mapping design into LUTs...
 Running directed packing...
@@ -22,13 +23,20 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    2
+Number of warnings:    0
 Logic Utilization:
+  Number of Slice Flip Flops:        37 out of  2,400    1%
+  Number of 4 input LUTs:            11 out of  2,400    1%
 Logic Distribution:
-    Number of Slices containing only related logic:      0 out of      0    0%
-    Number of Slices containing unrelated logic:         0 out of      0    0%
+    Number of occupied Slices:                          24 out of  1,200    2%
+    Number of Slices containing only related logic:     24 out of     24  100%
+    Number of Slices containing unrelated logic:         0 out of     24    0%
         *See NOTES below for an explanation of the effects of unrelated logic
+Total Number of 4 input LUTs:           36 out of  2,400    1%
+      Number used as logic:                        11
+      Number used as a route-thru:                 25
    Number of bonded IOBs:            10 out of     92   10%
+   Number of GCLKs:                   1 out of      4   25%
    Number of GCLKIOBs:                1 out of      4   25%
 
 Peak Memory Usage:  130 MB

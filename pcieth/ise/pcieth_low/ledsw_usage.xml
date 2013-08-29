@@ -4,119 +4,119 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<DeviceUsageSummary rev="12">
-<DesignStatistics TimeStamp="Mon Aug 26 16:55:18 2013"><group name="NetStatistics">
-<item name="NumNets_Active" rev="12">
+<DeviceUsageSummary rev="32">
+<DesignStatistics TimeStamp="Wed Aug 28 17:08:04 2013"><group name="NetStatistics">
+<item name="NumNets_Active" rev="32">
 <attrib name="value" value="53"/></item>
-<item name="NumNodesOfType_Active_BOUNCEIN" rev="12">
+<item name="NumNodesOfType_Active_BOUNCEIN" rev="32">
 <attrib name="value" value="1"/></item>
-<item name="NumNodesOfType_Active_BUFGOUT" rev="12">
+<item name="NumNodesOfType_Active_BUFGOUT" rev="32">
 <attrib name="value" value="1"/></item>
-<item name="NumNodesOfType_Active_BUFHINP2OUT" rev="12">
+<item name="NumNodesOfType_Active_BUFHINP2OUT" rev="32">
 <attrib name="value" value="1"/></item>
-<item name="NumNodesOfType_Active_CLKPINFEED" rev="12">
+<item name="NumNodesOfType_Active_CLKPINFEED" rev="32">
 <attrib name="value" value="5"/></item>
-<item name="NumNodesOfType_Active_CNTRLPIN" rev="12">
+<item name="NumNodesOfType_Active_CNTRLPIN" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="NumNodesOfType_Active_DOUBLE" rev="12">
+<item name="NumNodesOfType_Active_DOUBLE" rev="32">
 <attrib name="value" value="23"/></item>
-<item name="NumNodesOfType_Active_GENERIC" rev="12">
+<item name="NumNodesOfType_Active_GENERIC" rev="32">
 <attrib name="value" value="28"/></item>
-<item name="NumNodesOfType_Active_GLOBAL" rev="12">
+<item name="NumNodesOfType_Active_GLOBAL" rev="32">
 <attrib name="value" value="13"/></item>
-<item name="NumNodesOfType_Active_INPUT" rev="12">
+<item name="NumNodesOfType_Active_INPUT" rev="32">
 <attrib name="value" value="1"/></item>
-<item name="NumNodesOfType_Active_IOBIN2OUT" rev="12">
+<item name="NumNodesOfType_Active_IOBIN2OUT" rev="32">
 <attrib name="value" value="26"/></item>
-<item name="NumNodesOfType_Active_IOBOUTPUT" rev="12">
+<item name="NumNodesOfType_Active_IOBOUTPUT" rev="32">
 <attrib name="value" value="18"/></item>
-<item name="NumNodesOfType_Active_OUTBOUND" rev="12">
+<item name="NumNodesOfType_Active_OUTBOUND" rev="32">
 <attrib name="value" value="20"/></item>
-<item name="NumNodesOfType_Active_OUTPUT" rev="12">
+<item name="NumNodesOfType_Active_OUTPUT" rev="32">
 <attrib name="value" value="1"/></item>
-<item name="NumNodesOfType_Active_PADINPUT" rev="12">
+<item name="NumNodesOfType_Active_PADINPUT" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="NumNodesOfType_Active_PADOUTPUT" rev="12">
+<item name="NumNodesOfType_Active_PADOUTPUT" rev="32">
 <attrib name="value" value="10"/></item>
-<item name="NumNodesOfType_Active_PINBOUNCE" rev="12">
+<item name="NumNodesOfType_Active_PINBOUNCE" rev="32">
 <attrib name="value" value="10"/></item>
-<item name="NumNodesOfType_Active_PINFEED" rev="12">
+<item name="NumNodesOfType_Active_PINFEED" rev="32">
 <attrib name="value" value="26"/></item>
-<item name="NumNodesOfType_Active_PINFEED2" rev="12">
+<item name="NumNodesOfType_Active_PINFEED2" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="NumNodesOfType_Active_QUAD" rev="12">
+<item name="NumNodesOfType_Active_QUAD" rev="32">
 <attrib name="value" value="103"/></item>
-<item name="NumNodesOfType_Active_SINGLE" rev="12">
+<item name="NumNodesOfType_Active_SINGLE" rev="32">
 <attrib name="value" value="10"/></item>
 </group>
 <group name="SiteStatistics">
-<item name="BUFG-BUFGMUX" rev="12">
+<item name="BUFG-BUFGMUX" rev="32">
 <attrib name="value" value="1"/></item>
-<item name="IOB-IOBM" rev="12">
+<item name="IOB-IOBM" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="IOB-IOBS" rev="12">
+<item name="IOB-IOBS" rev="32">
 <attrib name="value" value="18"/></item>
 </group>
 <group name="MiscellaneousStatistics">
-<item name="AGG_BONDED_IO" rev="11">
+<item name="AGG_BONDED_IO" rev="31">
 <attrib name="value" value="26"/></item>
-<item name="AGG_IO" rev="11">
+<item name="AGG_IO" rev="31">
 <attrib name="value" value="26"/></item>
-<item name="AGG_LOCED_IO" rev="11">
+<item name="AGG_LOCED_IO" rev="31">
 <attrib name="value" value="26"/></item>
-<item name="NUM_BONDED_IOB" rev="11">
+<item name="NUM_BONDED_IOB" rev="31">
 <attrib name="value" value="26"/></item>
-<item name="NUM_BUFG" rev="11">
+<item name="NUM_BUFG" rev="31">
 <attrib name="value" value="1"/></item>
-<item name="NUM_ILOGIC2" rev="11">
+<item name="NUM_ILOGIC2" rev="31">
 <attrib name="value" value="8"/></item>
-<item name="NUM_IOB_FF" rev="11">
+<item name="NUM_IOB_FF" rev="31">
 <attrib name="value" value="8"/></item>
-<item name="NUM_LOCED_IOB" rev="11">
+<item name="NUM_LOCED_IOB" rev="31">
 <attrib name="value" value="26"/></item>
 </group>
 </DesignStatistics>
-<DeviceUsage TimeStamp="Mon Aug 26 16:55:18 2013"><group name="SiteSummary">
-<item name="BUFG" rev="12">
+<DeviceUsage TimeStamp="Wed Aug 28 17:08:04 2013"><group name="SiteSummary">
+<item name="BUFG" rev="32">
 <attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
-<item name="BUFG_BUFG" rev="12">
+<item name="BUFG_BUFG" rev="32">
 <attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
-<item name="HARD0" rev="12">
+<item name="HARD0" rev="32">
 <attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
-<item name="ILOGIC2" rev="12">
+<item name="ILOGIC2" rev="32">
 <attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
-<item name="ILOGIC2_IFF" rev="12">
+<item name="ILOGIC2_IFF" rev="32">
 <attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
-<item name="INVERTER" rev="12">
+<item name="INVERTER" rev="32">
 <attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
-<item name="IOB" rev="12">
+<item name="IOB" rev="32">
 <attrib name="total" value="1000000"/><attrib name="used" value="26"/></item>
-<item name="IOB_IMUX" rev="12">
+<item name="IOB_IMUX" rev="32">
 <attrib name="total" value="1000000"/><attrib name="used" value="18"/></item>
-<item name="IOB_INBUF" rev="12">
+<item name="IOB_INBUF" rev="32">
 <attrib name="total" value="1000000"/><attrib name="used" value="18"/></item>
-<item name="IOB_OUTBUF" rev="12">
+<item name="IOB_OUTBUF" rev="32">
 <attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
-<item name="PAD" rev="12">
+<item name="PAD" rev="32">
 <attrib name="total" value="1000000"/><attrib name="used" value="26"/></item>
-<item name="SELMUX2_1" rev="12">
+<item name="SELMUX2_1" rev="32">
 <attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
 </group>
 </DeviceUsage>
-<ReportConfigData TimeStamp="Mon Aug 26 16:55:18 2013"><group name="IOB_OUTBUF">
-<item name="DRIVEATTRBOX" rev="12">
+<ReportConfigData TimeStamp="Wed Aug 28 17:08:04 2013"><group name="IOB_OUTBUF">
+<item name="DRIVEATTRBOX" rev="32">
 <attrib name="12" value="8"/></item>
-<item name="SLEW" rev="12">
+<item name="SLEW" rev="32">
 <attrib name="SLOW" value="8"/></item>
-<item name="SUSPEND" rev="12">
+<item name="SUSPEND" rev="32">
 <attrib name="3STATE" value="8"/></item>
 </group>
 <group name="ILOGIC2_IFF">
-<item name="CLK0" rev="12">
+<item name="CLK0" rev="32">
 <attrib name="CLK0_INV" value="0"/><attrib name="CLK0" value="8"/></item>
-<item name="IFFTYPE" rev="12">
+<item name="IFFTYPE" rev="32">
 <attrib name="FF" value="8"/></item>
-<item name="SRINIT_Q" rev="12">
+<item name="SRINIT_Q" rev="32">
 <attrib name="0" value="8"/></item>
 </group>
 <group name="OLOGIC2">
@@ -132,14 +132,14 @@
 <attrib name="0" value="16"/></item>
 </group>
 <group name="ILOGIC2">
-<item name="CLK0" rev="12">
+<item name="CLK0" rev="32">
 <attrib name="CLK0_INV" value="0"/><attrib name="CLK0" value="8"/></item>
 </group>
 </ReportConfigData>
-<ReportPinData TimeStamp="Mon Aug 26 16:55:18 2013"><group name="IOB_OUTBUF">
-<item name="IN" rev="12">
+<ReportPinData TimeStamp="Wed Aug 28 17:08:04 2013"><group name="IOB_OUTBUF">
+<item name="IN" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="OUT" rev="12">
+<item name="OUT" rev="32">
 <attrib name="value" value="8"/></item>
 </group>
 <group name="SLICEX">
@@ -149,29 +149,29 @@
 <attrib name="value" value="2"/></item>
 </group>
 <group name="BUFG_BUFG">
-<item name="I0" rev="12">
+<item name="I0" rev="32">
 <attrib name="value" value="1"/></item>
-<item name="O" rev="12">
+<item name="O" rev="32">
 <attrib name="value" value="1"/></item>
 </group>
 <group name="ILOGIC2_IFF">
-<item name="CE0" rev="12">
+<item name="CE0" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="CLK0" rev="12">
+<item name="CLK0" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="D" rev="12">
+<item name="D" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="Q1" rev="12">
+<item name="Q1" rev="32">
 <attrib name="value" value="8"/></item>
 </group>
 <group name="PAD">
-<item name="PAD" rev="12">
+<item name="PAD" rev="32">
 <attrib name="value" value="26"/></item>
 </group>
 <group name="IOB_INBUF">
-<item name="OUT" rev="12">
+<item name="OUT" rev="32">
 <attrib name="value" value="18"/></item>
-<item name="PAD" rev="12">
+<item name="PAD" rev="32">
 <attrib name="value" value="18"/></item>
 </group>
 <group name="OLOGIC2">
@@ -201,53 +201,53 @@
 <attrib name="value" value="2"/></item>
 </group>
 <group name="SELMUX2_1">
-<item name="0" rev="12">
+<item name="0" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="OUT" rev="12">
+<item name="OUT" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="S0" rev="12">
+<item name="S0" rev="32">
 <attrib name="value" value="8"/></item>
 </group>
 <group name="INVERTER">
-<item name="IN" rev="12">
+<item name="IN" rev="32">
 <attrib name="value" value="1"/></item>
-<item name="OUT" rev="12">
+<item name="OUT" rev="32">
 <attrib name="value" value="1"/></item>
 </group>
 <group name="IOB_IMUX">
-<item name="I" rev="12">
+<item name="I" rev="32">
 <attrib name="value" value="17"/></item>
-<item name="I_B" rev="12">
+<item name="I_B" rev="32">
 <attrib name="value" value="1"/></item>
-<item name="OUT" rev="12">
+<item name="OUT" rev="32">
 <attrib name="value" value="18"/></item>
 </group>
 <group name="ILOGIC2">
-<item name="CE0" rev="12">
+<item name="CE0" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="CLK0" rev="12">
+<item name="CLK0" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="D" rev="12">
+<item name="D" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="Q4" rev="12">
+<item name="Q4" rev="32">
 <attrib name="value" value="8"/></item>
 </group>
 <group name="IOB">
-<item name="I" rev="12">
+<item name="I" rev="32">
 <attrib name="value" value="18"/></item>
-<item name="O" rev="12">
+<item name="O" rev="32">
 <attrib name="value" value="8"/></item>
-<item name="PAD" rev="12">
+<item name="PAD" rev="32">
 <attrib name="value" value="26"/></item>
 </group>
 <group name="HARD0">
-<item name="0" rev="12">
+<item name="0" rev="32">
 <attrib name="value" value="8"/></item>
 </group>
 <group name="BUFG">
-<item name="I0" rev="12">
+<item name="I0" rev="32">
 <attrib name="value" value="1"/></item>
-<item name="O" rev="12">
+<item name="O" rev="32">
 <attrib name="value" value="1"/></item>
 </group>
 </ReportPinData>

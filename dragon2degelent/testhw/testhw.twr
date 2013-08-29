@@ -3,8 +3,8 @@ Release 10.1.03 Trace  (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
 /software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/trce -ise
-/home/derek/iseproject/testhw/testhw.ise -intstyle ise -v 3 -s 5 -xml testhw
-testhw.ncd -o testhw.twr testhw.pcf -ucf testhw.ucf
+/home/derek/pci-eth-fpga/dragon2degelent/testhw/testhw.ise -intstyle ise -v 3
+-s 5 -xml testhw testhw.ncd -o testhw.twr testhw.pcf -ucf testhw.ucf
 
 Design file:              testhw.ncd
 Physical constraint file: testhw.pcf
@@ -29,18 +29,25 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 
 Data Sheet report:
 -----------------
-No constraints were found to generate data for the Data Sheet Report section.
-Use the Advanced Analysis (-a) option or generate global constraints for each
-clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
+All values displayed in nanoseconds (ns)
 
-Analysis completed Thu Jul 18 17:14:28 2013 
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.834|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Wed Aug 28 12:31:19 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 57 MB
+Peak Memory Usage: 59 MB
 
 
 

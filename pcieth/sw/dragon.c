@@ -256,6 +256,20 @@ static long iDragon_ioctl(struct file *file, unsigned int cmd, unsigned long arg
                 }
             }
             break;
+        case IOCTL_SET_LOW:
+            if(data->mode == MODE_IO) {
+                port = data->iobase;
+                if (copy_from_user(&value, (unsigned int *)arg, sizeof(unsigned int))) {
+                    return -EACCES;
+                }
+                outl(value, port + 0x10);
+            } else {
+                if (copy_from_user(&value, (unsigned int *)arg, sizeof(unsigned int))) {
+                    return -EACCES;
+                }
+                data->membase[4] = value;
+            }
+            break;
         default:
             return -EINVAL;
     }

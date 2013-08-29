@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map K.39 on Mon Aug 26 17:20:38 2013
+// Written by: Map K.39 on Thu Aug 29 12:44:01 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -43,6 +43,7 @@ COMP "LOW_data<4>" LOCATE = SITE "P80" LEVEL 1;
 COMP "LOW_data<5>" LOCATE = SITE "P78" LEVEL 1;
 COMP "LOW_data<6>" LOCATE = SITE "P79" LEVEL 1;
 COMP "LOW_data<7>" LOCATE = SITE "P77" LEVEL 1;
+COMP "PCI_INTAn" LOCATE = SITE "P64" LEVEL 1;
 COMP "PCI_LOCKn" LOCATE = SITE "P132" LEVEL 1;
 COMP "PCI_IRDYn" LOCATE = SITE "P129" LEVEL 1;
 COMP "PCI_DEVSELn" LOCATE = SITE "P131" LEVEL 1;
@@ -117,61 +118,72 @@ TIMEGRP PCI_CLK = BEL "PCI_Transaction" BEL "PCI_IOSpace" BEL "PCI_ConfSpace"
         "counter_10" BEL "counter_11" BEL "counter_12" BEL "counter_13" BEL
         "counter_14" BEL "counter_15" BEL "counter_16" BEL "counter_17" BEL
         "counter_18" BEL "counter_19" BEL "counter_20" BEL "counter_21" BEL
-        "counter_22" BEL "counter_23" BEL "addra_0" BEL "addra_1" BEL
-        "addra_2" BEL "addra_3" BEL "addra_4" BEL "addra_5" BEL "addra_6" BEL
-        "addra_7" BEL "PCI_TransactionAddr_0_1" BEL "PCI_TransactionAddr_1_1"
-        BEL "PCI_TransactionAddr_0_2" BEL "PCI_TransactionAddr_1_2" BEL
-        "PCI_IOSpace_1" BEL "PCI_TransactionAddr_0_3" PIN
-        "Mram_RAM_LA1.A_pins<25>" PIN "Mram_RAM_LA2.A_pins<25>" PIN
-        "Mram_RAM_LA3.A_pins<25>" BEL "SR5/SR_2/Mshreg_data_3/SRL16E" BEL
-        "SR5/SR_2/data_3" BEL "SR5/SR_0/Mshreg_data_3/SRL16E" BEL
-        "SR5/SR_0/data_3" BEL "SR5/SR_1/Mshreg_data_3/SRL16E" BEL
-        "SR5/SR_1/data_3" BEL "SR5/SR_5/Mshreg_data_3/SRL16E" BEL
-        "SR5/SR_5/data_3" BEL "SR5/SR_3/Mshreg_data_3/SRL16E" BEL
-        "SR5/SR_3/data_3" BEL "SR5/SR_4/Mshreg_data_3/SRL16E" BEL
-        "SR5/SR_4/data_3" BEL "SR4/SR_0/Mshreg_data_3/SRL16E" BEL
-        "SR4/SR_0/data_3" BEL "SR5/SR_6/Mshreg_data_3/SRL16E" BEL
-        "SR5/SR_6/data_3" BEL "SR5/SR_7/Mshreg_data_3/SRL16E" BEL
-        "SR5/SR_7/data_3" BEL "SR4/SR_3/Mshreg_data_3/SRL16E" BEL
-        "SR4/SR_3/data_3" BEL "SR4/SR_1/Mshreg_data_3/SRL16E" BEL
-        "SR4/SR_1/data_3" BEL "SR4/SR_2/Mshreg_data_3/SRL16E" BEL
-        "SR4/SR_2/data_3" BEL "SR4/SR_6/Mshreg_data_3/SRL16E" BEL
-        "SR4/SR_6/data_3" BEL "SR4/SR_4/Mshreg_data_3/SRL16E" BEL
-        "SR4/SR_4/data_3" BEL "SR4/SR_5/Mshreg_data_3/SRL16E" BEL
-        "SR4/SR_5/data_3" BEL "SR3/SR_1/Mshreg_data_3/SRL16E" BEL
-        "SR3/SR_1/data_3" BEL "SR4/SR_7/Mshreg_data_3/SRL16E" BEL
-        "SR4/SR_7/data_3" BEL "SR3/SR_0/Mshreg_data_3/SRL16E" BEL
-        "SR3/SR_0/data_3" BEL "SR3/SR_4/Mshreg_data_3/SRL16E" BEL
-        "SR3/SR_4/data_3" BEL "SR3/SR_2/Mshreg_data_3/SRL16E" BEL
-        "SR3/SR_2/data_3" BEL "SR3/SR_3/Mshreg_data_3/SRL16E" BEL
-        "SR3/SR_3/data_3" BEL "SR3/SR_7/Mshreg_data_3/SRL16E" BEL
-        "SR3/SR_7/data_3" BEL "SR3/SR_5/Mshreg_data_3/SRL16E" BEL
-        "SR3/SR_5/data_3" BEL "SR3/SR_6/Mshreg_data_3/SRL16E" BEL
-        "SR3/SR_6/data_3" BEL "SR2/SR_2/Mshreg_data_3/SRL16E" BEL
-        "SR2/SR_2/data_3" BEL "SR2/SR_0/Mshreg_data_3/SRL16E" BEL
-        "SR2/SR_0/data_3" BEL "SR2/SR_1/Mshreg_data_3/SRL16E" BEL
-        "SR2/SR_1/data_3" BEL "SR2/SR_5/Mshreg_data_3/SRL16E" BEL
-        "SR2/SR_5/data_3" BEL "SR2/SR_3/Mshreg_data_3/SRL16E" BEL
-        "SR2/SR_3/data_3" BEL "SR2/SR_4/Mshreg_data_3/SRL16E" BEL
-        "SR2/SR_4/data_3" BEL "SR1/SR_0/Mshreg_data_3/SRL16E" BEL
-        "SR1/SR_0/data_3" BEL "SR2/SR_6/Mshreg_data_3/SRL16E" BEL
-        "SR2/SR_6/data_3" BEL "SR2/SR_7/Mshreg_data_3/SRL16E" BEL
-        "SR2/SR_7/data_3" BEL "SR1/SR_3/Mshreg_data_3/SRL16E" BEL
-        "SR1/SR_3/data_3" BEL "SR1/SR_1/Mshreg_data_3/SRL16E" BEL
-        "SR1/SR_1/data_3" BEL "SR1/SR_2/Mshreg_data_3/SRL16E" BEL
-        "SR1/SR_2/data_3" BEL "SR1/SR_6/Mshreg_data_3/SRL16E" BEL
-        "SR1/SR_6/data_3" BEL "SR1/SR_4/Mshreg_data_3/SRL16E" BEL
-        "SR1/SR_4/data_3" BEL "SR1/SR_5/Mshreg_data_3/SRL16E" BEL
-        "SR1/SR_5/data_3" BEL "SR0/SR_1/Mshreg_data_3/SRL16E" BEL
-        "SR0/SR_1/data_3" BEL "SR1/SR_7/Mshreg_data_3/SRL16E" BEL
-        "SR1/SR_7/data_3" BEL "SR0/SR_0/Mshreg_data_3/SRL16E" BEL
-        "SR0/SR_0/data_3" BEL "SR0/SR_4/Mshreg_data_3/SRL16E" BEL
-        "SR0/SR_4/data_3" BEL "SR0/SR_2/Mshreg_data_3/SRL16E" BEL
-        "SR0/SR_2/data_3" BEL "SR0/SR_3/Mshreg_data_3/SRL16E" BEL
-        "SR0/SR_3/data_3" BEL "SR0/SR_7/Mshreg_data_3/SRL16E" BEL
-        "SR0/SR_7/data_3" BEL "SR0/SR_5/Mshreg_data_3/SRL16E" BEL
-        "SR0/SR_5/data_3" BEL "SR0/SR_6/Mshreg_data_3/SRL16E" BEL
-        "SR0/SR_6/data_3";
+        "counter_22" BEL "counter_23" BEL "counter_24" BEL "addra_0" BEL
+        "addra_1" BEL "addra_2" BEL "addra_3" BEL "addra_4" BEL "addra_5" BEL
+        "addra_6" BEL "addra_7" BEL "U_txtx/W" BEL "U_txtx/cnt_9" BEL
+        "U_txtx/cnt_8" BEL "U_txtx/cnt_7" BEL "U_txtx/cnt_6" BEL
+        "U_txtx/cnt_5" BEL "U_txtx/cnt_4" BEL "U_txtx/cnt_3" BEL
+        "U_txtx/cnt_2" BEL "U_txtx/cnt_1" BEL "U_txtx/cnt_0" BEL
+        "PCI_TransactionAddr_0_1" BEL "PCI_IOSpace_1" BEL
+        "PCI_TransactionAddr_1_1" PIN "Mram_RAM_LA1.A_pins<25>" PIN
+        "Mram_RAM_LA2.A_pins<25>" PIN "Mram_RAM_LA3.A_pins<25>" BEL
+        "SR5/SR_2/Mshreg_data_3/SRL16E" BEL "SR5/SR_2/data_3" BEL
+        "SR5/SR_0/Mshreg_data_3/SRL16E" BEL "SR5/SR_0/data_3" BEL
+        "SR5/SR_1/Mshreg_data_3/SRL16E" BEL "SR5/SR_1/data_3" BEL
+        "SR5/SR_5/Mshreg_data_3/SRL16E" BEL "SR5/SR_5/data_3" BEL
+        "SR5/SR_3/Mshreg_data_3/SRL16E" BEL "SR5/SR_3/data_3" BEL
+        "SR5/SR_4/Mshreg_data_3/SRL16E" BEL "SR5/SR_4/data_3" BEL
+        "SR4/SR_0/Mshreg_data_3/SRL16E" BEL "SR4/SR_0/data_3" BEL
+        "SR5/SR_6/Mshreg_data_3/SRL16E" BEL "SR5/SR_6/data_3" BEL
+        "SR5/SR_7/Mshreg_data_3/SRL16E" BEL "SR5/SR_7/data_3" BEL
+        "SR4/SR_3/Mshreg_data_3/SRL16E" BEL "SR4/SR_3/data_3" BEL
+        "SR4/SR_1/Mshreg_data_3/SRL16E" BEL "SR4/SR_1/data_3" BEL
+        "SR4/SR_2/Mshreg_data_3/SRL16E" BEL "SR4/SR_2/data_3" BEL
+        "SR4/SR_6/Mshreg_data_3/SRL16E" BEL "SR4/SR_6/data_3" BEL
+        "SR4/SR_4/Mshreg_data_3/SRL16E" BEL "SR4/SR_4/data_3" BEL
+        "SR4/SR_5/Mshreg_data_3/SRL16E" BEL "SR4/SR_5/data_3" BEL
+        "SR3/SR_1/Mshreg_data_3/SRL16E" BEL "SR3/SR_1/data_3" BEL
+        "SR4/SR_7/Mshreg_data_3/SRL16E" BEL "SR4/SR_7/data_3" BEL
+        "SR3/SR_0/Mshreg_data_3/SRL16E" BEL "SR3/SR_0/data_3" BEL
+        "SR3/SR_4/Mshreg_data_3/SRL16E" BEL "SR3/SR_4/data_3" BEL
+        "SR3/SR_2/Mshreg_data_3/SRL16E" BEL "SR3/SR_2/data_3" BEL
+        "SR3/SR_3/Mshreg_data_3/SRL16E" BEL "SR3/SR_3/data_3" BEL
+        "SR3/SR_7/Mshreg_data_3/SRL16E" BEL "SR3/SR_7/data_3" BEL
+        "SR3/SR_5/Mshreg_data_3/SRL16E" BEL "SR3/SR_5/data_3" BEL
+        "SR3/SR_6/Mshreg_data_3/SRL16E" BEL "SR3/SR_6/data_3" BEL
+        "SR2/SR_2/Mshreg_data_3/SRL16E" BEL "SR2/SR_2/data_3" BEL
+        "SR2/SR_0/Mshreg_data_3/SRL16E" BEL "SR2/SR_0/data_3" BEL
+        "SR2/SR_1/Mshreg_data_3/SRL16E" BEL "SR2/SR_1/data_3" BEL
+        "SR2/SR_5/Mshreg_data_3/SRL16E" BEL "SR2/SR_5/data_3" BEL
+        "SR2/SR_3/Mshreg_data_3/SRL16E" BEL "SR2/SR_3/data_3" BEL
+        "SR2/SR_4/Mshreg_data_3/SRL16E" BEL "SR2/SR_4/data_3" BEL
+        "SR1/SR_0/Mshreg_data_3/SRL16E" BEL "SR1/SR_0/data_3" BEL
+        "SR2/SR_6/Mshreg_data_3/SRL16E" BEL "SR2/SR_6/data_3" BEL
+        "SR2/SR_7/Mshreg_data_3/SRL16E" BEL "SR2/SR_7/data_3" BEL
+        "SR1/SR_3/Mshreg_data_3/SRL16E" BEL "SR1/SR_3/data_3" BEL
+        "SR1/SR_1/Mshreg_data_3/SRL16E" BEL "SR1/SR_1/data_3" BEL
+        "SR1/SR_2/Mshreg_data_3/SRL16E" BEL "SR1/SR_2/data_3" BEL
+        "SR1/SR_6/Mshreg_data_3/SRL16E" BEL "SR1/SR_6/data_3" BEL
+        "SR1/SR_4/Mshreg_data_3/SRL16E" BEL "SR1/SR_4/data_3" BEL
+        "SR1/SR_5/Mshreg_data_3/SRL16E" BEL "SR1/SR_5/data_3" BEL
+        "SR0/SR_1/Mshreg_data_3/SRL16E" BEL "SR0/SR_1/data_3" BEL
+        "SR1/SR_7/Mshreg_data_3/SRL16E" BEL "SR1/SR_7/data_3" BEL
+        "SR0/SR_0/Mshreg_data_3/SRL16E" BEL "SR0/SR_0/data_3" BEL
+        "SR0/SR_4/Mshreg_data_3/SRL16E" BEL "SR0/SR_4/data_3" BEL
+        "SR0/SR_2/Mshreg_data_3/SRL16E" BEL "SR0/SR_2/data_3" BEL
+        "SR0/SR_3/Mshreg_data_3/SRL16E" BEL "SR0/SR_3/data_3" BEL
+        "SR0/SR_7/Mshreg_data_3/SRL16E" BEL "SR0/SR_7/data_3" BEL
+        "SR0/SR_5/Mshreg_data_3/SRL16E" BEL "SR0/SR_5/data_3" BEL
+        "SR0/SR_6/Mshreg_data_3/SRL16E" BEL "SR0/SR_6/data_3";
+PIN Mram_RAM_LA1.B_pins<25> = BEL "Mram_RAM_LA1.B" PINNAME "31";
+PIN Mram_RAM_LA2.B_pins<25> = BEL "Mram_RAM_LA2.B" PINNAME "31";
+PIN Mram_RAM_LA3.B_pins<25> = BEL "Mram_RAM_LA3.B" PINNAME "31";
+TIMEGRP CLK24 = BEL "USB_Data_0" BEL "USB_Data_1" BEL "USB_Data_2" BEL
+        "USB_Data_3" BEL "USB_Data_4" BEL "USB_Data_5" BEL "USB_Data_6" BEL
+        "USB_Data_7" BEL "addrb_0" BEL "addrb_1" BEL "addrb_2" BEL "addrb_3"
+        BEL "addrb_4" BEL "addrb_5" BEL "addrb_6" BEL "addrb_7" BEL "addrb_8"
+        BEL "addrb_9" BEL "addrb_10" PIN "Mram_RAM_LA1.B_pins<25>" PIN
+        "Mram_RAM_LA2.B_pins<25>" PIN "Mram_RAM_LA3.B_pins<25>";
 TIMEGRP PCI_AD_GRP = BEL "PCI_AD<0>" BEL "PCI_AD<10>" BEL "PCI_AD<11>" BEL
         "PCI_AD<12>" BEL "PCI_AD<13>" BEL "PCI_AD<14>" BEL "PCI_AD<15>" BEL
         "PCI_AD<16>" BEL "PCI_AD<17>" BEL "PCI_AD<18>" BEL "PCI_AD<19>" BEL
@@ -183,6 +195,7 @@ TIMEGRP PCI_AD_GRP = BEL "PCI_AD<0>" BEL "PCI_AD<10>" BEL "PCI_AD<11>" BEL
         "PCI_AD<9>";
 TIMEGRP PCI_CBE_GRP = BEL "PCI_CBE<0>" BEL "PCI_CBE<1>" BEL "PCI_CBE<2>" BEL
         "PCI_CBE<3>";
+TS_CLK24 = PERIOD TIMEGRP "CLK24" 24 MHz HIGH 50%;
 TS_PCI_CLK = PERIOD TIMEGRP "PCI_CLK" 30 ns HIGH 50%;
 COMP "PCI_DEVSELn" OFFSET = OUT 11 ns AFTER COMP "PCI_CLK";
 COMP "PCI_FRAMEn" OFFSET = IN 7 ns BEFORE COMP "PCI_CLK";

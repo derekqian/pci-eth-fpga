@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Thu Jul 18 16:57:41 2013">
+<application name="pn" timeStamp="Wed Aug 28 12:28:11 2013">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="F84686A5AC9C0A185FDC7D9D3ED544B6" type="project"/>
-<property name="ProjectIteration" value="5" type="project"/>
-<property name="ProjectFile" value="/home/derek/iseproject/testhw1/testhw1.xise" type="project"/>
+<property name="ProjectIteration" value="10" type="project"/>
+<property name="ProjectFile" value="/home/derek/pci-eth-fpga/dragon2degelent/testhw1/testhw1.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2013-07-18T15:38:10" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -24,10 +24,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2013-07-18T15:38:10" type="design"/>
 <property name="PROP_intWbtProjectID" value="F84686A5AC9C0A185FDC7D9D3ED544B6" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="5" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="10" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
+<property name="PROP_CompxlibEdkSimLib" value="true" type="process"/>
 <property name="PROP_DevFamily" value="Spartan6" type="design"/>
 <property name="PROP_DevDevice" value="xc6slx45" type="design"/>
 <property name="PROP_DevFamilyPMName" value="spartan6" type="design"/>

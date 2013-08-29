@@ -8,16 +8,7 @@
 <msg type="info" file="Par" num="282" delta="unknown" >No user timing constraints were detected or you have set the option to ignore timing constraints (&quot;par -x&quot;). Place and Route will run in &quot;Performance Evaluation Mode&quot; to automatically improve the performance of all internal clocks in this design. The PAR timing summary will list the performance achieved for each clock. Note: For the fastest runtime, set the effort level to &quot;std&quot;.  For best performance, set the effort level to &quot;high&quot;. For a balance between the fastest runtime and best performance, set the effort level to &quot;med&quot;.
 </msg>
 
-<msg type="warning" file="Par" num="288" delta="unknown" >The signal <arg fmt="%s" index="1">clk_IBUF</arg> has no load.  PAR will not attempt to route this signal.
-</msg>
-
-<msg type="warning" file="Par" num="283" delta="unknown" >There are <arg fmt="%d" index="1">1</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
-
-</msg>
-
-<msg type="warning" file="ParHelpers" num="361" delta="unknown" >There are <arg fmt="%d" index="1">1</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
-
-</msg>
+<msg type="info" file="Timing" num="2761" delta="unknown" >N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no requested value.</msg>
 
 </messages>
 

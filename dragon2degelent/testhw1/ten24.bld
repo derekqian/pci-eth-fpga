@@ -4,7 +4,8 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 Command Line: /software/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle ise
 -dd _ngo -nt timestamp -uc ten24.ucf -p xc6slx45-csg324-3 ten24.ngc ten24.ngd
 
-Reading NGO file "/home/derek/iseproject/testhw1/ten24.ngc" ...
+Reading NGO file "/home/derek/pci-eth-fpga/dragon2degelent/testhw1/ten24.ngc"
+...
 Gathering constraint information from source properties...
 Done.
 
@@ -26,7 +27,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 391984 kilobytes
+Total memory usage is 391948 kilobytes
 
 Writing NGD file "ten24.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec

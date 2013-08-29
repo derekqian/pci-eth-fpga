@@ -35,11 +35,11 @@
 <msg type="info" file="Par" num="459" delta="old" >The Clock Report is not displayed in the non timing-driven mode.
 </msg>
 
-<msg type="warning" file="ParHelpers" num="361" delta="new" >There are <arg fmt="%d" index="1">8</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+<msg type="warning" file="ParHelpers" num="361" delta="old" >There are <arg fmt="%d" index="1">8</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
 </msg>
 
-<msg type="warning" file="Par" num="283" delta="new" >There are <arg fmt="%d" index="1">8</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+<msg type="warning" file="Par" num="283" delta="old" >There are <arg fmt="%d" index="1">8</arg> loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
 </msg>
 

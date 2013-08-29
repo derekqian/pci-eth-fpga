@@ -5,35 +5,38 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
                                             |         |    Slack   | Achievable | Errors |    Score   
 ------------------------------------------------------------------------------------------------------
-* COMP "PCI_STOPn" OFFSET = OUT 11 ns AFTER | MAXDELAY|    -1.969ns|    12.969ns|       1|        1969
+* COMP "PCI_STOPn" OFFSET = OUT 11 ns AFTER | MAXDELAY|    -2.159ns|    13.159ns|       1|        2159
    COMP "PCI_CLK"                           |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-* COMP "PCI_DEVSELn" OFFSET = OUT 11 ns AFT | MAXDELAY|    -1.923ns|    12.923ns|       1|        1923
+* COMP "PCI_TRDYn" OFFSET = OUT 11 ns AFTER | MAXDELAY|    -1.816ns|    12.816ns|       1|        1816
+   COMP "PCI_CLK"                           |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+* COMP "PCI_DEVSELn" OFFSET = OUT 11 ns AFT | MAXDELAY|    -1.739ns|    12.739ns|       1|        1739
   ER COMP "PCI_CLK"                         |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-* COMP "PCI_TRDYn" OFFSET = OUT 11 ns AFTER | MAXDELAY|    -1.919ns|    12.919ns|       1|        1919
-   COMP "PCI_CLK"                           |         |            |            |        |            
-------------------------------------------------------------------------------------------------------
-* TIMEGRP "PCI_AD_GRP" OFFSET = IN 7 ns BEF | SETUP   |    -0.425ns|     7.425ns|       4|        1045
+* TIMEGRP "PCI_AD_GRP" OFFSET = IN 7 ns BEF | SETUP   |    -1.281ns|     8.281ns|       2|        2202
   ORE COMP "PCI_CLK"                        |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  TIMEGRP "PCI_CBE_GRP" OFFSET = IN 7 ns BE | SETUP   |     0.398ns|     6.602ns|       0|           0
+  COMP "PCI_IRDYn" OFFSET = IN 7 ns BEFORE  | SETUP   |     0.147ns|     6.853ns|       0|           0
+  COMP "PCI_CLK"                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "PCI_CBE_GRP" OFFSET = IN 7 ns BE | SETUP   |     0.250ns|     6.750ns|       0|           0
   FORE COMP "PCI_CLK"                       |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  COMP "PCI_IRDYn" OFFSET = IN 7 ns BEFORE  | SETUP   |     0.867ns|     6.133ns|       0|           0
+  COMP "PCI_IDSEL" OFFSET = IN 7 ns BEFORE  | SETUP   |     0.809ns|     6.191ns|       0|           0
   COMP "PCI_CLK"                            |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  COMP "PCI_IDSEL" OFFSET = IN 7 ns BEFORE  | SETUP   |     1.436ns|     5.564ns|       0|           0
-  COMP "PCI_CLK"                            |         |            |            |        |            
-------------------------------------------------------------------------------------------------------
-  COMP "PCI_FRAMEn" OFFSET = IN 7 ns BEFORE | SETUP   |     1.722ns|     5.278ns|       0|           0
+  COMP "PCI_FRAMEn" OFFSET = IN 7 ns BEFORE | SETUP   |     2.171ns|     4.829ns|       0|           0
    COMP "PCI_CLK"                           |         |            |            |        |            
 ------------------------------------------------------------------------------------------------------
-  TS_PCI_CLK = PERIOD TIMEGRP "PCI_CLK" 30  | SETUP   |    19.306ns|    10.694ns|       0|           0
+  TS_PCI_CLK = PERIOD TIMEGRP "PCI_CLK" 30  | SETUP   |    19.332ns|    10.668ns|       0|           0
   ns HIGH 50%                               | HOLD    |     2.265ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
-  TIMEGRP "PCI_AD_GRP" OFFSET = OUT 41 ns A | MAXDELAY|    21.062ns|    19.938ns|       0|           0
+  TIMEGRP "PCI_AD_GRP" OFFSET = OUT 41 ns A | MAXDELAY|    20.041ns|    20.959ns|       0|           0
   FTER COMP "PCI_CLK"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_CLK24 = PERIOD TIMEGRP "CLK24" 24 MHz  | SETUP   |    28.831ns|    12.835ns|       0|           0
+  HIGH 50%                                  | HOLD    |     3.067ns|            |       0|           0
 ------------------------------------------------------------------------------------------------------
 
 

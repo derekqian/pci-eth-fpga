@@ -1,5 +1,5 @@
 CommandLine
-/software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/xst -ise /home/derek/iseproject/testhw/testhw.ise -intstyle ise -ifn /home/derek/iseproject/testhw/testhw.xst -ofn /home/derek/iseproject/testhw/testhw.syr -finalclean 1
+/software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/xst -ise /home/derek/pci-eth-fpga/dragon2degelent/testhw/testhw.ise -intstyle ise -ifn /home/derek/pci-eth-fpga/dragon2degelent/testhw/testhw.xst -ofn /home/derek/pci-eth-fpga/dragon2degelent/testhw/testhw.syr -finalclean 1
 s
 FormatString
 xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]

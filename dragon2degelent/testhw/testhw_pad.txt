@@ -1,7 +1,7 @@
 Release 10.1.03 - par K.39 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-Thu Jul 18 17:14:27 2013
+Wed Aug 28 12:31:18 2013
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -17,154 +17,154 @@ PACKAGE:          tq144
 
 Pinout by Pin Number:
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|Pin Number|Signal Name|Pin Usage|Pin Name    |Direction|IO Standard|IO Bank Number|Drive (mA)|Slew Rate|Termination|IOB Delay|Voltage  |Constraint|DCI Value|IO Register|Signal Integrity|
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|P1        |           |         |VCCO        |         |           |0             |          |         |           |         |any******|          |         |           |                |
-|P2        |           |         |TCK         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P3        |           |IOB      |IO          |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
-|P4        |           |IOB      |IO          |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
-|P5        |           |IOB      |IO_VREF_0   |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
-|P6        |           |IOB      |IO_VREF_0   |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
-|P7        |           |IOB      |IO          |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
-|P8        |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P9        |           |         |VCCINT      |         |           |              |          |         |           |         |2.5      |          |         |           |                |
-|P10       |           |IOB      |IO          |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
-|P11       |           |IOB      |IO          |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
-|P12       |           |IOB      |IO_VREF_0   |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
-|P13       |           |IOB      |IO          |UNUSED   |           |0             |          |         |           |         |         |          |         |           |                |
-|P14       |           |         |VCCINT      |         |           |              |          |         |           |         |2.5      |          |         |           |                |
-|P15       |clk        |GCLKIOB  |GCK3        |INPUT    |LVTTL*     |0             |          |         |           |NONE     |         |LOCATED   |         |NO         |NONE            |
-|P16       |           |         |VCCO        |         |           |0             |          |         |           |         |any******|          |         |           |                |
-|P17       |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P18       |           |GCLKIOB  |GCK2        |UNUSED   |           |1             |          |         |           |         |         |          |         |           |                |
-|P19       |           |IOB      |IO          |UNUSED   |           |1             |          |         |           |         |         |          |         |           |                |
-|P20       |           |IOB      |IO          |UNUSED   |           |1             |          |         |           |         |         |          |         |           |                |
-|P21       |           |IOB      |IO_VREF_1   |UNUSED   |           |1             |          |         |           |         |         |          |         |           |                |
-|P22       |           |IOB      |IO          |UNUSED   |           |1             |          |         |           |         |         |          |         |           |                |
-|P23       |           |IOB      |IO          |UNUSED   |           |1             |          |         |           |         |         |          |         |           |                |
-|P24       |           |         |VCCINT      |         |           |              |          |         |           |         |2.5      |          |         |           |                |
-|P25       |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P26       |           |IOB      |IO          |UNUSED   |           |1             |          |         |           |         |         |          |         |           |                |
-|P27       |           |IOB      |IO_VREF_1   |UNUSED   |           |1             |          |         |           |         |         |          |         |           |                |
-|P28       |           |IOB      |IO_VREF_1   |UNUSED   |           |1             |          |         |           |         |         |          |         |           |                |
-|P29       |           |IOB      |IO          |UNUSED   |           |1             |          |         |           |         |         |          |         |           |                |
-|P30       |           |IOB      |IO_WRITE    |UNUSED   |           |1             |          |         |           |         |         |          |         |           |                |
-|P31       |           |IOB      |IO_CS       |UNUSED   |           |1             |          |         |           |         |         |          |         |           |                |
-|P32       |           |         |TDI         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P33       |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P34       |           |         |TDO         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P35       |           |         |VCCO        |         |           |0             |          |         |           |         |any******|          |         |           |                |
-|P36       |           |         |VCCO        |         |           |1             |          |         |           |         |any******|          |         |           |                |
-|P37       |           |         |CCLK        |         |           |              |          |         |           |         |         |          |         |           |                |
-|P38       |           |IOB      |IO_DOUT_BUSY|UNUSED   |           |2             |          |         |           |         |         |          |         |           |                |
-|P39       |           |IOB      |IO_DIN_D0   |UNUSED   |           |2             |          |         |           |         |         |          |         |           |                |
-|P40       |           |IOB      |IO          |UNUSED   |           |2             |          |         |           |         |         |          |         |           |                |
-|P41       |           |IOB      |IO_VREF_2   |UNUSED   |           |2             |          |         |           |         |         |          |         |           |                |
-|P42       |           |IOB      |IO          |UNUSED   |           |2             |          |         |           |         |         |          |         |           |                |
-|P43       |           |IOB      |IO_VREF_2   |UNUSED   |           |2             |          |         |           |         |         |          |         |           |                |
-|P44       |           |IOB      |IO_D1       |UNUSED   |           |2             |          |         |           |         |         |          |         |           |                |
-|P45       |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P46       |           |IOB      |IO_D2       |UNUSED   |           |2             |          |         |           |         |         |          |         |           |                |
-|P47       |           |IOB      |IO          |UNUSED   |           |2             |          |         |           |         |         |          |         |           |                |
-|P48       |           |IOB      |IO_VREF_2   |UNUSED   |           |2             |          |         |           |         |         |          |         |           |                |
-|P49       |           |IOB      |IO_D3       |UNUSED   |           |2             |          |         |           |         |         |          |         |           |                |
-|P50       |           |IOB      |IO          |UNUSED   |           |2             |          |         |           |         |         |          |         |           |                |
-|P51       |           |PCIIOB   |IO_IRDY     |UNUSED   |           |2             |          |         |           |         |         |          |         |           |                |
-|P52       |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P53       |           |         |VCCO        |         |           |1             |          |         |           |         |any******|          |         |           |                |
-|P54       |           |PCIIOB   |IO_TRDY     |UNUSED   |           |3             |          |         |           |         |         |          |         |           |                |
-|P55       |           |         |VCCINT      |         |           |              |          |         |           |         |2.5      |          |         |           |                |
-|P56       |           |IOB      |IO          |UNUSED   |           |3             |          |         |           |         |         |          |         |           |                |
-|P57       |           |IOB      |IO_D4       |UNUSED   |           |3             |          |         |           |         |         |          |         |           |                |
-|P58       |           |IOB      |IO_VREF_3   |UNUSED   |           |3             |          |         |           |         |         |          |         |           |                |
-|P59       |           |IOB      |IO          |UNUSED   |           |3             |          |         |           |         |         |          |         |           |                |
-|P60       |           |IOB      |IO_D5       |UNUSED   |           |3             |          |         |           |         |         |          |         |           |                |
-|P61       |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P62       |           |IOB      |IO_D6       |UNUSED   |           |3             |          |         |           |         |         |          |         |           |                |
-|P63       |           |IOB      |IO_VREF_3   |UNUSED   |           |3             |          |         |           |         |         |          |         |           |                |
-|P64       |           |IOB      |IO          |UNUSED   |           |3             |          |         |           |         |         |          |         |           |                |
-|P65       |           |IOB      |IO_VREF_3   |UNUSED   |           |3             |          |         |           |         |         |          |         |           |                |
-|P66       |           |IOB      |IO          |UNUSED   |           |3             |          |         |           |         |         |          |         |           |                |
-|P67       |           |IOB      |IO_D7       |UNUSED   |           |3             |          |         |           |         |         |          |         |           |                |
-|P68       |           |IOB      |IO_INIT     |UNUSED   |           |3             |          |         |           |         |         |          |         |           |                |
-|P69       |           |         |PROGRAM     |         |           |              |          |         |           |         |         |          |         |           |                |
-|P70       |           |         |VCCO        |         |           |1             |          |         |           |         |any******|          |         |           |                |
-|P71       |           |         |VCCO        |         |           |2             |          |         |           |         |3.30     |          |         |           |                |
-|P72       |           |         |DONE        |         |           |              |          |         |           |         |         |          |         |           |                |
-|P73       |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P74       |           |IOB      |IO          |UNUSED   |           |4             |          |         |           |         |         |          |         |           |                |
-|P75       |dout<8>    |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |         |LOCATED   |         |NO         |NONE            |
-|P76       |dout<9>    |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |         |LOCATED   |         |NO         |NONE            |
-|P77       |dout<7>    |IOB      |IO_VREF_4   |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |         |LOCATED   |         |NO         |NONE            |
-|P78       |dout<5>    |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |         |LOCATED   |         |NO         |NONE            |
-|P79       |dout<6>    |IOB      |IO_VREF_4   |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |         |LOCATED   |         |NO         |NONE            |
-|P80       |dout<4>    |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |         |LOCATED   |         |NO         |NONE            |
-|P81       |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P82       |           |         |VCCINT      |         |           |              |          |         |           |         |2.5      |          |         |           |                |
-|P83       |dout<2>    |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |         |LOCATED   |         |NO         |NONE            |
-|P84       |dout<3>    |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |         |LOCATED   |         |NO         |NONE            |
-|P85       |dout<1>    |IOB      |IO_VREF_4   |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |         |LOCATED   |         |NO         |NONE            |
-|P86       |dout<0>    |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |         |LOCATED   |         |NO         |NONE            |
-|P87       |           |IOB      |IO          |UNUSED   |           |4             |          |         |           |         |         |          |         |           |                |
-|P88       |           |GCLKIOB  |GCK0        |UNUSED   |           |4             |          |         |           |         |         |          |         |           |                |
-|P89       |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P90       |           |         |VCCO        |         |           |2             |          |         |           |         |3.30     |          |         |           |                |
-|P91       |           |GCLKIOB  |GCK1        |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
-|P92       |           |         |VCCINT      |         |           |              |          |         |           |         |2.5      |          |         |           |                |
-|P93       |           |IOB      |IO          |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
-|P94       |           |IOB      |IO_VREF_5   |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
-|P95       |           |IOB      |IO          |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
-|P96       |           |IOB      |IO          |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
-|P97       |           |         |VCCINT      |         |           |              |          |         |           |         |2.5      |          |         |           |                |
-|P98       |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P99       |           |IOB      |IO          |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
-|P100      |           |IOB      |IO_VREF_5   |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
-|P101      |           |IOB      |IO          |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
-|P102      |           |IOB      |IO_VREF_5   |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
-|P103      |           |IOB      |IO          |UNUSED   |           |5             |          |         |           |         |         |          |         |           |                |
-|P104      |           |         |NC          |         |           |              |          |         |           |         |         |          |         |           |                |
-|P105      |           |         |NC          |         |           |              |          |         |           |         |         |          |         |           |                |
-|P106      |           |         |M2          |         |           |              |          |         |           |         |         |          |         |           |                |
-|P107      |           |         |VCCO        |         |           |2             |          |         |           |         |3.30     |          |         |           |                |
-|P108      |           |         |VCCO        |         |           |3             |          |         |           |         |3.30     |          |         |           |                |
-|P109      |           |         |M0          |         |           |              |          |         |           |         |         |          |         |           |                |
-|P110      |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P111      |           |         |M1          |         |           |              |          |         |           |         |         |          |         |           |                |
-|P112      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
-|P113      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
-|P114      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
-|P115      |           |IOB      |IO_VREF_6   |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
-|P116      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
-|P117      |           |IOB      |IO_VREF_6   |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
-|P118      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
-|P119      |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P120      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
-|P121      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
-|P122      |           |IOB      |IO_VREF_6   |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
-|P123      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
-|P124      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
-|P125      |           |         |VCCINT      |         |           |              |          |         |           |         |2.5      |          |         |           |                |
-|P126      |           |PCIIOB   |IO_TRDY     |UNUSED   |           |6             |          |         |           |         |         |          |         |           |                |
-|P127      |           |         |VCCO        |         |           |3             |          |         |           |         |3.30     |          |         |           |                |
-|P128      |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P129      |           |PCIIOB   |IO_IRDY     |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
-|P130      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
-|P131      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
-|P132      |           |IOB      |IO_VREF_7   |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
-|P133      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
-|P134      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
-|P135      |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P136      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
-|P137      |           |IOB      |IO_VREF_7   |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
-|P138      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
-|P139      |           |IOB      |IO_VREF_7   |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
-|P140      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
-|P141      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |         |          |         |           |                |
-|P142      |           |         |TMS         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P143      |           |         |GND         |         |           |              |          |         |           |         |         |          |         |           |                |
-|P144      |           |         |VCCO        |         |           |3             |          |         |           |         |3.30     |          |         |           |                |
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Pin Number|Signal Name|Pin Usage|Pin Name    |Direction|IO Standard|IO Bank Number|Drive (mA)|Slew Rate|Termination|IOB Delay|Voltage|Constraint|DCI Value|IO Register|Signal Integrity|
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|P1        |           |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P2        |           |         |TCK         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P3        |           |IOB      |IO          |UNUSED   |           |0             |          |         |           |         |       |          |         |           |                |
+|P4        |           |IOB      |IO          |UNUSED   |           |0             |          |         |           |         |       |          |         |           |                |
+|P5        |           |IOB      |IO_VREF_0   |UNUSED   |           |0             |          |         |           |         |       |          |         |           |                |
+|P6        |           |IOB      |IO_VREF_0   |UNUSED   |           |0             |          |         |           |         |       |          |         |           |                |
+|P7        |           |IOB      |IO          |UNUSED   |           |0             |          |         |           |         |       |          |         |           |                |
+|P8        |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P9        |           |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P10       |           |IOB      |IO          |UNUSED   |           |0             |          |         |           |         |       |          |         |           |                |
+|P11       |           |IOB      |IO          |UNUSED   |           |0             |          |         |           |         |       |          |         |           |                |
+|P12       |           |IOB      |IO_VREF_0   |UNUSED   |           |0             |          |         |           |         |       |          |         |           |                |
+|P13       |           |IOB      |IO          |UNUSED   |           |0             |          |         |           |         |       |          |         |           |                |
+|P14       |           |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P15       |           |GCLKIOB  |GCK3        |UNUSED   |           |0             |          |         |           |         |       |          |         |           |                |
+|P16       |           |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P17       |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P18       |clk        |GCLKIOB  |GCK2        |INPUT    |LVTTL*     |1             |          |         |           |NONE     |       |LOCATED   |         |NO         |NONE            |
+|P19       |           |IOB      |IO          |UNUSED   |           |1             |          |         |           |         |       |          |         |           |                |
+|P20       |           |IOB      |IO          |UNUSED   |           |1             |          |         |           |         |       |          |         |           |                |
+|P21       |           |IOB      |IO_VREF_1   |UNUSED   |           |1             |          |         |           |         |       |          |         |           |                |
+|P22       |           |IOB      |IO          |UNUSED   |           |1             |          |         |           |         |       |          |         |           |                |
+|P23       |           |IOB      |IO          |UNUSED   |           |1             |          |         |           |         |       |          |         |           |                |
+|P24       |           |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P25       |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P26       |           |IOB      |IO          |UNUSED   |           |1             |          |         |           |         |       |          |         |           |                |
+|P27       |           |IOB      |IO_VREF_1   |UNUSED   |           |1             |          |         |           |         |       |          |         |           |                |
+|P28       |           |IOB      |IO_VREF_1   |UNUSED   |           |1             |          |         |           |         |       |          |         |           |                |
+|P29       |           |IOB      |IO          |UNUSED   |           |1             |          |         |           |         |       |          |         |           |                |
+|P30       |           |IOB      |IO_WRITE    |UNUSED   |           |1             |          |         |           |         |       |          |         |           |                |
+|P31       |           |IOB      |IO_CS       |UNUSED   |           |1             |          |         |           |         |       |          |         |           |                |
+|P32       |           |         |TDI         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P33       |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P34       |           |         |TDO         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P35       |           |         |VCCO        |         |           |0             |          |         |           |         |3.30   |          |         |           |                |
+|P36       |           |         |VCCO        |         |           |1             |          |         |           |         |3.30   |          |         |           |                |
+|P37       |           |         |CCLK        |         |           |              |          |         |           |         |       |          |         |           |                |
+|P38       |           |IOB      |IO_DOUT_BUSY|UNUSED   |           |2             |          |         |           |         |       |          |         |           |                |
+|P39       |           |IOB      |IO_DIN_D0   |UNUSED   |           |2             |          |         |           |         |       |          |         |           |                |
+|P40       |           |IOB      |IO          |UNUSED   |           |2             |          |         |           |         |       |          |         |           |                |
+|P41       |           |IOB      |IO_VREF_2   |UNUSED   |           |2             |          |         |           |         |       |          |         |           |                |
+|P42       |           |IOB      |IO          |UNUSED   |           |2             |          |         |           |         |       |          |         |           |                |
+|P43       |           |IOB      |IO_VREF_2   |UNUSED   |           |2             |          |         |           |         |       |          |         |           |                |
+|P44       |           |IOB      |IO_D1       |UNUSED   |           |2             |          |         |           |         |       |          |         |           |                |
+|P45       |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P46       |           |IOB      |IO_D2       |UNUSED   |           |2             |          |         |           |         |       |          |         |           |                |
+|P47       |           |IOB      |IO          |UNUSED   |           |2             |          |         |           |         |       |          |         |           |                |
+|P48       |           |IOB      |IO_VREF_2   |UNUSED   |           |2             |          |         |           |         |       |          |         |           |                |
+|P49       |           |IOB      |IO_D3       |UNUSED   |           |2             |          |         |           |         |       |          |         |           |                |
+|P50       |           |IOB      |IO          |UNUSED   |           |2             |          |         |           |         |       |          |         |           |                |
+|P51       |           |PCIIOB   |IO_IRDY     |UNUSED   |           |2             |          |         |           |         |       |          |         |           |                |
+|P52       |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P53       |           |         |VCCO        |         |           |1             |          |         |           |         |3.30   |          |         |           |                |
+|P54       |           |PCIIOB   |IO_TRDY     |UNUSED   |           |3             |          |         |           |         |       |          |         |           |                |
+|P55       |           |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P56       |           |IOB      |IO          |UNUSED   |           |3             |          |         |           |         |       |          |         |           |                |
+|P57       |           |IOB      |IO_D4       |UNUSED   |           |3             |          |         |           |         |       |          |         |           |                |
+|P58       |           |IOB      |IO_VREF_3   |UNUSED   |           |3             |          |         |           |         |       |          |         |           |                |
+|P59       |           |IOB      |IO          |UNUSED   |           |3             |          |         |           |         |       |          |         |           |                |
+|P60       |           |IOB      |IO_D5       |UNUSED   |           |3             |          |         |           |         |       |          |         |           |                |
+|P61       |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P62       |           |IOB      |IO_D6       |UNUSED   |           |3             |          |         |           |         |       |          |         |           |                |
+|P63       |           |IOB      |IO_VREF_3   |UNUSED   |           |3             |          |         |           |         |       |          |         |           |                |
+|P64       |dout<0>    |IOB      |IO          |OUTPUT   |LVTTL*     |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P65       |           |IOB      |IO_VREF_3   |UNUSED   |           |3             |          |         |           |         |       |          |         |           |                |
+|P66       |           |IOB      |IO          |UNUSED   |           |3             |          |         |           |         |       |          |         |           |                |
+|P67       |           |IOB      |IO_D7       |UNUSED   |           |3             |          |         |           |         |       |          |         |           |                |
+|P68       |           |IOB      |IO_INIT     |UNUSED   |           |3             |          |         |           |         |       |          |         |           |                |
+|P69       |           |         |PROGRAM     |         |           |              |          |         |           |         |       |          |         |           |                |
+|P70       |           |         |VCCO        |         |           |1             |          |         |           |         |3.30   |          |         |           |                |
+|P71       |           |         |VCCO        |         |           |2             |          |         |           |         |3.30   |          |         |           |                |
+|P72       |           |         |DONE        |         |           |              |          |         |           |         |       |          |         |           |                |
+|P73       |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P74       |           |IOB      |IO          |UNUSED   |           |4             |          |         |           |         |       |          |         |           |                |
+|P75       |dout<8>    |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P76       |dout<9>    |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P77       |dout<7>    |IOB      |IO_VREF_4   |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P78       |dout<5>    |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P79       |dout<6>    |IOB      |IO_VREF_4   |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P80       |dout<4>    |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P81       |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P82       |           |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P83       |dout<2>    |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P84       |dout<3>    |IOB      |IO          |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P85       |dout<1>    |IOB      |IO_VREF_4   |OUTPUT   |LVTTL*     |4             |12        |SLOW     |NONE**     |         |       |LOCATED   |         |NO         |NONE            |
+|P86       |           |IOB      |IO          |UNUSED   |           |4             |          |         |           |         |       |          |         |           |                |
+|P87       |           |IOB      |IO          |UNUSED   |           |4             |          |         |           |         |       |          |         |           |                |
+|P88       |           |GCLKIOB  |GCK0        |UNUSED   |           |4             |          |         |           |         |       |          |         |           |                |
+|P89       |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P90       |           |         |VCCO        |         |           |2             |          |         |           |         |3.30   |          |         |           |                |
+|P91       |           |GCLKIOB  |GCK1        |UNUSED   |           |5             |          |         |           |         |       |          |         |           |                |
+|P92       |           |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P93       |           |IOB      |IO          |UNUSED   |           |5             |          |         |           |         |       |          |         |           |                |
+|P94       |           |IOB      |IO_VREF_5   |UNUSED   |           |5             |          |         |           |         |       |          |         |           |                |
+|P95       |           |IOB      |IO          |UNUSED   |           |5             |          |         |           |         |       |          |         |           |                |
+|P96       |           |IOB      |IO          |UNUSED   |           |5             |          |         |           |         |       |          |         |           |                |
+|P97       |           |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P98       |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P99       |           |IOB      |IO          |UNUSED   |           |5             |          |         |           |         |       |          |         |           |                |
+|P100      |           |IOB      |IO_VREF_5   |UNUSED   |           |5             |          |         |           |         |       |          |         |           |                |
+|P101      |           |IOB      |IO          |UNUSED   |           |5             |          |         |           |         |       |          |         |           |                |
+|P102      |           |IOB      |IO_VREF_5   |UNUSED   |           |5             |          |         |           |         |       |          |         |           |                |
+|P103      |           |IOB      |IO          |UNUSED   |           |5             |          |         |           |         |       |          |         |           |                |
+|P104      |           |         |NC          |         |           |              |          |         |           |         |       |          |         |           |                |
+|P105      |           |         |NC          |         |           |              |          |         |           |         |       |          |         |           |                |
+|P106      |           |         |M2          |         |           |              |          |         |           |         |       |          |         |           |                |
+|P107      |           |         |VCCO        |         |           |2             |          |         |           |         |3.30   |          |         |           |                |
+|P108      |           |         |VCCO        |         |           |3             |          |         |           |         |3.30   |          |         |           |                |
+|P109      |           |         |M0          |         |           |              |          |         |           |         |       |          |         |           |                |
+|P110      |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P111      |           |         |M1          |         |           |              |          |         |           |         |       |          |         |           |                |
+|P112      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |       |          |         |           |                |
+|P113      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |       |          |         |           |                |
+|P114      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |       |          |         |           |                |
+|P115      |           |IOB      |IO_VREF_6   |UNUSED   |           |6             |          |         |           |         |       |          |         |           |                |
+|P116      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |       |          |         |           |                |
+|P117      |           |IOB      |IO_VREF_6   |UNUSED   |           |6             |          |         |           |         |       |          |         |           |                |
+|P118      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |       |          |         |           |                |
+|P119      |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P120      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |       |          |         |           |                |
+|P121      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |       |          |         |           |                |
+|P122      |           |IOB      |IO_VREF_6   |UNUSED   |           |6             |          |         |           |         |       |          |         |           |                |
+|P123      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |       |          |         |           |                |
+|P124      |           |IOB      |IO          |UNUSED   |           |6             |          |         |           |         |       |          |         |           |                |
+|P125      |           |         |VCCINT      |         |           |              |          |         |           |         |2.5    |          |         |           |                |
+|P126      |           |PCIIOB   |IO_TRDY     |UNUSED   |           |6             |          |         |           |         |       |          |         |           |                |
+|P127      |           |         |VCCO        |         |           |3             |          |         |           |         |3.30   |          |         |           |                |
+|P128      |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P129      |           |PCIIOB   |IO_IRDY     |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P130      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P131      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P132      |           |IOB      |IO_VREF_7   |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P133      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P134      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P135      |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P136      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P137      |           |IOB      |IO_VREF_7   |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P138      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P139      |           |IOB      |IO_VREF_7   |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P140      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P141      |           |IOB      |IO          |UNUSED   |           |7             |          |         |           |         |       |          |         |           |                |
+|P142      |           |         |TMS         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P143      |           |         |GND         |         |           |              |          |         |           |         |       |          |         |           |                |
+|P144      |           |         |VCCO        |         |           |3             |          |         |           |         |3.30   |          |         |           |                |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Default value.
 ** This default Pullup/Pulldown value can be overridden in Bitgen. 

@@ -1,5 +1,5 @@
 CommandLine
-/software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/trce -ise /home/derek/iseproject/ten2four/ten2four.ise -intstyle ise -v 3 -s 5 -xml ten2four ten2four.ncd -o ten2four.twr ten2four.pcf -ucf ten2four.ucf
+/software/ISE_WEBPACK_10.1/ISE/bin/lin/unwrapped/trce -ise /home/derek/pci-eth-fpga/digilent2dragon/ten2four/ten2four.ise -intstyle ise -v 3 -s 5 -xml ten2four ten2four.ncd -o ten2four.twr ten2four.pcf -ucf ten2four.ucf
 s
 FormatString
 trce ([-e|-v [<limit:0,2000000000>]] [-l <limit:0,2000000000>] [-n [<limit:0,2000000000>]] [-u [<limit:0,2000000000>]] [-skew] [-a] [--p] [-s <speed>] [-o <report[.twr]>] [--m] [-stamp <stampfile>] [-tsi <tsifile[.tsi]>] [-xml <report[.twx]>] [-nodatasheet] [-timegroups] [-fastpaths] [-intstyle ise|xflow|silent] [-ise <projectfile>] [--ucf <constraint[.ucf]>] <design[.ncd]> [<constraint[.pcf]>]) | ([-run <macro[.xtm]> [<design[.ncd]> [<constraint[.pcf]>]]] [-intstyle ise|xflow|silent] [-ise <projectfile>])

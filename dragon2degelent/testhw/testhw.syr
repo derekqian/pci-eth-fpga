@@ -1,18 +1,18 @@
 Release 10.1.03 - xst K.39 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 --> 
-Parameter TMPDIR set to /home/derek/iseproject/testhw/xst/projnav.tmp
+Parameter TMPDIR set to /home/derek/pci-eth-fpga/dragon2degelent/testhw/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
-Parameter xsthdpdir set to /home/derek/iseproject/testhw/xst
+Parameter xsthdpdir set to /home/derek/pci-eth-fpga/dragon2degelent/testhw/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Reading design: testhw.prj
@@ -166,7 +166,12 @@ Loading device for application Rf_Device from file 'v100.nph' in environment /so
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Counters                                             : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 11
+ Flip-Flops                                            : 11
+
 =========================================================================
 
 =========================================================================
@@ -177,14 +182,17 @@ Optimizing unit <testhw> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block testhw, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block testhw, actual ratio is 2.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+
 =========================================================================
 
 =========================================================================
@@ -212,8 +220,21 @@ Design Statistics
 # IOs                              : 11
 
 Cell Usage :
-# BELS                             : 1
+# BELS                             : 97
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 25
+#      LUT2                        : 1
+#      LUT4                        : 8
+#      LUT4_L                      : 1
+#      MUXCY                       : 32
 #      VCC                         : 1
+#      XORCY                       : 26
+# FlipFlops/Latches                : 37
+#      FD                          : 36
+#      FDE                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
 # IO Buffers                       : 10
 #      OBUF                        : 10
 =========================================================================
@@ -223,9 +244,12 @@ Device utilization summary:
 
 Selected Device : 2s100tq144-5 
 
- Number of Slices:                        0  out of   1200     0%  
+ Number of Slices:                       24  out of   1200     2%  
+ Number of Slice Flip Flops:             37  out of   2400     1%  
+ Number of 4 input LUTs:                 37  out of   2400     1%  
  Number of IOs:                          11
- Number of bonded IOBs:                  10  out of     92    10%  
+ Number of bonded IOBs:                  11  out of     92    11%  
+ Number of GCLKs:                         1  out of      4    25%  
 
 ---------------------------
 Partition Resource Summary:
@@ -245,7 +269,13 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 27    |
+clk_1Hz                            | NONE(data_0)           | 10    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -255,9 +285,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: No path found
+   Minimum period: 6.522ns (Maximum Frequency: 153.327MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
+   Maximum output required time after clock: 8.329ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -265,17 +295,107 @@ Timing Detail:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.522ns (frequency: 153.327MHz)
+  Total number of paths / destination ports: 378 / 28
+-------------------------------------------------------------------------
+Delay:               6.522ns (Levels of Logic = 27)
+  Source:            couter_0 (FF)
+  Destination:       couter_25 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: couter_0 to couter_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   1.292   1.340  couter_0 (couter_0)
+     INV:I->O              1   0.653   0.000  Mcount_couter_lut<0>_INV_0 (Mcount_couter_lut<0>)
+     MUXCY:S->O            1   0.784   0.000  Mcount_couter_cy<0> (Mcount_couter_cy<0>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<1> (Mcount_couter_cy<1>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<2> (Mcount_couter_cy<2>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<3> (Mcount_couter_cy<3>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<4> (Mcount_couter_cy<4>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<5> (Mcount_couter_cy<5>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<6> (Mcount_couter_cy<6>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<7> (Mcount_couter_cy<7>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<8> (Mcount_couter_cy<8>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<9> (Mcount_couter_cy<9>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<10> (Mcount_couter_cy<10>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<11> (Mcount_couter_cy<11>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<12> (Mcount_couter_cy<12>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<13> (Mcount_couter_cy<13>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<14> (Mcount_couter_cy<14>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<15> (Mcount_couter_cy<15>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<16> (Mcount_couter_cy<16>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<17> (Mcount_couter_cy<17>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<18> (Mcount_couter_cy<18>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<19> (Mcount_couter_cy<19>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<20> (Mcount_couter_cy<20>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<21> (Mcount_couter_cy<21>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<22> (Mcount_couter_cy<22>)
+     MUXCY:CI->O           1   0.050   0.000  Mcount_couter_cy<23> (Mcount_couter_cy<23>)
+     MUXCY:CI->O           0   0.050   0.000  Mcount_couter_cy<24> (Mcount_couter_cy<24>)
+     XORCY:CI->O           1   0.500   0.000  Mcount_couter_xor<25> (Result<25>)
+     FD:D                      0.753          couter_25
+    ----------------------------------------
+    Total                      6.522ns (5.182ns logic, 1.340ns route)
+                                       (79.5% logic, 20.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_1Hz'
+  Clock period: 5.981ns (frequency: 167.196MHz)
+  Total number of paths / destination ports: 19 / 10
+-------------------------------------------------------------------------
+Delay:               5.981ns (Levels of Logic = 2)
+  Source:            data_3 (FF)
+  Destination:       data_0 (FF)
+  Source Clock:      clk_1Hz rising
+  Destination Clock: clk_1Hz rising
+
+  Data Path: data_3 to data_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   1.292   1.480  data_3 (data_3)
+     LUT4:I0->O            1   0.653   1.150  data_cmp_eq000039_SW0 (N0)
+     LUT4:I3->O            1   0.653   0.000  data_cmp_eq000039 (N01)
+     FD:D                      0.753          data_0
+    ----------------------------------------
+    Total                      5.981ns (3.351ns logic, 2.630ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_1Hz'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              8.329ns (Levels of Logic = 1)
+  Source:            data_8 (FF)
+  Destination:       dout<8> (PAD)
+  Source Clock:      clk_1Hz rising
+
+  Data Path: data_8 to dout<8>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   1.292   1.480  data_8 (data_8)
+     OBUF:I->O                 5.557          dout_8_OBUF (dout<8>)
+    ----------------------------------------
+    Total                      8.329ns (6.849ns logic, 1.480ns route)
+                                       (82.2% logic, 17.8% route)
+
+=========================================================================
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 1.21 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.36 secs
  
 --> 
 
 
-Total memory usage is 126524 kilobytes
+Total memory usage is 127028 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

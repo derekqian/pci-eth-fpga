@@ -1,5 +1,5 @@
-set -tmpdir "/home/derek/iseproject/ten2four/xst/projnav.tmp"
-set -xsthdpdir "/home/derek/iseproject/ten2four/xst"
+set -tmpdir "/home/derek/pci-eth-fpga/digilent2dragon/ten2four/xst/projnav.tmp"
+set -xsthdpdir "/home/derek/pci-eth-fpga/digilent2dragon/ten2four/xst"
 run
 -ifn ten2four.prj
 -ifmt mixed

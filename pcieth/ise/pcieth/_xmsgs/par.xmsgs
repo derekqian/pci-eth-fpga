@@ -5,9 +5,6 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="Place" num="834" delta="unknown" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">71</arg> IOs, <arg fmt="%d" index="2">70</arg> are locked and <arg fmt="%d" index="3">1</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
-</msg>
-
 <msg type="warning" file="Par" num="62" delta="unknown" >Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
 
    Review the timing report using Timing Analyzer (In ISE select &quot;Post-Place &amp;

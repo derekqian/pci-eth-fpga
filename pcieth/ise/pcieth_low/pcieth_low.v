@@ -34,6 +34,8 @@ module ledsw(W, R, DATA,         // from higher FPGA
       if(~R)                    // this is write command                                                                                                     
         LED <= DATA;
    end
+	
+//	assign LED = {W, R, DATA[5:0]};
 
 //   always @(posedge R) begin
 //      if(~W)                    // this is read command                                                                                                      

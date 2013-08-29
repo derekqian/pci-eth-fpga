@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-07-31T14:23:07</DateModified>
+  <DateModified>2013-08-28T12:03:39</DateModified>
   <ModuleName>ten24</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/derek/iseproject/testhw1/iseconfig/ten24.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/derek/iseproject/testhw1/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/derek/pci-eth-fpga/dragon2degelent/testhw1/iseconfig/ten24.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/derek/pci-eth-fpga/dragon2degelent/testhw1/</ImplementationReportsDirectory>
   <DateInitialized>2013-07-18T16:18:33</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -26,7 +26,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 392136 kilobytes
+Total memory usage is 392144 kilobytes
 
 Writing NGD file "ledsw.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec

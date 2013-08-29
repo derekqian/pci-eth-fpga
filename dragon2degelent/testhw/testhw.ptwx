@@ -329,4 +329,4 @@
 <!ELEMENT twName (#PCDATA)>
 <!ELEMENT twValue (#PCDATA)>
 ]>
-<twReport><twBody><twSumRpt></twSumRpt></twBody></twReport>
+<twReport><twBody><twSumRpt><twConstSummaryTable><twConstSummary><twConstName UCFConstName="">Autotimespec constraint for clock net clk_BUFGP</twConstName><twConstData type="SETUP" best="6.834" units="ns" score="0"/><twConstData type="HOLD" slack="2.485" units="ns" errors="0" score="0"/></twConstSummary><twConstSummary><twConstName UCFConstName="">Autotimespec constraint for clock net clk_1Hz</twConstName><twConstData type="SETUP" best="4.842" units="ns" score="0"/><twConstData type="HOLD" slack="1.944" units="ns" errors="0" score="0"/></twConstSummary></twConstSummaryTable><twUnmetConstCnt>0</twUnmetConstCnt><twInfo>INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no requested value.</twInfo></twSumRpt></twBody></twReport>

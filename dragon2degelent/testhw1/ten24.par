@@ -1,7 +1,7 @@
 Release 13.3 par O.76xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-svl6::  Thu Jul 18 16:57:42 2013
+svl6::  Wed Aug 28 12:28:13 2013
 
 par -w -intstyle ise -ol high -mt off ten24_map.ncd ten24.ncd ten24.pcf 
 
@@ -65,8 +65,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        14 out of     218    6%
-    Number of LOCed IOBs:                       14 out of      14  100%
+  Number of bonded IOBs:                        18 out of     218    8%
+    Number of LOCed IOBs:                       18 out of      18  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of     116    0%
@@ -101,29 +101,29 @@ Finished initial Timing Analysis.  REAL time: 5 secs
 Starting Router
 
 
-Phase  1  : 90 unrouted;      REAL time: 6 secs 
+Phase  1  : 94 unrouted;      REAL time: 6 secs 
 
-Phase  2  : 85 unrouted;      REAL time: 6 secs 
+Phase  2  : 89 unrouted;      REAL time: 6 secs 
 
-Phase  3  : 54 unrouted;      REAL time: 6 secs 
+Phase  3  : 46 unrouted;      REAL time: 9 secs 
 
-Phase  4  : 54 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
+Phase  4  : 46 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
 Updating file: ten24.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
-Total REAL time to Router completion: 8 secs 
-Total CPU time to Router completion: 7 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+Total REAL time to Router completion: 11 secs 
+Total CPU time to Router completion: 10 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -142,10 +142,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 8 secs 
-Total CPU time to PAR completion: 8 secs 
+Total REAL time to PAR completion: 11 secs 
+Total CPU time to PAR completion: 11 secs 
 
-Peak Memory Usage:  598 MB
+Peak Memory Usage:  616 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

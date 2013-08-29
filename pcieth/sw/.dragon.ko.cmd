@@ -1,0 +1,1 @@
+cmd_/home/derek/pci-eth-fpga/pcieth/sw/dragon.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-2.6.32-37-server/scripts/module-common.lds --build-id -o /home/derek/pci-eth-fpga/pcieth/sw/dragon.ko /home/derek/pci-eth-fpga/pcieth/sw/dragon.o /home/derek/pci-eth-fpga/pcieth/sw/dragon.mod.o

@@ -1,13 +1,9 @@
 Release 10.1.03 - par K.39 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-Thu Jul 18 17:14:27 2013
+Wed Aug 28 12:31:18 2013
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC
-   warnings.
-
-   clk_IBUF
 
 

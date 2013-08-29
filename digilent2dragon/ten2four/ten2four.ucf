@@ -1,4 +1,4 @@
-NET "INDATA<0>"  LOC = "P86"  ;
+NET "INDATA<0>"  LOC = "P64"  ;
 NET "INDATA<1>"  LOC = "P85"  ;
 NET "INDATA<2>"  LOC = "P83"  ;
 NET "INDATA<3>"  LOC = "P84"  ;

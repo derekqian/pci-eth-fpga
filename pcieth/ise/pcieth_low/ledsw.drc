@@ -1,7 +1,7 @@
 Release 13.3 Drc O.76xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Mon Aug 26 16:55:12 2013
+Wed Aug 28 17:07:59 2013
 
 drc -z ledsw.ncd ledsw.pcf
 

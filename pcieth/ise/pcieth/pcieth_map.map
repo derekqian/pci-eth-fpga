@@ -3,14 +3,14 @@ Xilinx Map Application Log File for Design 'pcieth'
 
 Design Information
 ------------------
-Command Line   : map -ise /home/derek/pci-eth-fpga/pcieth/ise/pcieth.ise
+Command Line   : map -ise /home/derek/pci-eth-fpga/pcieth/ise/pcieth/pcieth.ise
 -intstyle ise -p xc2s100-tq144-5 -cm area -pr off -k 4 -c 100 -tx off -o
 pcieth_map.ncd pcieth.ngd pcieth.pcf 
 Target Device  : xc2s100
 Target Package : tq144
 Target Speed   : -5
 Mapper Version : spartan2 -- $Revision: 1.46.12.2 $
-Mapped Date    : Mon Aug 26 17:20:37 2013
+Mapped Date    : Thu Aug 29 12:44:00 2013
 
 Mapping design into LUTs...
 Running directed packing...
@@ -24,18 +24,18 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    1
 Logic Utilization:
-  Total Number Slice Registers:     240 out of  2,400   10%
-    Number used as Flip Flops:                    208
+  Total Number Slice Registers:     246 out of  2,400   10%
+    Number used as Flip Flops:                    214
     Number used as Latches:                        32
-  Number of 4 input LUTs:           190 out of  2,400    7%
+  Number of 4 input LUTs:           229 out of  2,400    9%
 Logic Distribution:
-    Number of occupied Slices:                         214 out of  1,200   17%
-    Number of Slices containing only related logic:    214 out of    214  100%
-    Number of Slices containing unrelated logic:         0 out of    214    0%
+    Number of occupied Slices:                         236 out of  1,200   19%
+    Number of Slices containing only related logic:    236 out of    236  100%
+    Number of Slices containing unrelated logic:         0 out of    236    0%
         *See NOTES below for an explanation of the effects of unrelated logic
-Total Number of 4 input LUTs:          279 out of  2,400   11%
-      Number used as logic:                       190
-      Number used as a route-thru:                 41
+Total Number of 4 input LUTs:          320 out of  2,400   13%
+      Number used as logic:                       229
+      Number used as a route-thru:                 43
       Number used as Shift registers:              48
    Number of bonded IOBs:            71 out of     92   77%
       IOB Latches:                                  8
@@ -44,8 +44,8 @@ Total Number of 4 input LUTs:          279 out of  2,400   11%
    Number of GCLKIOBs:                2 out of      4   50%
 
 Peak Memory Usage:  134 MB
-Total REAL time to MAP completion:  0 secs 
-Total CPU time to MAP completion:   0 secs 
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   1 secs 
 
 NOTES:
 

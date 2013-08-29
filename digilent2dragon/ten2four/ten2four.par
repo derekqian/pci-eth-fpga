@@ -1,7 +1,7 @@
 Release 10.1.03 par K.39 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-svl6::  Wed Jul 31 14:58:04 2013
+svl6::  Wed Aug 28 13:18:42 2013
 
 par -w -intstyle ise -ol std -t 1 ten2four_map.ncd ten2four.ncd ten2four.pcf 
 
@@ -39,35 +39,35 @@ Router effort level (-rl):    Standard
 Starting Placer
 
 Phase 1.1
-Phase 1.1 (Checksum:ae62) REAL time: 0 secs 
+Phase 1.1 (Checksum:b358) REAL time: 0 secs 
 
 Phase 2.7
-Phase 2.7 (Checksum:ae62) REAL time: 0 secs 
+Phase 2.7 (Checksum:b358) REAL time: 0 secs 
 
 Phase 3.31
-Phase 3.31 (Checksum:ae62) REAL time: 0 secs 
+Phase 3.31 (Checksum:b358) REAL time: 0 secs 
 
 Phase 4.23
-Phase 4.23 (Checksum:ae62) REAL time: 0 secs 
+Phase 4.23 (Checksum:b358) REAL time: 0 secs 
 
 Phase 5.3
-Phase 5.3 (Checksum:ae62) REAL time: 0 secs 
+Phase 5.3 (Checksum:b358) REAL time: 0 secs 
 
 Phase 6.5
-Phase 6.5 (Checksum:ae62) REAL time: 0 secs 
+Phase 6.5 (Checksum:b358) REAL time: 0 secs 
 
 Phase 7.8
 .
-Phase 7.8 (Checksum:11852) REAL time: 0 secs 
+Phase 7.8 (Checksum:1224c) REAL time: 0 secs 
 
 Phase 8.5
-Phase 8.5 (Checksum:11852) REAL time: 0 secs 
+Phase 8.5 (Checksum:1224c) REAL time: 0 secs 
 
 Phase 9.18
-Phase 9.18 (Checksum:11813) REAL time: 0 secs 
+Phase 9.18 (Checksum:12271) REAL time: 0 secs 
 
 Phase 10.5
-Phase 10.5 (Checksum:11813) REAL time: 0 secs 
+Phase 10.5 (Checksum:12271) REAL time: 0 secs 
 
 REAL time consumed by placer: 0 secs 
 CPU  time consumed by placer: 0 secs 
@@ -83,11 +83,11 @@ Phase 1: 92 unrouted;       REAL time: 0 secs
 
 Phase 2: 92 unrouted;       REAL time: 0 secs 
 
-Phase 3: 25 unrouted;       REAL time: 0 secs 
+Phase 3: 28 unrouted;       REAL time: 0 secs 
 
-Phase 4: 25 unrouted; (0)      REAL time: 0 secs 
+Phase 4: 28 unrouted; (0)      REAL time: 0 secs 
 
-Phase 5: 25 unrouted; (0)      REAL time: 0 secs 
+Phase 5: 28 unrouted; (0)      REAL time: 0 secs 
 
 Phase 6: 0 unrouted; (0)      REAL time: 0 secs 
 

@@ -5,42 +5,26 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu Jul 18 16:57:19 2013">
+  <application stringID="Xst" timeStamp="Wed Aug 28 12:27:50 2013">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
-          <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="/software/ISE_DS/ISE"/>
-        </row>
-        <row stringID="row" value="1">
-          <item stringID="variable" value="LD_LIBRARY_PATH"/>
-          <item stringID="value" value="/software/ISE_DS/ISE//lib/lin64:/software/ISE_DS/common/lib/lin64:/software/ISE_DS/ISE/sysgen/lib:/software/ISE_DS/ISE/lib/lin64:/software/ISE_DS/ISE/smartmodel/lin64/installed_lin64/lib:/software/ISE_DS/EDK/lib/lin64"/>
-        </row>
-        <row stringID="row" value="2">
-          <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="/software/ISE_DS/EDK"/>
-        </row>
-        <row stringID="row" value="3">
           <item stringID="variable" value="XILINXD_LICENSE_FILE"/>
           <item stringID="value" value="2100@svl6"/>
         </row>
-        <row stringID="row" value="4">
+        <row stringID="row" value="1">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/software/ISE_DS/ISE//bin/lin64:/software/ISE_DS/common/bin/lin64:/software/ISE_DS/ISE/sysgen/bin:/software/ISE_DS/PlanAhead/bin:/software/ISE_DS/ISE/bin/lin64:/software/ISE_DS/ISE/sysgen/util:/software/ISE_DS/EDK/bin/lin64:/software/ISE_DS/EDK/gnu/microblaze/lin64/bin:/software/ISE_DS/EDK/gnu/powerpc-eabi/lin64/bin:/home/derek/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/derek/software/modelsim/modeltech/bin"/>
+          <item stringID="value" value="/software/ISE_DS/ISE//bin/lin64:/home/derek/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/derek/software/modelsim/modeltech/bin"/>
         </row>
-        <row stringID="row" value="5">
-          <item stringID="variable" value="LMC_HOME"/>
-          <item stringID="value" value="/software/ISE_DS/ISE/smartmodel/lin64/installed_lin64"/>
-        </row>
-        <row stringID="row" value="6">
-          <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="/software/ISE_DS/PlanAhead"/>
-        </row>
-        <row stringID="row" value="7">
+        <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
           <item stringID="value" value="/software/ISE_DS/ISE/"/>
+        </row>
+        <row stringID="row" value="3">
+          <item stringID="variable" value="LD_LIBRARY_PATH"/>
+          <item stringID="value" value="/software/ISE_DS/ISE//lib/lin64"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
@@ -53,7 +37,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="Intel(R) Xeon(R) CPU           X3470  @ 2.93GHz"/>
-          <item stringID="speed" value="2925.607 MHz"/>
+          <item stringID="speed" value="2926.341 MHz"/>
         </row>
       </table>
     </section>
@@ -121,16 +105,17 @@
         <item stringID="XST_TOP_LEVEL_OUTPUT_FILE_NAME" value="ten24.ngc"/>
       </section>
       <section stringID="XST_PRIMITIVE_AND_BLACK_BOX_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="20">
+        <item dataType="int" stringID="XST_BELS" value="21">
+          <item dataType="int" stringID="XST_GND" value="1"/>
           <item dataType="int" stringID="XST_LUT2" value="1"/>
           <item dataType="int" stringID="XST_LUT3" value="2"/>
           <item dataType="int" stringID="XST_LUT4" value="5"/>
           <item dataType="int" stringID="XST_LUT5" value="4"/>
           <item dataType="int" stringID="XST_LUT6" value="8"/>
         </item>
-        <item dataType="int" stringID="XST_IO_BUFFERS" value="14">
+        <item dataType="int" stringID="XST_IO_BUFFERS" value="18">
           <item dataType="int" stringID="XST_IBUF" value="10"/>
-          <item dataType="int" stringID="XST_OBUF" value="4"/>
+          <item dataType="int" stringID="XST_OBUF" value="8"/>
         </item>
       </section>
     </section>
@@ -143,8 +128,8 @@
       <item AVAILABLE="20" dataType="int" label="Number with an unused LUT" stringID="XST_NUMBER_WITH_AN_UNUSED_LUT" value="0"/>
       <item AVAILABLE="20" dataType="int" label="Number of fully used LUT-FF pairs" stringID="XST_NUMBER_OF_FULLY_USED_LUTFF_PAIRS" value="0"/>
       <item dataType="int" label="Number of unique control sets" stringID="XST_NUMBER_OF_UNIQUE_CONTROL_SETS" value="0"/>
-      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="14"/>
-      <item AVAILABLE="218" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="14"/>
+      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="18"/>
+      <item AVAILABLE="218" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="18"/>
     </section>
     <section stringID="XST_PARTITION_RESOURCE_SUMMARY">
       <section stringID="XST_NO_PARTITIONS_WERE_FOUND_IN_THIS_DESIGN"/>

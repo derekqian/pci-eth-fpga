@@ -1,7 +1,7 @@
 Release 10.1.03 - par K.39 (lin)
 Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
 
-Wed Jul 31 14:58:05 2013
+Wed Aug 28 13:18:43 2013
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -82,7 +82,7 @@ P60|outdata<2>|IOB|IO_D5|OUTPUT|LVTTL*|3|12|SLOW|NONE**|||LOCATED||NO|NONE|
 P61|||GND|||||||||||||
 P62|outdata<1>|IOB|IO_D6|OUTPUT|LVTTL*|3|12|SLOW|NONE**|||LOCATED||NO|NONE|
 P63||IOB|IO_VREF_3|UNUSED||3||||||||||
-P64||IOB|IO|UNUSED||3||||||||||
+P64|indata<0>|IOB|IO|INPUT|LVTTL*|3||||NONE||LOCATED||NO|NONE|
 P65||IOB|IO_VREF_3|UNUSED||3||||||||||
 P66||IOB|IO|UNUSED||3||||||||||
 P67|outdata<0>|IOB|IO_D7|OUTPUT|LVTTL*|3|12|SLOW|NONE**|||LOCATED||NO|NONE|
@@ -104,7 +104,7 @@ P82|||VCCINT||||||||2.5|||||
 P83|indata<2>|IOB|IO|INPUT|LVTTL*|4||||NONE||LOCATED||NO|NONE|
 P84|indata<3>|IOB|IO|INPUT|LVTTL*|4||||NONE||LOCATED||NO|NONE|
 P85|indata<1>|IOB|IO_VREF_4|INPUT|LVTTL*|4||||NONE||LOCATED||NO|NONE|
-P86|indata<0>|IOB|IO|INPUT|LVTTL*|4||||NONE||LOCATED||NO|NONE|
+P86||IOB|IO|UNUSED||4||||||||||
 P87||IOB|IO|UNUSED||4||||||||||
 P88||GCLKIOB|GCK0|UNUSED||4||||||||||
 P89|||GND|||||||||||||

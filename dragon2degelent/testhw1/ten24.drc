@@ -1,7 +1,7 @@
 Release 13.3 Drc O.76xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Thu Jul 18 16:58:01 2013
+Wed Aug 28 12:28:35 2013
 
 drc -z ten24.ncd ten24.pcf
 
