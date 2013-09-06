@@ -270,6 +270,19 @@ static long iDragon_ioctl(struct file *file, unsigned int cmd, unsigned long arg
                 data->membase[4] = value;
             }
             break;
+        case IOCTL_GET_LOW:
+            if(data->mode == MODE_IO) {
+                port = data->iobase;
+                value = inl(port + 0x14);
+                if (copy_to_user((unsigned int *)arg, &value, sizeof(unsigned int))) {
+                    return -EACCES;
+                }
+            } else {
+                if (copy_to_user((unsigned int *)arg, data->membase + 5, sizeof(unsigned int))) {
+                    return -EACCES;
+                }
+            }
+            break;
         default:
             return -EINVAL;
     }
@@ -364,6 +377,7 @@ static int __devinit iDragon_pci_probe(struct pci_dev *pdev, const struct pci_de
 
   pci_read_config_byte(pdev, PCI_INTERRUPT_PIN, &intpin);
   if(intpin) {
+    printk(KERN_WARNING "iDragon_pci_probe: intpin is %d, pdev->irq is %d\n", intpin, pdev->irq);
     ret = request_irq(pdev->irq, iDragon_irq_handler, IRQF_SHARED, "Dragon", data);
     if(ret < 0) {
       printk(KERN_WARNING "iDragon_pci_probe: unable to register irq handler\n");

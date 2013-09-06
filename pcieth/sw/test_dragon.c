@@ -73,7 +73,7 @@ int main (int ac, char **av) {
     sscanf (av[3], "%x", &value);
     ioctl(fd, IOCTL_SET_STATUS, &value);
     printf ("Set STATUS: 0x%08X\n\n", value);
-  } if (strcmp(av[2], "--get-switch") == 0) {
+  } else if (strcmp(av[2], "--get-switch") == 0) {
     ioctl(fd, IOCTL_GET_SWITCH, &value);
     printf ("Get SWITCH: 0x%08X\n\n", value);
   } else if (strcmp(av[2], "--set-low") == 0) {
@@ -85,6 +85,9 @@ int main (int ac, char **av) {
     sscanf (av[3], "%x", &value);
     ioctl(fd, IOCTL_SET_LOW, &value);
     printf ("Set LOW: 0x%08X\n\n", value);
+  } else if (strcmp(av[2], "--get-low") == 0) {
+    ioctl(fd, IOCTL_GET_LOW, &value);
+    printf ("Get LOW: 0x%08X\n\n", value);
   }
 
 clean_operate:

@@ -30,9 +30,10 @@
 #define IOCTL_GET_LED _IOR(MAGIC_NUM, 3, unsigned int)
 #define IOCTL_SET_LED _IOW(MAGIC_NUM, 4, unsigned int)
 #define IOCTL_GET_STATUS _IOR(MAGIC_NUM, 5, unsigned int)
-#define IOCTL_SET_STATUS _IOR(MAGIC_NUM, 6, unsigned int)
+#define IOCTL_SET_STATUS _IOW(MAGIC_NUM, 6, unsigned int)
 #define IOCTL_GET_SWITCH _IOR(MAGIC_NUM, 7, unsigned int)
-#define IOCTL_SET_LOW _IOR(MAGIC_NUM, 8, unsigned int)
+#define IOCTL_SET_LOW _IOW(MAGIC_NUM, 8, unsigned int)
+#define IOCTL_GET_LOW _IOW(MAGIC_NUM, 9, unsigned int)
 
 
 #endif
