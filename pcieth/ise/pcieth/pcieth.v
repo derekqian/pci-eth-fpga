@@ -241,7 +241,8 @@ reg [31:0] REG_led;
 reg [31:0] REG_status;
 reg [31:0] REG_switch;
 reg [31:0] REG_WRdata;
-wire WR_en;
+wire [31:0] REG_RDdata;
+wire       WR_en;
 
 // write
 always @(posedge PCI_CLK) 
@@ -274,6 +275,7 @@ case(PCI_TransactionAddr)
   4'h1: PCI_DATAread <= {26'h0000000, REG_led[2:0], 3'b000};
   4'h2: PCI_DATAread <= REG_status;
   4'h3: PCI_DATAread <= REG_switch;
+  4'h5: PCI_DATAread <= REG_RDdata;
   default:;
 endcase
 end
@@ -284,6 +286,7 @@ case(PCI_TransactionAddr)
   4'h1: PCI_DATAread <= {29'h00000000, REG_led[2:0]};
   4'h2: PCI_DATAread <= REG_status;
   4'h3: PCI_DATAread <= REG_switch;
+  4'h5: PCI_DATAread <= REG_RDdata;
   default:;
 endcase
 end
@@ -297,17 +300,16 @@ wire [7:0] RDdata_unused;   // TODO: remove this
 wire [1:0] LED_unused;
 txrx U_txtx(
             .reset      (PCI_RSTn),
+            //.clk        (cnt_haha[12]),
             .clk        (PCI_CLK),
-            .RDdata     (RDdata_unused),
+            .RDdata     (REG_RDdata),
             .RDen       (1'b0),
             .WRdata     (REG_WRdata),
             .WRen       (PCI_TransferWrite),
-				//.WRen       (1'b1),
             .W          (LOW_w),
             .R          (LOW_r),
             .DATA       (LOW_data),
-				//.LED        (LED)
-				.LED        (LED_unused)
+	    .LED        (LED_unused)
             );
 
 
@@ -419,50 +421,89 @@ module txrx (reset, clk, RDdata, RDen, WRdata, WRen, W, R, DATA, LED);
    // from PCI module
    output [7:0] RDdata;         // read data
    input        RDen;           // read enable signal
-   input [7:0] WRdata;         // write data
+   input [7:0] 	WRdata;         // write data
    input        WRen;           // write enable signal
 
    // to lower FPGA
    output       W;              // write clk
    output       R;              // read clk
-   inout [7:0]  DATA;           // w/r data
-	output [1:0] LED;
+   inout [7:0] 	DATA;           // w/r data
+   output [1:0] LED;
 
-   reg [9:0]    cnt;
-   reg W;
-
+   reg [11:0] 	cnt;
+   reg 		W;
+	reg      R;
+	reg DATA_reg_en;
+   reg [7:0] 	RDdata;         // read data
+   
    always@(posedge clk or negedge reset) begin
-	if (~reset) begin
-	    cnt <= 10'h3ff;
-		 W <= 1'b0;		 
-	end
-	else begin
-	case(cnt)
-		10'h000: begin
-			W <= 1'b1;
-			cnt<= cnt + 1;
-		end
-		10'h200: begin
-		   W <= 1'b0;
-         cnt<= cnt + 1;
-		end
-		10'h3ff: begin
-		  if(WRen)
-			  cnt<= cnt + 1;
-		end
-		default: begin
-         cnt<= cnt + 1;
-		end
-   endcase
-	end
+      if (~reset) begin
+	 cnt <= 12'hfff;
+	 W <= 1'b0;
+	 R <= 1'b0;
+	 DATA_reg_en <= 0;
+      end
+      else begin
+	 case(cnt)
+	   12'hfff: begin	// start state
+	      W <= 1'b0;
+	      R <= 1'b0;
+	      DATA_reg_en <= 0;
+	      cnt <= WRen ? 12'h000 : 12'h800;
+	   end
+	   12'h000: begin 	// W start set W to 0
+	      W <= 1'b0;
+	      R <= 1'b0;
+	      DATA_reg_en <= 0;
+	      cnt <= cnt + 1;
+	   end
+	   12'h200: begin	// set W to 1
+	      W <= 1'b1;
+	      R <= 1'b0;
+	      DATA_reg_en <= 0;
+              cnt <= cnt + 1;
+	   end
+	   12'h400: begin 
+	      W <= 1'b0;
+	      R <= 1'b0;
+	      DATA_reg_en <= 1;
+	      cnt <= cnt + 1;
+	   end
+	   12'h600: begin	// set W to 1
+	      W <= 1'b1;
+	      R <= 1'b0;
+	      DATA_reg_en <= 1;
+              cnt <= cnt + 1;
+	   end
+	   12'h7ff: begin	// W end, set W to 0
+	      W <= 1'b0;
+	      R <= 1'b0;
+	      DATA_reg_en <= 0;
+	      cnt <= 12'hfff;
+	   end
+	   12'h800: begin 	// R start set R to 0
+	      W <= 1'b0;
+	      R <= 1'b0;
+	      cnt <= WRen ? 12'h000 : cnt + 1; // if WRen, go to W start
+	   end
+	   12'ha00: begin	// flip R set R to 1
+	      W <= 1'b0;
+	      R <= WRen ? 1'b0 : 1'b1;
+	      cnt <= WRen ? 12'h000 : cnt + 1; // if WRen, go to W start
+	   end
+	   12'he00: begin	// R end set R to 0
+	      W <= 1'b0;
+	      R <= 1'b0;
+	      RDdata <= DATA;
+	      cnt <= WRen ? 12'h000 : cnt + 1; // if WRen, go to W start
+	   end
+	   default: begin
+	      if(cnt > 12'h800)
+		cnt <= WRen ? 12'h000 : cnt + 1; // if WRen, go to W start
+	      else cnt <=  cnt + 1;
+	   end
+	 endcase
+      end
    end
-	
-//	assign W = WRen;
-//   assign LED = cnt;
-   assign DATA   = WRen ? WRdata : DATA;
-//   assign DATA[3:0]   = WRen ? WRdata[3:0] : DATA[3:0];
-//	assign DATA[5:4]   = cnt[24:23];
-//	assign DATA[7:6] =2'b00;
-   assign RDdata = RDen ? DATA   : RDdata;
-
+	assign DATA = DATA_reg_en ? WRdata : 8'hZZ;
 endmodule

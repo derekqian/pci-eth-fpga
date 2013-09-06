@@ -9,6 +9,8 @@ NET "DATA<7>"  LOC = "N9"  ;
 NET "W"  LOC = "V11"  ;
 NET "R"  LOC = "T10"  ;
 
+NET "reset"  LOC = "T15";
+
 NET "LED<0>"  LOC = "U18"  ;
 NET "LED<1>"  LOC = "M14"  ;
 NET "LED<2>"  LOC = "N14"  ;
